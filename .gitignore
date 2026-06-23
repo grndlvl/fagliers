@@ -1,0 +1,36 @@
+# OS / system files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+npm-debug.log*
+
+# Dependencies
+node_modules/
+
+# Build output (compiled Tailwind CSS + Pages publish dir are produced by the build)
+assets/tailwind.css
+_site/
+
+# Local preview / browser-automation artifacts
+.playwright-mcp/
+*-preview.*
+byb-full.jpeg
+preview-*.jpeg
+preview-*.png
+
+# OMC / assistant working state
+.omc/
+.claude/
+
+# OMC/assistant working state
+.omx/
