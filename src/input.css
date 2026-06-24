@@ -2,50 +2,49 @@
 @tailwind components;
 @tailwind utilities;
 
-/* ---- Custom site styles (source for the compiled assets/tailwind.css) ---- */
-html { scroll-behavior: smooth; scroll-padding-top: 5rem; }
-body { font-family: 'Barlow', system-ui, sans-serif; }
+/* ---- Faglier's MMA — modern editorial theme (source for assets/tailwind.css) ---- */
+html { scroll-behavior: smooth; scroll-padding-top: 5.5rem; }
+body { font-family: 'Inter', system-ui, sans-serif; }
 
-.font-display { font-family: 'Bebas Neue', 'Oswald', sans-serif; letter-spacing: .015em; }
-.font-head { font-family: 'Barlow Condensed', sans-serif; }
+.font-display { font-family: 'Archivo', system-ui, sans-serif; }
 
-/* Logo badge: the logo art already has a white field, keep it crisp */
+/* Big editorial headline sizing helper */
+.display-xl { letter-spacing: -0.02em; line-height: 0.95; font-weight: 800; }
+
+/* Logo art already sits on a white field — keep it crisp */
 .logo-badge { object-fit: contain; }
 
-/* Hero darkening overlay over the textured background */
-.hero-overlay {
-  background:
-    radial-gradient(120% 90% at 50% 0%, rgba(108,189,69,.16) 0%, rgba(10,12,9,0) 55%),
-    linear-gradient(180deg, rgba(10,12,9,.55) 0%, rgba(10,12,9,.82) 60%, rgba(10,12,9,.99) 100%);
+/* Hero photo darkening so overlaid white text stays AA-legible */
+.hero-scrim {
+  background: linear-gradient(180deg, rgba(20,22,15,.30) 0%, rgba(20,22,15,.45) 45%, rgba(20,22,15,.88) 100%);
 }
 
-/* Subtle diagonal "mat texture" used behind dark sections */
-.mat-texture {
-  background-image:
-    repeating-linear-gradient(135deg, rgba(108,189,69,.05) 0 2px, transparent 2px 9px);
+/* Thin number/label used in the discipline index */
+.index-num { font-variant-numeric: tabular-nums; }
+
+/* Legibility shadow for the white nav while it sits over the hero photo */
+.nav-shadow { text-shadow: 0 1px 10px rgba(0,0,0,.75), 0 1px 3px rgba(0,0,0,.6); }
+
+/* Accessible focus ring across the whole site */
+a:focus-visible, button:focus-visible, summary:focus-visible, [tabindex]:focus-visible {
+  outline: 3px solid #2F6A1E; outline-offset: 2px; border-radius: 6px;
+}
+/* On dark bands, use the bright green ring for visibility */
+.on-dark a:focus-visible, .on-dark button:focus-visible, .on-dark summary:focus-visible {
+  outline-color: #8FD861;
 }
 
-/* Green brushstroke underline accent under section eyebrows */
-.section-rule { height: 4px; width: 64px; background: #6CBD45; border-radius: 4px; }
-
-/* Octagon (MMA cage) clip used for the hero badge frame */
-.octagon {
-  clip-path: polygon(30% 0, 70% 0, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0 70%, 0 30%);
-}
-
-/* Animated headline accent bar */
-.accent-bar { background: linear-gradient(90deg, #6CBD45, #92DC63); }
-
-a:focus-visible, button:focus-visible, summary:focus-visible {
-  outline: 3px solid #6CBD45; outline-offset: 2px; border-radius: 4px;
-}
-
-/* FAQ disclosure marker */
+/* FAQ disclosure */
 details > summary { list-style: none; cursor: pointer; }
 details > summary::-webkit-details-marker { display: none; }
-details[open] .faq-plus { transform: rotate(45deg); }
+details[open] .faq-icon { transform: rotate(45deg); }
+
+/* Marquee strip of disciplines (respects reduced motion below) */
+@keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+.marquee-track { animation: marquee 30s linear infinite; }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  * { animation: none !important; transition: none !important; }
+  .marquee-track { animation: none; }
+  * { animation-duration: .001ms !important; transition-duration: .001ms !important; }
 }

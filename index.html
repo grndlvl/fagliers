@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Faglier's Mixed Martial Arts | Kempo Karate &amp; MMA in Augusta, GA</title>
   <meta name="description" content="Faglier's Mixed Martial Arts is a family-run fight gym in Augusta, GA. Kempo Karate, MMA, Muay Thai, kickboxing, Brazilian Jiu-Jitsu and wrestling for kids and adults. The gym where UFC fighter Malcolm 'The Machine' Wellmaker got his start. 2025 Best of Georgia winner." />
-  <meta name="theme-color" content="#0A0C09" />
+  <meta name="theme-color" content="#14160F" />
   <link rel="canonical" href="https://fagliersmma.com/" />
 
   <!-- Icons -->
@@ -35,7 +35,7 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
   <!-- Compiled Tailwind CSS (built by `npm run build:css` / the GitHub Actions deploy) -->
   <link rel="stylesheet" href="assets/tailwind.css" />
@@ -70,15 +70,8 @@
       { "@type": "City", "name": "Evans, GA" },
       { "@type": "AdministrativeArea", "name": "Central Savannah River Area (CSRA)" }
     ],
-    "audience": {
-      "@type": "Audience",
-      "audienceType": "Kids and adults of all experience levels"
-    },
-    "founder": {
-      "@type": "Person",
-      "name": "Jason Faglier Sr.",
-      "jobTitle": "Founder & Head Instructor"
-    },
+    "audience": { "@type": "Audience", "audienceType": "Kids and adults of all experience levels" },
+    "founder": { "@type": "Person", "name": "Jason Faglier Sr.", "jobTitle": "Founder & Head Instructor" },
     "employee": [
       { "@type": "Person", "name": "Jason Faglier Sr.", "jobTitle": "Founder & Head Instructor" },
       { "@type": "Person", "name": "Jason Faglier Jr.", "jobTitle": "Instructor" },
@@ -88,12 +81,7 @@
     "openingHoursSpecification": [
       { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday"], "opens": "17:00", "closes": "20:30" }
     ],
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "5.0",
-      "bestRating": "5",
-      "ratingCount": "15"
-    },
+    "aggregateRating": { "@type": "AggregateRating", "ratingValue": "5.0", "bestRating": "5", "ratingCount": "15" },
     "award": "2025 Best of Georgia Regional Winner — Martial Arts Training Facilities",
     "sameAs": [
       "https://www.facebook.com/FagliersKempoKarate/",
@@ -103,39 +91,38 @@
   </script>
 </head>
 
-<body class="bg-ink text-slate-100 font-body antialiased selection:bg-brand selection:text-ink">
+<body class="bg-paper text-ink font-body antialiased selection:bg-brand selection:text-ink">
 
   <!-- Skip link -->
-  <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:z-[100] focus:top-3 focus:left-3 focus:bg-brand focus:text-ink focus:px-4 focus:py-2 focus:rounded-md focus:font-semibold">
+  <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:z-[100] focus:top-3 focus:left-3 focus:bg-ink focus:text-white focus:px-4 focus:py-2 focus:rounded-lg focus:font-semibold">
     Skip to main content
   </a>
 
-  <!-- ============ HEADER / NAV ============ -->
-  <header class="fixed inset-x-0 top-0 z-50 bg-ink/85 backdrop-blur border-b border-ink-line">
-    <nav class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8" aria-label="Primary">
-      <div class="flex h-16 items-center justify-between">
+  <!-- ============ HEADER ============ -->
+  <header id="siteHeader" class="fixed inset-x-0 top-0 z-50 transition-colors duration-300">
+    <nav class="mx-auto max-w-8xl px-4 sm:px-6 lg:px-10" aria-label="Primary">
+      <div class="flex h-[4.5rem] items-center justify-between">
         <a href="#top" class="flex items-center gap-3 group">
-          <img src="images/logo.jpg" alt="" width="40" height="40" class="logo-badge h-10 w-10 rounded-md ring-1 ring-ink-line" />
-          <span class="font-head font-700 tracking-wide text-lg leading-none">
-            <span class="text-white">FAGLIER'S</span> <span class="text-brand">MMA</span>
+          <img src="images/logo.jpg" alt="" width="44" height="44" class="logo-badge h-11 w-11 rounded-lg bg-white ring-1 ring-black/10" />
+          <span class="font-display font-800 tracking-tight text-lg leading-none" data-nav-text>
+            FAGLIER'S<span class="text-brand-deep" data-nav-accent>&nbsp;MMA</span>
           </span>
         </a>
 
-        <div class="hidden lg:flex items-center gap-7 font-head text-sm font-600 uppercase tracking-wider text-slate-300">
-          <a href="#train" class="hover:text-brand transition-colors">Train</a>
-          <a href="#programs" class="hover:text-brand transition-colors">Programs</a>
-          <a href="#coaches" class="hover:text-brand transition-colors">Coaches</a>
-          <a href="#schedule" class="hover:text-brand transition-colors">Schedule</a>
-          <a href="#story" class="hover:text-brand transition-colors">Our Story</a>
-          <a href="#gallery" class="hover:text-brand transition-colors">Gallery</a>
-          <a href="#visit" class="hover:text-brand transition-colors">Visit</a>
+        <div class="hidden lg:flex items-center gap-8 text-sm font-600" data-nav-links>
+          <a href="#train" class="hover:text-brand-deep transition-colors">Train</a>
+          <a href="#programs" class="hover:text-brand-deep transition-colors">Programs</a>
+          <a href="#coaches" class="hover:text-brand-deep transition-colors">Coaches</a>
+          <a href="#schedule" class="hover:text-brand-deep transition-colors">Schedule</a>
+          <a href="#gallery" class="hover:text-brand-deep transition-colors">Gallery</a>
+          <a href="#visit" class="hover:text-brand-deep transition-colors">Visit</a>
         </div>
 
         <div class="flex items-center gap-3">
-          <a href="#visit" class="hidden sm:inline-flex items-center rounded-md bg-brand px-4 py-2 font-head font-700 uppercase tracking-wider text-sm text-ink hover:bg-brand-glow transition-colors">
-            Try a Class
+          <a href="#visit" class="hidden sm:inline-flex items-center rounded-full bg-brand px-5 py-2.5 font-700 text-sm text-ink hover:bg-brand-glow transition-colors">
+            Free Trial Class
           </a>
-          <button id="navToggle" class="lg:hidden inline-flex items-center justify-center rounded-md p-2 text-slate-200 hover:bg-ink-card" aria-expanded="false" aria-controls="mobileMenu" aria-label="Open menu">
+          <button id="navToggle" class="lg:hidden inline-flex items-center justify-center rounded-lg p-2 text-ink bg-white/70 ring-1 ring-black/10" aria-expanded="false" aria-controls="mobileMenu" aria-label="Open menu" data-nav-toggle>
             <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
           </button>
         </div>
@@ -143,15 +130,14 @@
 
       <!-- Mobile menu -->
       <div id="mobileMenu" class="hidden lg:hidden pb-4">
-        <div class="flex flex-col gap-1 font-head uppercase tracking-wider text-slate-200">
-          <a href="#train" class="rounded-md px-3 py-2 hover:bg-ink-card">Train</a>
-          <a href="#programs" class="rounded-md px-3 py-2 hover:bg-ink-card">Programs</a>
-          <a href="#coaches" class="rounded-md px-3 py-2 hover:bg-ink-card">Coaches</a>
-          <a href="#schedule" class="rounded-md px-3 py-2 hover:bg-ink-card">Schedule</a>
-          <a href="#story" class="rounded-md px-3 py-2 hover:bg-ink-card">Our Story</a>
-          <a href="#gallery" class="rounded-md px-3 py-2 hover:bg-ink-card">Gallery</a>
-          <a href="#visit" class="rounded-md px-3 py-2 hover:bg-ink-card">Visit</a>
-          <a href="#visit" class="mt-2 rounded-md bg-brand px-3 py-2 font-700 text-ink">Try a Class →</a>
+        <div class="flex flex-col gap-1 rounded-2xl bg-white p-3 ring-1 ring-black/10 shadow-xl text-ink font-600">
+          <a href="#train" class="rounded-lg px-3 py-2.5 hover:bg-paper-mist">Train</a>
+          <a href="#programs" class="rounded-lg px-3 py-2.5 hover:bg-paper-mist">Programs</a>
+          <a href="#coaches" class="rounded-lg px-3 py-2.5 hover:bg-paper-mist">Coaches</a>
+          <a href="#schedule" class="rounded-lg px-3 py-2.5 hover:bg-paper-mist">Schedule</a>
+          <a href="#gallery" class="rounded-lg px-3 py-2.5 hover:bg-paper-mist">Gallery</a>
+          <a href="#visit" class="rounded-lg px-3 py-2.5 hover:bg-paper-mist">Visit</a>
+          <a href="#visit" class="mt-1 rounded-lg bg-brand px-3 py-2.5 font-700 text-ink text-center">Free Trial Class →</a>
         </div>
       </div>
     </nav>
@@ -161,486 +147,424 @@
     <span id="top"></span>
 
     <!-- ============ HERO ============ -->
-    <section class="relative overflow-hidden pt-16">
-      <div class="absolute inset-0 mat-texture" aria-hidden="true"></div>
-      <div class="absolute inset-0 hero-overlay" aria-hidden="true"></div>
+    <section class="relative min-h-[88svh] flex items-end on-dark">
+      <img src="images/hero-team-belts.jpg" alt="" aria-hidden="true" class="absolute inset-0 h-full w-full object-cover" />
+      <div class="absolute inset-0 hero-scrim" aria-hidden="true"></div>
 
-      <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 sm:py-28 lg:py-32">
-        <div class="grid lg:grid-cols-2 gap-12 items-center">
-          <div>
-            <p class="font-head uppercase tracking-[0.25em] text-brand text-sm font-600">Augusta · Martinez · Evans · the CSRA</p>
-            <h1 class="mt-4 font-display text-6xl sm:text-7xl lg:text-8xl leading-[0.9] text-white">
-              Train like a fighter.<br /><span class="text-brand">Grow like family.</span>
-            </h1>
-            <p class="mt-6 max-w-xl text-lg text-slate-300">
-              Faglier's Mixed Martial Arts is a family-run fight gym in Augusta, Georgia. From your first day on the mat to your first day in the cage, we build discipline, confidence and real skill — for kids and adults of every level.
+      <div class="relative w-full mx-auto max-w-8xl px-4 sm:px-6 lg:px-10 pb-14 sm:pb-20 pt-32">
+        <span class="inline-flex items-center gap-2 rounded-full bg-brand px-3.5 py-1.5 text-xs sm:text-sm font-700 text-ink">
+          <span aria-hidden="true">★</span> 2025 Best of Georgia Winner · Augusta, GA
+        </span>
+        <h1 class="mt-5 max-w-4xl font-display display-xl text-white text-5xl sm:text-7xl lg:text-8xl">
+          Train like a fighter.<br /><span class="text-brand-glow">Grow like family.</span>
+        </h1>
+        <p class="mt-6 max-w-xl text-lg text-white/85">
+          A family-run fight gym in Augusta — teaching Kempo Karate, MMA, Muay Thai, kickboxing, jiu-jitsu and wrestling to kids and adults of every level.
+        </p>
+        <div class="mt-8 flex flex-wrap gap-4">
+          <a href="#visit" class="inline-flex items-center rounded-full bg-brand px-7 py-3.5 font-700 text-ink hover:bg-brand-glow transition-colors">
+            Claim your free class
+          </a>
+          <a href="#train" class="inline-flex items-center rounded-full bg-white/10 px-7 py-3.5 font-700 text-white ring-1 ring-white/40 hover:bg-white/20 transition-colors backdrop-blur-sm">
+            What we train
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ DISCIPLINE MARQUEE ============ -->
+    <div class="bg-ink text-white overflow-hidden border-y border-white/10" aria-hidden="true">
+      <div class="flex whitespace-nowrap py-3.5 marquee-track font-display font-700 uppercase tracking-wide text-sm">
+        <span class="flex shrink-0">
+          <span class="px-6">Kempo Karate</span><span class="px-6 text-brand-glow">✦</span>
+          <span class="px-6">Mixed Martial Arts</span><span class="px-6 text-brand-glow">✦</span>
+          <span class="px-6">Muay Thai</span><span class="px-6 text-brand-glow">✦</span>
+          <span class="px-6">Kickboxing</span><span class="px-6 text-brand-glow">✦</span>
+          <span class="px-6">Brazilian Jiu-Jitsu</span><span class="px-6 text-brand-glow">✦</span>
+          <span class="px-6">Wrestling</span><span class="px-6 text-brand-glow">✦</span>
+        </span>
+        <span class="flex shrink-0">
+          <span class="px-6">Kempo Karate</span><span class="px-6 text-brand-glow">✦</span>
+          <span class="px-6">Mixed Martial Arts</span><span class="px-6 text-brand-glow">✦</span>
+          <span class="px-6">Muay Thai</span><span class="px-6 text-brand-glow">✦</span>
+          <span class="px-6">Kickboxing</span><span class="px-6 text-brand-glow">✦</span>
+          <span class="px-6">Brazilian Jiu-Jitsu</span><span class="px-6 text-brand-glow">✦</span>
+          <span class="px-6">Wrestling</span><span class="px-6 text-brand-glow">✦</span>
+        </span>
+      </div>
+    </div>
+
+    <!-- ============ STORY / STATEMENT ============ -->
+    <section id="story" class="py-20 sm:py-28">
+      <div class="mx-auto max-w-8xl px-4 sm:px-6 lg:px-10">
+        <div class="grid lg:grid-cols-12 gap-10 lg:gap-16 items-end">
+          <div class="lg:col-span-7">
+            <p class="font-600 text-brand-deep">Run by one family. Built for yours.</p>
+            <h2 class="mt-4 font-display display-xl text-4xl sm:text-5xl lg:text-6xl">
+              Augusta's family fight gym for over twenty years.
+            </h2>
+          </div>
+          <div class="lg:col-span-5">
+            <p class="text-lg text-ink/80">
+              What started as Faglier's Kempo Karate School has grown into one of the CSRA's most respected mixed martial arts gyms — founded on Christian principles by Jason Faglier Sr. and still run, mat to front desk, by the Faglier family. Walk through our doors and you're not a membership number. You're family.
             </p>
+          </div>
+        </div>
 
+        <dl class="mt-14 grid grid-cols-2 lg:grid-cols-4 gap-px rounded-3xl overflow-hidden bg-paper-line ring-1 ring-paper-line">
+          <div class="bg-paper p-7">
+            <dt class="font-display font-800 text-4xl sm:text-5xl">20+</dt>
+            <dd class="mt-1 text-sm text-ink-muted">Years training Augusta</dd>
+          </div>
+          <div class="bg-paper p-7">
+            <dt class="font-display font-800 text-4xl sm:text-5xl">6</dt>
+            <dd class="mt-1 text-sm text-ink-muted">Disciplines under one roof</dd>
+          </div>
+          <div class="bg-paper p-7">
+            <dt class="font-display font-800 text-4xl sm:text-5xl">5.0<span class="text-brand-deep">★</span></dt>
+            <dd class="mt-1 text-sm text-ink-muted">Rated by our students</dd>
+          </div>
+          <div class="bg-paper p-7">
+            <dt class="font-display font-800 text-4xl sm:text-5xl">1</dt>
+            <dd class="mt-1 text-sm text-ink-muted">UFC fighter got his start here</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- ============ DISCIPLINES INDEX ============ -->
+    <section id="train" class="py-20 sm:py-28 bg-paper-mist border-y border-paper-line">
+      <div class="mx-auto max-w-8xl px-4 sm:px-6 lg:px-10">
+        <div class="flex flex-wrap items-end justify-between gap-6">
+          <h2 class="font-display display-xl text-4xl sm:text-5xl lg:text-6xl max-w-2xl">Six disciplines.<br />One fight family.</h2>
+          <p class="max-w-sm text-ink/70">Striking, grappling and traditional martial arts that work together. Mix and match, or go all-in — every class meets you where you are.</p>
+        </div>
+
+        <ul class="mt-14 border-t border-paper-line">
+          <li class="grid grid-cols-[3rem_1fr] sm:grid-cols-[5rem_14rem_1fr] items-baseline gap-x-4 sm:gap-x-8 gap-y-1 py-7 border-b border-paper-line">
+            <span class="index-num font-display font-700 text-brand-deep text-lg">01</span>
+            <span class="font-display font-800 text-2xl sm:text-3xl">Kempo Karate</span>
+            <span class="col-start-2 sm:col-start-3 text-ink/70">Our roots — practical, self-defense-first karate with technique you can actually use.</span>
+          </li>
+          <li class="grid grid-cols-[3rem_1fr] sm:grid-cols-[5rem_14rem_1fr] items-baseline gap-x-4 sm:gap-x-8 gap-y-1 py-7 border-b border-paper-line">
+            <span class="index-num font-display font-700 text-brand-deep text-lg">02</span>
+            <span class="font-display font-800 text-2xl sm:text-3xl">Mixed Martial Arts</span>
+            <span class="col-start-2 sm:col-start-3 text-ink/70">Karate, jiu-jitsu, wrestling and kickboxing under one roof — to compete or just train like a pro.</span>
+          </li>
+          <li class="grid grid-cols-[3rem_1fr] sm:grid-cols-[5rem_14rem_1fr] items-baseline gap-x-4 sm:gap-x-8 gap-y-1 py-7 border-b border-paper-line">
+            <span class="index-num font-display font-700 text-brand-deep text-lg">03</span>
+            <span class="font-display font-800 text-2xl sm:text-3xl">Muay Thai</span>
+            <span class="col-start-2 sm:col-start-3 text-ink/70">The art of eight limbs — hands, elbows, knees and kicks, plus serious conditioning.</span>
+          </li>
+          <li class="grid grid-cols-[3rem_1fr] sm:grid-cols-[5rem_14rem_1fr] items-baseline gap-x-4 sm:gap-x-8 gap-y-1 py-7 border-b border-paper-line">
+            <span class="index-num font-display font-700 text-brand-deep text-lg">04</span>
+            <span class="font-display font-800 text-2xl sm:text-3xl">Kickboxing</span>
+            <span class="col-start-2 sm:col-start-3 text-ink/70">Striking and cardio that hits hard — get in shape and learn to throw with power.</span>
+          </li>
+          <li class="grid grid-cols-[3rem_1fr] sm:grid-cols-[5rem_14rem_1fr] items-baseline gap-x-4 sm:gap-x-8 gap-y-1 py-7 border-b border-paper-line">
+            <span class="index-num font-display font-700 text-brand-deep text-lg">05</span>
+            <span class="font-display font-800 text-2xl sm:text-3xl">Brazilian Jiu-Jitsu</span>
+            <span class="col-start-2 sm:col-start-3 text-ink/70">The ground game — leverage, control and submissions, the great equalizer in any fight.</span>
+          </li>
+          <li class="grid grid-cols-[3rem_1fr] sm:grid-cols-[5rem_14rem_1fr] items-baseline gap-x-4 sm:gap-x-8 gap-y-1 py-7 border-b border-paper-line">
+            <span class="index-num font-display font-700 text-brand-deep text-lg">06</span>
+            <span class="font-display font-800 text-2xl sm:text-3xl">Wrestling</span>
+            <span class="col-start-2 sm:col-start-3 text-ink/70">Dictate where the fight happens — takedowns, scrambles and the engine of every MMA game.</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ PROGRAMS (split rows) ============ -->
+    <section id="programs" class="py-20 sm:py-28">
+      <div class="mx-auto max-w-8xl px-4 sm:px-6 lg:px-10">
+        <h2 class="font-display display-xl text-4xl sm:text-5xl lg:text-6xl max-w-3xl">A class for every age &amp; goal.</h2>
+
+        <!-- Kids & Teens -->
+        <div class="mt-14 grid lg:grid-cols-2 gap-8 lg:gap-14 items-center">
+          <div class="relative order-1">
+            <img src="images/gallery/kids.jpg" alt="Two young students wearing their Faglier's MMA shirts at the gym" loading="lazy" width="960" height="960" class="w-full rounded-3xl object-cover object-top aspect-[4/3]" />
+          </div>
+          <div class="order-2">
+            <span class="inline-block rounded-full bg-brand/20 text-brand-deep px-3 py-1 text-xs font-700 uppercase tracking-wide">Kids &amp; Teens</span>
+            <h3 class="mt-4 font-display font-800 text-3xl sm:text-4xl">Confidence that starts on the mat</h3>
+            <p class="mt-4 text-ink/75">Focus, respect and toughness wrapped in a fun, high-energy class. We split our youngsters by age so every kid trains at the right level — and builds the kind of confidence that follows them to school and beyond.</p>
+            <ul class="mt-6 space-y-2 text-ink/80">
+              <li class="flex items-center gap-3"><span class="h-1.5 w-1.5 rounded-full bg-brand" aria-hidden="true"></span> <strong class="font-600">Little Tigers</strong> — ages 4–8</li>
+              <li class="flex items-center gap-3"><span class="h-1.5 w-1.5 rounded-full bg-brand" aria-hidden="true"></span> <strong class="font-600">Youth MMA</strong> — ages 9–12</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Adults -->
+        <div class="mt-16 grid lg:grid-cols-2 gap-8 lg:gap-14 items-center">
+          <div class="lg:order-2">
+            <img src="images/gallery/team-medals.jpg" alt="Faglier's teens and adults together on the mat with their tournament medals" loading="lazy" width="960" height="960" class="w-full rounded-3xl object-cover object-center aspect-[4/3]" />
+          </div>
+          <div class="lg:order-1">
+            <span class="inline-block rounded-full bg-brand/20 text-brand-deep px-3 py-1 text-xs font-700 uppercase tracking-wide">Teens &amp; Adults</span>
+            <h3 class="mt-4 font-display font-800 text-3xl sm:text-4xl">Get in the best shape of your life</h3>
+            <p class="mt-4 text-ink/75">Learn to defend yourself while you train harder than you ever have. Our all-levels adult classes blend striking and grappling — no experience or fitness base required. Come as you are; leave better than you came in.</p>
+            <ul class="mt-6 space-y-2 text-ink/80">
+              <li class="flex items-center gap-3"><span class="h-1.5 w-1.5 rounded-full bg-brand" aria-hidden="true"></span> All-levels striking &amp; grappling</li>
+              <li class="flex items-center gap-3"><span class="h-1.5 w-1.5 rounded-full bg-brand" aria-hidden="true"></span> Optional path to the competition fight team</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ WELLMAKER (dark band) ============ -->
+    <section class="on-dark bg-ink text-white py-20 sm:py-28">
+      <div class="mx-auto max-w-8xl px-4 sm:px-6 lg:px-10">
+        <div class="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+          <div class="order-2 lg:order-1">
+            <p class="font-600 text-brand-glow">Where it started</p>
+            <h2 class="mt-4 font-display display-xl text-4xl sm:text-5xl lg:text-6xl">
+              The gym that started UFC's Malcolm <span class="text-brand-glow">"The Machine"</span> Wellmaker
+            </h2>
+            <p class="mt-6 max-w-xl text-white/80">
+              Augusta's own Malcolm Wellmaker first stepped onto our mats with no combat-sports background — and from that start built a career all the way to the UFC. He's since taken his pro camp to a major fight team, but his mixed martial arts journey began right here. The same coaching and fight family that helped launch a UFC fighter is ready for you.
+            </p>
+            <p class="mt-4 text-sm text-white/55 italic">Every fighter starts somewhere. Yours could start here.</p>
             <div class="mt-8 flex flex-wrap gap-4">
-              <a href="#visit" class="inline-flex items-center rounded-md bg-brand px-6 py-3 font-head font-700 uppercase tracking-wider text-ink hover:bg-brand-glow transition-colors">
-                Try a Class
-              </a>
-              <a href="#train" class="inline-flex items-center rounded-md border border-brand/60 px-6 py-3 font-head font-700 uppercase tracking-wider text-brand hover:bg-brand/10 transition-colors">
-                What We Train
-              </a>
-            </div>
-
-            <!-- Trust strip -->
-            <div class="mt-10 flex flex-wrap items-center gap-x-6 gap-y-3 text-sm">
-              <span class="inline-flex items-center gap-2 text-slate-200">
-                <span class="text-brand text-lg" aria-hidden="true">★★★★★</span>
-                <span class="font-600">5.0 rated</span>
-              </span>
-              <span class="h-4 w-px bg-ink-line" aria-hidden="true"></span>
-              <span class="text-slate-200"><span class="font-600 text-brand">2025</span> Best of Georgia Winner</span>
-              <span class="h-4 w-px bg-ink-line" aria-hidden="true"></span>
-              <span class="text-slate-200">Family-owned, 20+ years</span>
-            </div>
-          </div>
-
-          <!-- Real gym photo: the team under the wall of championship belts -->
-          <div class="relative mx-auto lg:mx-0 max-w-lg w-full">
-            <img src="images/hero-team-belts.jpg" alt="The Faglier's MMA team gathered on the mat in front of a wall lined with championship belts" width="960" height="960" class="w-full rounded-2xl border border-brand/30 shadow-2xl shadow-black/50 object-cover" />
-            <img src="images/logo.jpg" alt="" width="88" height="88" class="logo-badge absolute -bottom-6 -left-6 h-20 w-20 sm:h-24 sm:w-24 rounded-xl ring-2 ring-brand/60 bg-ink p-1" />
-            <span class="absolute top-4 right-4 rounded-full bg-ink/85 backdrop-blur px-3 py-1 font-head uppercase tracking-wider text-xs text-brand border border-brand/30">Wall of champions</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ DISCIPLINES ============ -->
-    <section id="train" class="relative py-20 sm:py-24 bg-ink-soft border-y border-ink-line">
-      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div class="max-w-2xl">
-          <p class="font-head uppercase tracking-[0.2em] text-brand text-sm font-600">What We Train</p>
-          <div class="section-rule mt-3"></div>
-          <h2 class="mt-4 font-display text-4xl sm:text-5xl text-white">Six disciplines. One fight family.</h2>
-          <p class="mt-4 text-slate-300">Our striking, grappling and traditional programs work together. Mix and match, or go all-in — every class meets you where you are.</p>
-        </div>
-
-        <div class="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          <!-- card -->
-          <article class="rounded-xl bg-ink-card border border-ink-line p-6 hover:border-brand/50 transition-colors">
-            <h3 class="font-head text-2xl font-700 text-white">Kempo Karate</h3>
-            <p class="mt-2 text-slate-300 text-sm leading-relaxed">Our roots. Practical, self-defense-first karate with no-nonsense technique you can actually use — taught the way the Faglier family has for over two decades.</p>
-          </article>
-          <article class="rounded-xl bg-ink-card border border-ink-line p-6 hover:border-brand/50 transition-colors">
-            <h3 class="font-head text-2xl font-700 text-white">Mixed Martial Arts</h3>
-            <p class="mt-2 text-slate-300 text-sm leading-relaxed">Karate, jiu-jitsu, wrestling and kickboxing under one roof. Learn to flow between striking and grappling — whether you want to compete or just train like a pro.</p>
-          </article>
-          <article class="rounded-xl bg-ink-card border border-ink-line p-6 hover:border-brand/50 transition-colors">
-            <h3 class="font-head text-2xl font-700 text-white">Muay Thai</h3>
-            <p class="mt-2 text-slate-300 text-sm leading-relaxed">The art of eight limbs. Sharpen your hands, elbows, knees and kicks on the pads and build serious conditioning along the way.</p>
-          </article>
-          <article class="rounded-xl bg-ink-card border border-ink-line p-6 hover:border-brand/50 transition-colors">
-            <h3 class="font-head text-2xl font-700 text-white">Kickboxing</h3>
-            <p class="mt-2 text-slate-300 text-sm leading-relaxed">Striking and cardio that hits hard. A high-energy way to get in shape, relieve stress and learn to throw with power and precision.</p>
-          </article>
-          <article class="rounded-xl bg-ink-card border border-ink-line p-6 hover:border-brand/50 transition-colors">
-            <h3 class="font-head text-2xl font-700 text-white">Brazilian Jiu-Jitsu</h3>
-            <p class="mt-2 text-slate-300 text-sm leading-relaxed">The ground game. Leverage, control and submissions that let a smaller, smarter grappler take over — the great equalizer in any fight.</p>
-          </article>
-          <article class="rounded-xl bg-ink-card border border-ink-line p-6 hover:border-brand/50 transition-colors">
-            <h3 class="font-head text-2xl font-700 text-white">Wrestling</h3>
-            <p class="mt-2 text-slate-300 text-sm leading-relaxed">Dictate where the fight happens. Takedowns, scrambles and top control — the engine that powers every well-rounded mixed martial artist.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ WELLMAKER FEATURE ============ -->
-    <section class="relative overflow-hidden bg-ink py-16 sm:py-20">
-      <div class="absolute inset-0 mat-texture opacity-60" aria-hidden="true"></div>
-      <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div class="rounded-2xl border border-brand/30 bg-gradient-to-br from-brand/10 to-transparent p-6 sm:p-10">
-          <div class="grid lg:grid-cols-[1.4fr_1fr] gap-8 lg:gap-10 items-center">
-            <div>
-              <p class="font-head uppercase tracking-[0.2em] text-brand text-sm font-600">Where it started</p>
-              <h2 class="mt-3 font-display text-4xl sm:text-5xl lg:text-6xl text-white leading-[0.95]">
-                The gym that started<br />UFC's Malcolm <span class="text-brand">"The Machine"</span> Wellmaker
-              </h2>
-              <p class="mt-5 max-w-2xl text-slate-300">
-                Augusta's own Malcolm Wellmaker first stepped onto our mats with no combat-sports background — and from that start built a career all the way to the UFC. He's since taken his pro camp to a major fight team, but his mixed martial arts journey began right here. The same coaching and fight family that helped launch a UFC fighter is ready for you.
-              </p>
-              <p class="mt-4 text-sm text-slate-400 italic">Every fighter starts somewhere. Yours could start here.</p>
-              <div class="mt-6 flex flex-wrap gap-4">
-                <div class="rounded-xl bg-ink-card border border-ink-line px-6 py-3">
-                  <p class="font-display text-3xl text-brand leading-none">UFC</p>
-                  <p class="mt-1 text-xs uppercase tracking-wider text-slate-400">Bantamweight</p>
-                </div>
-                <div class="rounded-xl bg-ink-card border border-ink-line px-6 py-3">
-                  <p class="font-display text-3xl text-brand leading-none">Augusta</p>
-                  <p class="mt-1 text-xs uppercase tracking-wider text-slate-400">Where he got his start</p>
-                </div>
+              <div class="rounded-2xl bg-white/5 ring-1 ring-white/10 px-6 py-4">
+                <p class="font-display font-800 text-3xl text-brand-glow leading-none">UFC</p>
+                <p class="mt-1 text-xs uppercase tracking-wider text-white/55">Bantamweight</p>
+              </div>
+              <div class="rounded-2xl bg-white/5 ring-1 ring-white/10 px-6 py-4">
+                <p class="font-display font-800 text-3xl text-brand-glow leading-none">Augusta</p>
+                <p class="mt-1 text-xs uppercase tracking-wider text-white/55">Where he got his start</p>
               </div>
             </div>
-            <div class="relative">
-              <img src="images/wellmaker-ufc.jpg" alt="A Faglier's MMA fighter flexing at an official UFC weigh-in" width="1080" height="1080" class="w-full rounded-xl border border-brand/30 object-cover shadow-xl shadow-black/50" />
-            </div>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ PROGRAMS ============ -->
-    <section id="programs" class="relative py-20 sm:py-24 bg-ink-soft border-y border-ink-line">
-      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div class="max-w-2xl">
-          <p class="font-head uppercase tracking-[0.2em] text-brand text-sm font-600">Programs</p>
-          <div class="section-rule mt-3"></div>
-          <h2 class="mt-4 font-display text-4xl sm:text-5xl text-white">A class for every age &amp; goal</h2>
-          <p class="mt-4 text-slate-300">From four-year-olds taking their first steps to grown adults chasing a fight, there's a place for you in our gym.</p>
-        </div>
-
-        <div class="mt-12 grid md:grid-cols-2 lg:grid-cols-4 gap-5">
-          <article class="flex flex-col rounded-xl bg-ink-card border border-ink-line overflow-hidden hover:border-brand/50 transition-colors">
-            <div class="bg-brand/10 px-6 py-4 border-b border-ink-line">
-              <p class="font-head uppercase tracking-wider text-brand text-xs font-600">Ages 4–8</p>
-              <h3 class="font-head text-2xl font-700 text-white">Little Tigers</h3>
-            </div>
-            <div class="p-6 text-sm text-slate-300 leading-relaxed">
-              Focus, listening and confidence wrapped in fun. Our youngest students learn respect and basic martial arts skills in a safe, high-energy class.
-            </div>
-          </article>
-
-          <article class="flex flex-col rounded-xl bg-ink-card border border-ink-line overflow-hidden hover:border-brand/50 transition-colors">
-            <div class="bg-brand/10 px-6 py-4 border-b border-ink-line">
-              <p class="font-head uppercase tracking-wider text-brand text-xs font-600">Ages 9–12</p>
-              <h3 class="font-head text-2xl font-700 text-white">Youth MMA</h3>
-            </div>
-            <div class="p-6 text-sm text-slate-300 leading-relaxed">
-              Striking, grappling and discipline for growing kids. We build coordination, toughness and the kind of confidence that follows them off the mat.
-            </div>
-          </article>
-
-          <article class="flex flex-col rounded-xl bg-ink-card border border-ink-line overflow-hidden hover:border-brand/50 transition-colors">
-            <div class="bg-brand/10 px-6 py-4 border-b border-ink-line">
-              <p class="font-head uppercase tracking-wider text-brand text-xs font-600">Teens &amp; Adults</p>
-              <h3 class="font-head text-2xl font-700 text-white">Adult Classes</h3>
-            </div>
-            <div class="p-6 text-sm text-slate-300 leading-relaxed">
-              Get in the best shape of your life while learning to defend yourself. All-levels striking and grappling — no experience or fitness base required.
-            </div>
-          </article>
-
-          <article class="flex flex-col rounded-xl bg-ink-card border border-brand/40 overflow-hidden hover:border-brand transition-colors">
-            <div class="bg-brand px-6 py-4 border-b border-ink-line">
-              <p class="font-head uppercase tracking-wider text-ink/70 text-xs font-700">By invitation</p>
-              <h3 class="font-head text-2xl font-700 text-ink">Fight Team</h3>
-            </div>
-            <div class="p-6 text-sm text-slate-300 leading-relaxed">
-              Ready to compete? Our competition team trains for amateur and pro MMA — the same path that took one of our own all the way to the UFC.
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ STORY / ABOUT ============ -->
-    <section id="story" class="relative py-20 sm:py-24 bg-ink">
-      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div class="grid lg:grid-cols-2 gap-12 items-center">
-          <div>
-            <p class="font-head uppercase tracking-[0.2em] text-brand text-sm font-600">Our Story</p>
-            <div class="section-rule mt-3"></div>
-            <h2 class="mt-4 font-display text-4xl sm:text-5xl text-white">Run by one family. Built for yours.</h2>
-            <div class="mt-6 space-y-4 text-slate-300 leading-relaxed">
-              <p>
-                What started as Faglier's Kempo Karate School has grown into one of the CSRA's most respected mixed martial arts gyms — but the heart of it has never changed. We're a family-run gym, founded on Christian principles, that's been training Augusta for more than twenty years.
-              </p>
-              <p>
-                Founder <span class="text-white font-600">Jason Faglier Sr.</span> built this place to do more than teach people how to fight. We're here to instill discipline, sharpen the mind as much as the body, and give every student — kid or adult — a place to belong.
-              </p>
-              <p>
-                When you walk through our doors, you're not a membership number. You're family. That's why our students keep coming back, why parents trust us with their kids, and why our gym was named a <span class="text-brand font-600">2025 Best of Georgia Regional Winner</span>.
-              </p>
-            </div>
-          </div>
-
-          <div class="rounded-2xl border border-ink-line bg-ink-soft p-8">
-            <p class="font-display text-3xl text-brand leading-tight">"The martial arts are primarily mental more than physical."</p>
-            <p class="mt-4 text-slate-300 leading-relaxed">
-              That belief shapes everything we do. We teach respect, conduct and self-control alongside every punch, kick and takedown — because the discipline you build here is what changes your life outside the gym.
-            </p>
-            <div class="mt-8 grid grid-cols-3 gap-4 text-center">
-              <div>
-                <p class="font-display text-4xl text-white">20+</p>
-                <p class="text-xs uppercase tracking-wider text-slate-400">Years training Augusta</p>
-              </div>
-              <div>
-                <p class="font-display text-4xl text-white">6</p>
-                <p class="text-xs uppercase tracking-wider text-slate-400">Disciplines under one roof</p>
-              </div>
-              <div>
-                <p class="font-display text-4xl text-white">5.0</p>
-                <p class="text-xs uppercase tracking-wider text-slate-400">Star-rated by students</p>
-              </div>
-            </div>
+          <div class="order-1 lg:order-2">
+            <img src="images/wellmaker-ufc.jpg" alt="A Faglier's MMA fighter flexing on the official scale at a UFC weigh-in" loading="lazy" width="1080" height="1080" class="w-full rounded-3xl object-cover ring-1 ring-white/10" />
           </div>
         </div>
       </div>
     </section>
 
     <!-- ============ COACHES ============ -->
-    <section id="coaches" class="relative py-20 sm:py-24 bg-ink-soft border-y border-ink-line">
-      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div class="max-w-2xl">
-          <p class="font-head uppercase tracking-[0.2em] text-brand text-sm font-600">The Coaches</p>
-          <div class="section-rule mt-3"></div>
-          <h2 class="mt-4 font-display text-4xl sm:text-5xl text-white">The Faglier family</h2>
-          <p class="mt-4 text-slate-300">Three generations on the mat. The whole coaching staff is family — and on day one, you become part of it.</p>
+    <section id="coaches" class="py-20 sm:py-28">
+      <div class="mx-auto max-w-8xl px-4 sm:px-6 lg:px-10">
+        <div class="flex flex-wrap items-end justify-between gap-6">
+          <h2 class="font-display display-xl text-4xl sm:text-5xl lg:text-6xl">The Faglier family</h2>
+          <p class="max-w-sm text-ink/70">Three generations on the mat. The whole coaching staff is family — and on day one, you become part of it.</p>
         </div>
 
-        <div class="mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
-          <article class="rounded-xl bg-ink-card border border-ink-line p-6 text-center">
-            <div class="mx-auto h-16 w-16 rounded-full bg-brand/15 ring-1 ring-brand/40 flex items-center justify-center font-display text-2xl text-brand">JS</div>
-            <h3 class="mt-4 font-head text-xl font-700 text-white">Jason Faglier Sr.</h3>
-            <p class="text-brand text-sm font-600 uppercase tracking-wider">Founder &amp; Head Instructor</p>
-            <p class="mt-3 text-sm text-slate-300">The man who started it all. "Pops" has led this gym from its Kempo Karate roots into a full mixed martial arts program.</p>
+        <div class="mt-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <article class="rounded-3xl bg-paper-mist ring-1 ring-paper-line p-7">
+            <div class="h-14 w-14 rounded-full bg-brand/20 text-brand-deep flex items-center justify-center font-display font-800 text-xl">JS</div>
+            <h3 class="mt-5 font-display font-800 text-xl">Jason Faglier Sr.</h3>
+            <p class="text-sm font-600 text-brand-deep">Founder &amp; Head Instructor</p>
+            <p class="mt-3 text-sm text-ink/70">The man who started it all — "Pops" led the gym from its Kempo Karate roots into a full MMA program.</p>
           </article>
-          <article class="rounded-xl bg-ink-card border border-ink-line p-6 text-center">
-            <div class="mx-auto h-16 w-16 rounded-full bg-brand/15 ring-1 ring-brand/40 flex items-center justify-center font-display text-2xl text-brand">JJ</div>
-            <h3 class="mt-4 font-head text-xl font-700 text-white">Jason Faglier Jr.</h3>
-            <p class="text-brand text-sm font-600 uppercase tracking-wider">Instructor</p>
-            <p class="mt-3 text-sm text-slate-300">Carrying the family tradition forward, coaching striking, grappling and the next wave of CSRA fighters.</p>
+          <article class="rounded-3xl bg-paper-mist ring-1 ring-paper-line p-7">
+            <div class="h-14 w-14 rounded-full bg-brand/20 text-brand-deep flex items-center justify-center font-display font-800 text-xl">JJ</div>
+            <h3 class="mt-5 font-display font-800 text-xl">Jason Faglier Jr.</h3>
+            <p class="text-sm font-600 text-brand-deep">Instructor</p>
+            <p class="mt-3 text-sm text-ink/70">Carrying the family tradition forward, coaching striking, grappling and the next wave of CSRA fighters.</p>
           </article>
-          <article class="rounded-xl bg-ink-card border border-ink-line p-6 text-center">
-            <div class="mx-auto h-16 w-16 rounded-full bg-brand/15 ring-1 ring-brand/40 flex items-center justify-center font-display text-2xl text-brand">AF</div>
-            <h3 class="mt-4 font-head text-xl font-700 text-white">Alex Faglier</h3>
-            <p class="text-brand text-sm font-600 uppercase tracking-wider">Instructor</p>
-            <p class="mt-3 text-sm text-slate-300">Bringing energy and precision to every class, from first-timers to competition-team athletes.</p>
+          <article class="rounded-3xl bg-paper-mist ring-1 ring-paper-line p-7">
+            <div class="h-14 w-14 rounded-full bg-brand/20 text-brand-deep flex items-center justify-center font-display font-800 text-xl">AF</div>
+            <h3 class="mt-5 font-display font-800 text-xl">Alex Faglier</h3>
+            <p class="text-sm font-600 text-brand-deep">Instructor</p>
+            <p class="mt-3 text-sm text-ink/70">Bringing energy and precision to every class, from first-timers to competition-team athletes.</p>
           </article>
-          <article class="rounded-xl bg-ink-card border border-ink-line p-6 text-center">
-            <div class="mx-auto h-16 w-16 rounded-full bg-brand/15 ring-1 ring-brand/40 flex items-center justify-center font-display text-2xl text-brand">JF</div>
-            <h3 class="mt-4 font-head text-xl font-700 text-white">Joel Faglier</h3>
-            <p class="text-brand text-sm font-600 uppercase tracking-wider">Instructor</p>
-            <p class="mt-3 text-sm text-slate-300">Coaching the team and the mats with the same family-first mindset the gym was built on.</p>
+          <article class="rounded-3xl bg-paper-mist ring-1 ring-paper-line p-7">
+            <div class="h-14 w-14 rounded-full bg-brand/20 text-brand-deep flex items-center justify-center font-display font-800 text-xl">JF</div>
+            <h3 class="mt-5 font-display font-800 text-xl">Joel Faglier</h3>
+            <p class="text-sm font-600 text-brand-deep">Instructor</p>
+            <p class="mt-3 text-sm text-ink/70">Coaching the team and the mats with the same family-first mindset the gym was built on.</p>
           </article>
         </div>
-        <p class="mt-6 text-xs text-slate-500">Coach bios are a starting point — send us your details and rank/credentials and we'll make them exactly right.</p>
+        <p class="mt-6 text-xs text-ink-muted">Coach bios are a starting point — send us each coach's rank and credentials and we'll make them exact.</p>
+      </div>
+    </section>
+
+    <!-- ============ GALLERY ============ -->
+    <section id="gallery" class="py-20 sm:py-28 bg-paper-mist border-y border-paper-line">
+      <div class="mx-auto max-w-8xl px-4 sm:px-6 lg:px-10">
+        <div class="flex flex-wrap items-end justify-between gap-6">
+          <h2 class="font-display display-xl text-4xl sm:text-5xl lg:text-6xl">Inside the gym</h2>
+          <p class="text-ink/70">See more on
+            <a href="https://www.facebook.com/FagliersKempoKarate/" target="_blank" rel="noopener" class="font-600 text-brand-deep underline underline-offset-4 hover:text-brand-dark">Facebook</a> &amp;
+            <a href="https://www.instagram.com/fagliersmma/" target="_blank" rel="noopener" class="font-600 text-brand-deep underline underline-offset-4 hover:text-brand-dark">Instagram</a>.
+          </p>
+        </div>
+        <div class="mt-12 grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
+          <figure class="col-span-2 row-span-2 overflow-hidden rounded-3xl group">
+            <img src="images/gallery/team-belts.jpg" alt="The Faglier's MMA team on the mat in front of a wall lined with championship belts" loading="lazy" width="960" height="960" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+          </figure>
+          <figure class="overflow-hidden rounded-3xl aspect-square group">
+            <img src="images/gallery/weighin-2.jpg" alt="A Faglier's MMA fighter at an event weigh-in" loading="lazy" width="1080" height="1080" class="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-105" />
+          </figure>
+          <figure class="overflow-hidden rounded-3xl aspect-square group">
+            <img src="images/gallery/athlete-portrait.jpg" alt="A Faglier's MMA athlete at a fight weigh-in" loading="lazy" width="1080" height="1080" class="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-105" />
+          </figure>
+          <figure class="overflow-hidden rounded-3xl aspect-square group">
+            <img src="images/gallery/weighin-1.jpg" alt="A Faglier's MMA fighter at a fight weigh-in" loading="lazy" width="1080" height="1080" class="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-105" />
+          </figure>
+          <figure class="overflow-hidden rounded-3xl aspect-square group">
+            <img src="images/gallery/fighter-portrait.jpg" alt="A Faglier's MMA fighter at a fight weigh-in" loading="lazy" width="1080" height="1080" class="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-105" />
+          </figure>
+        </div>
       </div>
     </section>
 
     <!-- ============ SCHEDULE ============ -->
-    <section id="schedule" class="relative py-20 sm:py-24 bg-ink">
-      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div class="grid lg:grid-cols-[1fr_1.4fr] gap-10 lg:gap-16 items-start">
+    <section id="schedule" class="py-20 sm:py-28">
+      <div class="mx-auto max-w-8xl px-4 sm:px-6 lg:px-10">
+        <div class="grid lg:grid-cols-[1fr_1.5fr] gap-10 lg:gap-16 items-start">
           <div>
-            <p class="font-head uppercase tracking-[0.2em] text-brand text-sm font-600">Class Schedule</p>
-            <div class="section-rule mt-3"></div>
-            <h2 class="mt-4 font-display text-4xl sm:text-5xl text-white">When to show up</h2>
-            <p class="mt-4 text-slate-300">We train weekday evenings. New students are always welcome — just come a few minutes early so we can get you set up.</p>
-            <div class="mt-6 rounded-xl border border-ink-line bg-ink-soft p-5">
-              <p class="font-head uppercase tracking-wider text-brand text-xs font-600">Gym Hours</p>
-              <p class="mt-1 text-slate-200 font-600">Monday – Thursday · 5:00 – 8:30 PM</p>
-              <p class="text-slate-400 text-sm">Friday – Sunday · Closed</p>
+            <h2 class="font-display display-xl text-4xl sm:text-5xl lg:text-6xl">When to<br />show up</h2>
+            <p class="mt-5 text-ink/75">We train weekday evenings. New students are always welcome — just come a few minutes early so we can get you set up.</p>
+            <div class="mt-6 rounded-2xl bg-paper-mist ring-1 ring-paper-line p-5">
+              <p class="text-xs font-700 uppercase tracking-wide text-brand-deep">Gym Hours</p>
+              <p class="mt-1 font-600">Monday – Thursday · 5:00 – 8:30 PM</p>
+              <p class="text-sm text-ink-muted">Friday – Sunday · Closed</p>
             </div>
           </div>
 
-          <div class="overflow-x-auto rounded-xl border border-ink-line">
-            <table class="w-full text-left text-sm">
+          <div class="overflow-hidden rounded-3xl ring-1 ring-paper-line">
+            <table class="w-full text-left">
               <caption class="sr-only">Weekly class schedule for Faglier's Mixed Martial Arts</caption>
-              <thead class="bg-ink-card font-head uppercase tracking-wider text-brand text-xs">
+              <thead class="bg-ink text-white text-xs uppercase tracking-wide">
                 <tr>
-                  <th scope="col" class="px-5 py-3">Class</th>
-                  <th scope="col" class="px-5 py-3">Days</th>
-                  <th scope="col" class="px-5 py-3">Time</th>
+                  <th scope="col" class="px-5 sm:px-6 py-4 font-700">Class</th>
+                  <th scope="col" class="px-5 sm:px-6 py-4 font-700">Days</th>
+                  <th scope="col" class="px-5 sm:px-6 py-4 font-700">Time</th>
                 </tr>
               </thead>
-              <tbody class="divide-y divide-ink-line text-slate-200">
-                <tr>
-                  <th scope="row" class="px-5 py-4 font-600 text-white">Little Tigers <span class="block text-xs font-400 text-slate-400">Ages 4–8</span></th>
-                  <td class="px-5 py-4">Mon &amp; Wed</td>
-                  <td class="px-5 py-4">5:30 – 6:30 PM</td>
+              <tbody class="divide-y divide-paper-line">
+                <tr class="bg-paper">
+                  <th scope="row" class="px-5 sm:px-6 py-5 font-600">Little Tigers <span class="block text-xs font-400 text-ink-muted">Ages 4–8</span></th>
+                  <td class="px-5 sm:px-6 py-5 text-ink/80">Mon &amp; Wed</td>
+                  <td class="px-5 sm:px-6 py-5 text-ink/80">5:30 – 6:30 PM</td>
                 </tr>
-                <tr>
-                  <th scope="row" class="px-5 py-4 font-600 text-white">Youth MMA <span class="block text-xs font-400 text-slate-400">Ages 9–12</span></th>
-                  <td class="px-5 py-4">Tue &amp; Thu</td>
-                  <td class="px-5 py-4">5:30 – 6:30 PM</td>
+                <tr class="bg-paper">
+                  <th scope="row" class="px-5 sm:px-6 py-5 font-600">Youth MMA <span class="block text-xs font-400 text-ink-muted">Ages 9–12</span></th>
+                  <td class="px-5 sm:px-6 py-5 text-ink/80">Tue &amp; Thu</td>
+                  <td class="px-5 sm:px-6 py-5 text-ink/80">5:30 – 6:30 PM</td>
                 </tr>
-                <tr>
-                  <th scope="row" class="px-5 py-4 font-600 text-white">Adult Classes <span class="block text-xs font-400 text-slate-400">Teens &amp; adults</span></th>
-                  <td class="px-5 py-4">Mon – Thu</td>
-                  <td class="px-5 py-4">8:00 PM</td>
+                <tr class="bg-paper">
+                  <th scope="row" class="px-5 sm:px-6 py-5 font-600">Adult Classes <span class="block text-xs font-400 text-ink-muted">Teens &amp; adults</span></th>
+                  <td class="px-5 sm:px-6 py-5 text-ink/80">Mon – Thu</td>
+                  <td class="px-5 sm:px-6 py-5 text-ink/80">8:00 PM</td>
                 </tr>
-                <tr>
-                  <th scope="row" class="px-5 py-4 font-600 text-white">Fight Team <span class="block text-xs font-400 text-slate-400">By invitation</span></th>
-                  <td class="px-5 py-4">By arrangement</td>
-                  <td class="px-5 py-4">Ask a coach</td>
+                <tr class="bg-paper">
+                  <th scope="row" class="px-5 sm:px-6 py-5 font-600">Fight Team <span class="block text-xs font-400 text-ink-muted">By invitation</span></th>
+                  <td class="px-5 sm:px-6 py-5 text-ink/80">By arrangement</td>
+                  <td class="px-5 sm:px-6 py-5 text-ink/80">Ask a coach</td>
                 </tr>
               </tbody>
             </table>
           </div>
         </div>
-        <p class="mt-6 text-xs text-slate-500">Schedule shown is based on the most recent public information. Message us to confirm current class times before your first visit.</p>
-      </div>
-    </section>
-
-    <!-- ============ WHY / VALUES ============ -->
-    <section class="relative py-20 sm:py-24 bg-ink-soft border-y border-ink-line">
-      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div class="max-w-2xl">
-          <p class="font-head uppercase tracking-[0.2em] text-brand text-sm font-600">Why Faglier's</p>
-          <div class="section-rule mt-3"></div>
-          <h2 class="mt-4 font-display text-4xl sm:text-5xl text-white">More than just fighting</h2>
-        </div>
-        <div class="mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
-          <div class="rounded-xl bg-ink-card border border-ink-line p-6">
-            <h3 class="font-head text-xl font-700 text-brand">Discipline</h3>
-            <p class="mt-2 text-sm text-slate-300">Show up, work hard, respect the room. The habits you build here carry into school, work and life.</p>
-          </div>
-          <div class="rounded-xl bg-ink-card border border-ink-line p-6">
-            <h3 class="font-head text-xl font-700 text-brand">Confidence</h3>
-            <p class="mt-2 text-sm text-slate-300">Knowing you can handle yourself changes how you carry yourself everywhere else.</p>
-          </div>
-          <div class="rounded-xl bg-ink-card border border-ink-line p-6">
-            <h3 class="font-head text-xl font-700 text-brand">Real Self-Defense</h3>
-            <p class="mt-2 text-sm text-slate-300">Practical skills built for the real world — not just for points or trophies.</p>
-          </div>
-          <div class="rounded-xl bg-ink-card border border-ink-line p-6">
-            <h3 class="font-head text-xl font-700 text-brand">Family</h3>
-            <p class="mt-2 text-sm text-slate-300">A welcoming, supportive room where you train hard and leave better than you came in.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ GALLERY ============ -->
-    <section id="gallery" class="relative py-20 sm:py-24 bg-ink">
-      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div class="max-w-2xl">
-          <p class="font-head uppercase tracking-[0.2em] text-brand text-sm font-600">Inside the Gym</p>
-          <div class="section-rule mt-3"></div>
-          <h2 class="mt-4 font-display text-4xl sm:text-5xl text-white">Real mats. Real fighters. Real family.</h2>
-          <p class="mt-4 text-slate-300">A look at our team, our students and the wall of belts that says everything about the work that happens here.</p>
-        </div>
-        <div class="mt-12 grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
-          <figure class="group relative overflow-hidden rounded-xl border border-ink-line sm:col-span-2 sm:row-span-2 aspect-[4/3] sm:aspect-auto">
-            <img src="images/gallery/team-belts.jpg" alt="The Faglier's MMA team gathered on the mat in front of a wall lined with championship belts" loading="lazy" width="960" height="960" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
-          </figure>
-          <figure class="group relative overflow-hidden rounded-xl border border-ink-line aspect-square">
-            <img src="images/gallery/team-medals.jpg" alt="Faglier's students and competitors holding tournament medals on the gym mat" loading="lazy" width="960" height="960" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
-          </figure>
-          <figure class="group relative overflow-hidden rounded-xl border border-ink-line aspect-square">
-            <img src="images/gallery/kids.jpg" alt="Young students wearing their Faglier's MMA shirts" loading="lazy" width="960" height="960" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
-          </figure>
-          <figure class="group relative overflow-hidden rounded-xl border border-ink-line aspect-square">
-            <img src="images/gallery/weighin-1.jpg" alt="A Faglier's MMA fighter at a fight weigh-in" loading="lazy" width="1080" height="1080" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
-          </figure>
-          <figure class="group relative overflow-hidden rounded-xl border border-ink-line aspect-square">
-            <img src="images/gallery/weighin-2.jpg" alt="Faglier's MMA fighters at an event weigh-in" loading="lazy" width="1080" height="1080" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
-          </figure>
-        </div>
-        <p class="mt-6 text-sm text-slate-400">See more on <a href="https://www.facebook.com/FagliersKempoKarate/" target="_blank" rel="noopener" class="text-brand underline decoration-brand/50 underline-offset-4 hover:text-brand-glow">Facebook</a> and <a href="https://www.instagram.com/fagliersmma/" target="_blank" rel="noopener" class="text-brand underline decoration-brand/50 underline-offset-4 hover:text-brand-glow">Instagram</a>.</p>
+        <p class="mt-6 text-xs text-ink-muted">Schedule shown is based on the most recent public information. Message us to confirm current class times before your first visit.</p>
       </div>
     </section>
 
     <!-- ============ FAQ ============ -->
-    <section class="relative py-20 sm:py-24 bg-ink-soft border-y border-ink-line">
-      <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
-        <div class="text-center">
-          <p class="font-head uppercase tracking-[0.2em] text-brand text-sm font-600">Questions</p>
-          <h2 class="mt-3 font-display text-4xl sm:text-5xl text-white">Before your first class</h2>
-        </div>
-        <div class="mt-10 space-y-3">
-          <details class="group rounded-xl border border-ink-line bg-ink-soft p-5">
-            <summary class="flex items-center justify-between gap-4 font-head text-lg font-600 text-white">
+    <section class="py-20 sm:py-28 bg-paper-mist border-y border-paper-line">
+      <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-10">
+        <h2 class="font-display display-xl text-4xl sm:text-5xl text-center">Before your first class</h2>
+        <div class="mt-12 space-y-3">
+          <details class="group rounded-2xl bg-paper ring-1 ring-paper-line p-5 sm:p-6">
+            <summary class="flex items-center justify-between gap-4 font-display font-700 text-lg">
               Do I need any experience?
-              <span class="faq-plus text-brand text-2xl leading-none transition-transform" aria-hidden="true">+</span>
+              <span class="faq-icon text-brand-deep text-2xl leading-none transition-transform" aria-hidden="true">+</span>
             </summary>
-            <p class="mt-3 text-slate-300 text-sm leading-relaxed">None at all. Most of our students walk in with zero background. Every class has options for total beginners, and our coaches will look after you from your very first minute on the mat.</p>
+            <p class="mt-3 text-ink/75">None at all. Most of our students walk in with zero background. Every class has options for total beginners, and our coaches look after you from your very first minute on the mat.</p>
           </details>
-          <details class="group rounded-xl border border-ink-line bg-ink-soft p-5">
-            <summary class="flex items-center justify-between gap-4 font-head text-lg font-600 text-white">
+          <details class="group rounded-2xl bg-paper ring-1 ring-paper-line p-5 sm:p-6">
+            <summary class="flex items-center justify-between gap-4 font-display font-700 text-lg">
               How old does my child need to be?
-              <span class="faq-plus text-brand text-2xl leading-none transition-transform" aria-hidden="true">+</span>
+              <span class="faq-icon text-brand-deep text-2xl leading-none transition-transform" aria-hidden="true">+</span>
             </summary>
-            <p class="mt-3 text-slate-300 text-sm leading-relaxed">Our Little Tigers program starts at age 4. Kids 9–12 move into our Youth MMA class. We'll help you find the right fit when you visit.</p>
+            <p class="mt-3 text-ink/75">Our Little Tigers program starts at age 4. Kids 9–12 move into Youth MMA. We'll help you find the right fit when you visit.</p>
           </details>
-          <details class="group rounded-xl border border-ink-line bg-ink-soft p-5">
-            <summary class="flex items-center justify-between gap-4 font-head text-lg font-600 text-white">
+          <details class="group rounded-2xl bg-paper ring-1 ring-paper-line p-5 sm:p-6">
+            <summary class="flex items-center justify-between gap-4 font-display font-700 text-lg">
               What should I wear and bring?
-              <span class="faq-plus text-brand text-2xl leading-none transition-transform" aria-hidden="true">+</span>
+              <span class="faq-icon text-brand-deep text-2xl leading-none transition-transform" aria-hidden="true">+</span>
             </summary>
-            <p class="mt-3 text-slate-300 text-sm leading-relaxed">Comfortable workout clothes and a water bottle are perfect for your first class. We'll guide you on any gear you need as you keep training.</p>
+            <p class="mt-3 text-ink/75">Comfortable workout clothes and a water bottle are perfect for your first class. We'll guide you on any gear you need as you keep training.</p>
           </details>
-          <details class="group rounded-xl border border-ink-line bg-ink-soft p-5">
-            <summary class="flex items-center justify-between gap-4 font-head text-lg font-600 text-white">
+          <details class="group rounded-2xl bg-paper ring-1 ring-paper-line p-5 sm:p-6">
+            <summary class="flex items-center justify-between gap-4 font-display font-700 text-lg">
               Do I have to fight or compete?
-              <span class="faq-plus text-brand text-2xl leading-none transition-transform" aria-hidden="true">+</span>
+              <span class="faq-icon text-brand-deep text-2xl leading-none transition-transform" aria-hidden="true">+</span>
             </summary>
-            <p class="mt-3 text-slate-300 text-sm leading-relaxed">Never. Plenty of our students train purely for fitness, confidence and self-defense. Competing is an option for those who want it — including a path to our fight team — but it's entirely up to you.</p>
+            <p class="mt-3 text-ink/75">Never. Plenty of our students train purely for fitness, confidence and self-defense. Competing is an option for those who want it — including a path to our fight team — but it's entirely up to you.</p>
           </details>
-          <details class="group rounded-xl border border-ink-line bg-ink-soft p-5">
-            <summary class="flex items-center justify-between gap-4 font-head text-lg font-600 text-white">
+          <details class="group rounded-2xl bg-paper ring-1 ring-paper-line p-5 sm:p-6">
+            <summary class="flex items-center justify-between gap-4 font-display font-700 text-lg">
               How do I get started?
-              <span class="faq-plus text-brand text-2xl leading-none transition-transform" aria-hidden="true">+</span>
+              <span class="faq-icon text-brand-deep text-2xl leading-none transition-transform" aria-hidden="true">+</span>
             </summary>
-            <p class="mt-3 text-slate-300 text-sm leading-relaxed">Message us on Facebook or Instagram, or give us a call. Tell us a little about who's training and your goals, and we'll get you booked into a class.</p>
+            <p class="mt-3 text-ink/75">Message us on Facebook or Instagram, or give us a call. Tell us a little about who's training and your goals, and we'll get you booked into a class.</p>
           </details>
         </div>
       </div>
     </section>
 
-    <!-- ============ VISIT / CONTACT ============ -->
-    <section id="visit" class="relative py-20 sm:py-24 bg-ink border-t border-ink-line">
-      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div class="grid lg:grid-cols-2 gap-12">
-          <div>
-            <p class="font-head uppercase tracking-[0.2em] text-brand text-sm font-600">Visit Us</p>
-            <div class="section-rule mt-3"></div>
-            <h2 class="mt-4 font-display text-4xl sm:text-5xl text-white">Your first class starts here</h2>
-            <p class="mt-4 text-slate-300 max-w-md">Stop in during class hours, or reach out and we'll set you up. We can't wait to meet you on the mat.</p>
+    <!-- ============ VISIT / CTA ============ -->
+    <section id="visit" class="py-20 sm:py-28">
+      <div class="mx-auto max-w-8xl px-4 sm:px-6 lg:px-10">
+        <div class="rounded-[2rem] bg-ink text-white on-dark overflow-hidden">
+          <div class="grid lg:grid-cols-2">
+            <div class="p-8 sm:p-12 lg:p-14">
+              <h2 class="font-display display-xl text-4xl sm:text-5xl">Your first class starts here</h2>
+              <p class="mt-4 max-w-md text-white/80">Stop in during class hours, or reach out and we'll set you up. We can't wait to meet you on the mat.</p>
 
-            <dl class="mt-8 space-y-5">
-              <div class="flex gap-4">
-                <span class="mt-1 text-brand" aria-hidden="true">
-                  <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a2 2 0 01-2.828 0l-4.243-4.243a8 8 0 1111.314 0z"/><circle cx="12" cy="11" r="3"/></svg>
-                </span>
-                <div>
-                  <dt class="font-head uppercase tracking-wider text-slate-400 text-xs">Location</dt>
-                  <dd class="text-slate-100">266 Bobby Jones Expressway, Suite 19<br />Augusta, GA 30907</dd>
+              <dl class="mt-9 space-y-6">
+                <div class="flex gap-4">
+                  <span class="mt-0.5 text-brand-glow" aria-hidden="true">
+                    <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a2 2 0 01-2.828 0l-4.243-4.243a8 8 0 1111.314 0z"/><circle cx="12" cy="11" r="3"/></svg>
+                  </span>
+                  <div>
+                    <dt class="text-xs uppercase tracking-wider text-white/55">Location</dt>
+                    <dd class="text-white">266 Bobby Jones Expressway, Suite 19<br />Augusta, GA 30907</dd>
+                  </div>
                 </div>
-              </div>
-              <div class="flex gap-4">
-                <span class="mt-1 text-brand" aria-hidden="true">
-                  <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11 11 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
-                </span>
-                <div>
-                  <dt class="font-head uppercase tracking-wider text-slate-400 text-xs">Phone</dt>
-                  <dd><a href="tel:+17067269068" class="text-slate-100 underline decoration-brand/50 underline-offset-4 hover:text-brand">(706) 726-9068</a></dd>
+                <div class="flex gap-4">
+                  <span class="mt-0.5 text-brand-glow" aria-hidden="true">
+                    <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11 11 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                  </span>
+                  <div>
+                    <dt class="text-xs uppercase tracking-wider text-white/55">Phone</dt>
+                    <dd><a href="tel:+17067269068" class="text-white underline decoration-brand-glow/60 underline-offset-4 hover:text-brand-glow">(706) 726-9068</a></dd>
+                  </div>
                 </div>
-              </div>
-              <div class="flex gap-4">
-                <span class="mt-1 text-brand" aria-hidden="true">
-                  <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path stroke-linecap="round" stroke-linejoin="round" d="M12 7v5l3 2"/></svg>
-                </span>
-                <div>
-                  <dt class="font-head uppercase tracking-wider text-slate-400 text-xs">Class Hours</dt>
-                  <dd class="text-slate-100">Mon – Thu · 5:00 – 8:30 PM</dd>
+                <div class="flex gap-4">
+                  <span class="mt-0.5 text-brand-glow" aria-hidden="true">
+                    <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path stroke-linecap="round" stroke-linejoin="round" d="M12 7v5l3 2"/></svg>
+                  </span>
+                  <div>
+                    <dt class="text-xs uppercase tracking-wider text-white/55">Class Hours</dt>
+                    <dd class="text-white">Mon – Thu · 5:00 – 8:30 PM</dd>
+                  </div>
                 </div>
-              </div>
-            </dl>
+              </dl>
 
-            <div class="mt-8 flex flex-wrap gap-3">
-              <a href="https://www.facebook.com/FagliersKempoKarate/" target="_blank" rel="noopener" class="inline-flex items-center gap-2 rounded-md bg-brand px-5 py-3 font-head font-700 uppercase tracking-wider text-ink hover:bg-brand-glow transition-colors">
-                Message on Facebook
-              </a>
-              <a href="https://www.instagram.com/fagliersmma/" target="_blank" rel="noopener" class="inline-flex items-center gap-2 rounded-md border border-brand/60 px-5 py-3 font-head font-700 uppercase tracking-wider text-brand hover:bg-brand/10 transition-colors">
-                @fagliersmma
-              </a>
+              <div class="mt-9 flex flex-wrap gap-3">
+                <a href="https://www.facebook.com/FagliersKempoKarate/" target="_blank" rel="noopener" class="inline-flex items-center rounded-full bg-brand px-6 py-3 font-700 text-ink hover:bg-brand-glow transition-colors">Message on Facebook</a>
+                <a href="https://www.instagram.com/fagliersmma/" target="_blank" rel="noopener" class="inline-flex items-center rounded-full bg-white/10 px-6 py-3 font-700 text-white ring-1 ring-white/30 hover:bg-white/20 transition-colors">@fagliersmma</a>
+              </div>
             </div>
-          </div>
 
-          <div class="rounded-2xl overflow-hidden border border-ink-line min-h-[340px] bg-ink-card">
-            <iframe
-              title="Map to Faglier's Mixed Martial Arts in Augusta, GA"
-              src="https://www.google.com/maps?q=266+Bobby+Jones+Expressway,+Augusta,+GA+30907&output=embed"
-              class="w-full h-full min-h-[340px]"
-              style="border:0;"
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-              allowfullscreen></iframe>
+            <div class="min-h-[320px] lg:min-h-full bg-white/5">
+              <iframe
+                title="Map to Faglier's Mixed Martial Arts in Augusta, GA"
+                src="https://www.google.com/maps?q=266+Bobby+Jones+Expressway,+Augusta,+GA+30907&output=embed"
+                class="w-full h-full min-h-[320px]"
+                style="border:0;"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                allowfullscreen></iframe>
+            </div>
           </div>
         </div>
       </div>
@@ -648,35 +572,35 @@
   </main>
 
   <!-- ============ FOOTER ============ -->
-  <footer class="bg-ink border-t border-ink-line">
-    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
-      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+  <footer class="bg-ink text-white on-dark border-t border-white/10">
+    <div class="mx-auto max-w-8xl px-4 sm:px-6 lg:px-10 py-14">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
         <div class="sm:col-span-2">
           <div class="flex items-center gap-3">
-            <img src="images/logo.jpg" alt="" width="44" height="44" class="logo-badge h-11 w-11 rounded-md ring-1 ring-ink-line" />
-            <span class="font-head font-700 tracking-wide text-lg"><span class="text-white">FAGLIER'S</span> <span class="text-brand">MMA</span></span>
+            <img src="images/logo.jpg" alt="" width="48" height="48" class="logo-badge h-12 w-12 rounded-lg bg-white ring-1 ring-white/10" />
+            <span class="font-display font-800 tracking-tight text-lg">FAGLIER'S<span class="text-brand-glow">&nbsp;MMA</span></span>
           </div>
-          <p class="mt-4 max-w-sm text-sm text-slate-400">Family-run mixed martial arts in Augusta, GA. Kempo Karate, MMA, Muay Thai, kickboxing, Brazilian Jiu-Jitsu and wrestling for all ages.</p>
+          <p class="mt-4 max-w-sm text-sm text-white/65">Family-run mixed martial arts in Augusta, GA. Kempo Karate, MMA, Muay Thai, kickboxing, Brazilian Jiu-Jitsu and wrestling for all ages.</p>
         </div>
         <div>
-          <h2 class="font-head uppercase tracking-wider text-slate-300 text-sm font-600">Explore</h2>
-          <ul class="mt-3 space-y-2 text-sm text-slate-400">
-            <li><a href="#train" class="hover:text-brand">What We Train</a></li>
-            <li><a href="#programs" class="hover:text-brand">Programs</a></li>
-            <li><a href="#schedule" class="hover:text-brand">Schedule</a></li>
-            <li><a href="#visit" class="hover:text-brand">Visit</a></li>
+          <h2 class="text-xs uppercase tracking-wider text-white/55 font-700">Explore</h2>
+          <ul class="mt-4 space-y-2.5 text-sm text-white/80">
+            <li><a href="#train" class="hover:text-brand-glow">What we train</a></li>
+            <li><a href="#programs" class="hover:text-brand-glow">Programs</a></li>
+            <li><a href="#schedule" class="hover:text-brand-glow">Schedule</a></li>
+            <li><a href="#visit" class="hover:text-brand-glow">Visit</a></li>
           </ul>
         </div>
         <div>
-          <h2 class="font-head uppercase tracking-wider text-slate-300 text-sm font-600">Connect</h2>
-          <ul class="mt-3 space-y-2 text-sm text-slate-400">
-            <li><a href="https://www.facebook.com/FagliersKempoKarate/" target="_blank" rel="noopener" class="hover:text-brand">Facebook</a></li>
-            <li><a href="https://www.instagram.com/fagliersmma/" target="_blank" rel="noopener" class="hover:text-brand">Instagram</a></li>
-            <li><a href="tel:+17067269068" class="hover:text-brand">(706) 726-9068</a></li>
+          <h2 class="text-xs uppercase tracking-wider text-white/55 font-700">Connect</h2>
+          <ul class="mt-4 space-y-2.5 text-sm text-white/80">
+            <li><a href="https://www.facebook.com/FagliersKempoKarate/" target="_blank" rel="noopener" class="hover:text-brand-glow">Facebook</a></li>
+            <li><a href="https://www.instagram.com/fagliersmma/" target="_blank" rel="noopener" class="hover:text-brand-glow">Instagram</a></li>
+            <li><a href="tel:+17067269068" class="hover:text-brand-glow">(706) 726-9068</a></li>
           </ul>
         </div>
       </div>
-      <div class="mt-10 pt-6 border-t border-ink-line flex flex-col sm:flex-row justify-between gap-3 text-xs text-slate-500">
+      <div class="mt-12 pt-6 border-t border-white/10 flex flex-col sm:flex-row justify-between gap-3 text-xs text-white/50">
         <p>© <span id="year">2026</span> Faglier's Mixed Martial Arts. All rights reserved.</p>
         <p>Augusta · Martinez · Evans · the CSRA</p>
       </div>
@@ -684,22 +608,54 @@
   </footer>
 
   <script>
-    // Mobile nav toggle
     (function () {
-      var btn = document.getElementById('navToggle');
+      // Sticky header: transparent over hero, solid paper on scroll
+      var header = document.getElementById('siteHeader');
+      var navText = document.querySelector('[data-nav-text]');
+      var navAccent = document.querySelector('[data-nav-accent]');
+      var navLinks = document.querySelector('[data-nav-links]');
+      var navToggle = document.querySelector('[data-nav-toggle]');
+      function onScroll() {
+        var solid = window.scrollY > 24;
+        header.classList.toggle('bg-paper/95', solid);
+        header.classList.toggle('backdrop-blur', solid);
+        header.classList.toggle('shadow-sm', solid);
+        header.classList.toggle('ring-1', solid);
+        header.classList.toggle('ring-black/5', solid);
+        // Transparent state: dark top gradient keeps white nav text legible over the photo
+        header.classList.toggle('bg-gradient-to-b', !solid);
+        header.classList.toggle('from-black/55', !solid);
+        header.classList.toggle('to-transparent', !solid);
+        // text color: white over hero, ink when solid
+        [navText, navLinks].forEach(function (el) {
+          if (!el) return;
+          el.classList.toggle('text-white', !solid);
+          el.classList.toggle('text-ink', solid);
+          el.classList.toggle('nav-shadow', !solid);
+        });
+        if (navAccent) {
+          navAccent.classList.toggle('text-brand-glow', !solid);
+          navAccent.classList.toggle('text-brand-deep', solid);
+        }
+      }
+      onScroll();
+      window.addEventListener('scroll', onScroll, { passive: true });
+
+      // Mobile menu
       var menu = document.getElementById('mobileMenu');
-      if (btn && menu) {
-        btn.addEventListener('click', function () {
+      if (navToggle && menu) {
+        navToggle.addEventListener('click', function () {
           var open = menu.classList.toggle('hidden') === false;
-          btn.setAttribute('aria-expanded', String(open));
+          navToggle.setAttribute('aria-expanded', String(open));
         });
         menu.querySelectorAll('a').forEach(function (a) {
           a.addEventListener('click', function () {
             menu.classList.add('hidden');
-            btn.setAttribute('aria-expanded', 'false');
+            navToggle.setAttribute('aria-expanded', 'false');
           });
         });
       }
+
       var y = document.getElementById('year');
       if (y) y.textContent = new Date().getFullYear();
     })();

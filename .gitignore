@@ -34,3 +34,5 @@ preview-*.png
 
 # OMC/assistant working state
 .omx/
+ref-*.jpeg
+new-*.jpeg

@@ -47,13 +47,31 @@ with the gym before going live:
   credentials and lineage were not public; add the real details.
 - **Pricing / trial policy** — not published anywhere; no prices are stated on the site yet.
 - **Founding year** — sources differ (≈1999–2001); the site says "20+ years" to stay safe.
-- **Photos** — only the logo was available. Drop real gym/action photos into `images/` and
-  wire them into the hero, programs and coaches sections.
-- **Domain** — set the production domain in `CNAME`, and update the canonical/OG URLs in
-  `index.html`, plus `robots.txt` and `sitemap.xml` (currently placeholder `fagliersmma.com`).
+- **Photos** — pulled from the gym's public Facebook page, which skews heavily to fighter
+  weigh-in portraits. We have the logo, the belt-wall team photo, a medals group shot, two
+  kids, and several weigh-in portraits. **Better class/training-action and kids-class photos
+  are still wanted** (TABLED — to revisit). Drop new photos into `images/` (heroes/features)
+  or `images/gallery/` and update the `src` + `alt` in `index.html`.
+- **Coaches photos** — none available; cards use initials avatars.
+- **Domain** — set the production domain in a `CNAME` file (none committed yet), and update the
+  canonical/OG URLs in `index.html`, plus `robots.txt` and `sitemap.xml` (placeholder
+  `fagliersmma.com`).
 
-## Brand
+## Brand &amp; design
 
-- **Green:** `#6CBD45` (sampled from the official logo)
-- **Fonts:** Bebas Neue (display), Barlow Condensed (headings), Barlow (body)
+Modern, clean, editorial — deliberately distinct from the sibling Backyard Bullies site.
+
+- **Palette:** warm light "paper" base (`#FAFAF6`) with a near-black ink (`#14160F`) and a
+  single brand-green accent (`#6CBD45`; `brand.deep` `#2F6A1E` is the contrast-safe green for
+  text on light). One dramatic dark band (the Wellmaker section).
+- **Fonts:** Archivo (heavy display/headings) + Inter (body).
+- **Layout:** full-bleed photo hero, a discipline marquee, a numbered discipline index,
+  alternating image/text program rows, clean tables and a dark contact card.
+- **Accessibility:** skip link, semantic landmarks, ARIA on the menu/map, visible focus rings
+  (bright-green ring on dark bands), reduced-motion handling, contrast-safe color usage.
 - Logo art lives at `images/logo.jpg`.
+
+## Tabled / next session
+
+- Source better training-action and kids photos for the Programs section.
+- Confirm the verify-before-launch items above, then set the domain and push to GitHub.
