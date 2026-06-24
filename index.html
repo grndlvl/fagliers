@@ -99,7 +99,7 @@
   </a>
 
   <!-- ============ HEADER ============ -->
-  <header id="siteHeader" class="fixed inset-x-0 top-0 z-50 transition-colors duration-300">
+  <header id="siteHeader" class="fixed inset-x-0 top-0 z-50 bg-paper/95 backdrop-blur shadow-sm ring-1 ring-black/5">
     <nav class="mx-auto max-w-8xl px-4 sm:px-6 lg:px-10" aria-label="Primary">
       <div class="flex h-[4.5rem] items-center justify-between">
         <a href="#top" class="flex items-center gap-3 group">
@@ -604,40 +604,9 @@
 
   <script>
     (function () {
-      // Sticky header: transparent over hero, solid paper on scroll
-      var header = document.getElementById('siteHeader');
-      var navText = document.querySelector('[data-nav-text]');
-      var navAccent = document.querySelector('[data-nav-accent]');
-      var navLinks = document.querySelector('[data-nav-links]');
-      var navToggle = document.querySelector('[data-nav-toggle]');
-      function onScroll() {
-        var solid = window.scrollY > 24;
-        header.classList.toggle('bg-paper/95', solid);
-        header.classList.toggle('backdrop-blur', solid);
-        header.classList.toggle('shadow-sm', solid);
-        header.classList.toggle('ring-1', solid);
-        header.classList.toggle('ring-black/5', solid);
-        // Transparent state: dark top gradient keeps white nav text legible over the photo
-        header.classList.toggle('bg-gradient-to-b', !solid);
-        header.classList.toggle('from-black/55', !solid);
-        header.classList.toggle('to-transparent', !solid);
-        // text color: white over hero, ink when solid
-        [navText, navLinks].forEach(function (el) {
-          if (!el) return;
-          el.classList.toggle('text-white', !solid);
-          el.classList.toggle('text-ink', solid);
-          el.classList.toggle('nav-shadow', !solid);
-        });
-        if (navAccent) {
-          navAccent.classList.toggle('text-brand-glow', !solid);
-          navAccent.classList.toggle('text-brand-deep', solid);
-        }
-      }
-      onScroll();
-      window.addEventListener('scroll', onScroll, { passive: true });
-
-      // Mobile menu
+      // Mobile menu (header stays a solid light bar at all times)
       var menu = document.getElementById('mobileMenu');
+      var navToggle = document.querySelector('[data-nav-toggle]');
       if (navToggle && menu) {
         navToggle.addEventListener('click', function () {
           var open = menu.classList.toggle('hidden') === false;
