@@ -99,7 +99,7 @@
   </a>
 
   <!-- ============ HEADER ============ -->
-  <header id="siteHeader" class="fixed inset-x-0 top-0 z-50 bg-paper/95 backdrop-blur shadow-sm ring-1 ring-black/5">
+  <header id="siteHeader" class="fixed inset-x-0 top-0 z-50 bg-paper shadow-sm ring-1 ring-black/5">
     <nav class="mx-auto max-w-8xl px-4 sm:px-6 lg:px-10" aria-label="Primary">
       <div class="flex h-[4.5rem] items-center justify-between">
         <a href="#top" class="flex items-center gap-3 group">
@@ -114,6 +114,7 @@
           <a href="#programs" class="hover:text-brand-deep transition-colors">Programs</a>
           <a href="#coaches" class="hover:text-brand-deep transition-colors">Coaches</a>
           <a href="#schedule" class="hover:text-brand-deep transition-colors">Schedule</a>
+          <a href="#pricing" class="hover:text-brand-deep transition-colors">Pricing</a>
           <a href="#gallery" class="hover:text-brand-deep transition-colors">Gallery</a>
           <a href="#visit" class="hover:text-brand-deep transition-colors">Visit</a>
         </div>
@@ -135,6 +136,7 @@
           <a href="#programs" class="rounded-lg px-3 py-2.5 hover:bg-paper-mist">Programs</a>
           <a href="#coaches" class="rounded-lg px-3 py-2.5 hover:bg-paper-mist">Coaches</a>
           <a href="#schedule" class="rounded-lg px-3 py-2.5 hover:bg-paper-mist">Schedule</a>
+          <a href="#pricing" class="rounded-lg px-3 py-2.5 hover:bg-paper-mist">Pricing</a>
           <a href="#gallery" class="rounded-lg px-3 py-2.5 hover:bg-paper-mist">Gallery</a>
           <a href="#visit" class="rounded-lg px-3 py-2.5 hover:bg-paper-mist">Visit</a>
           <a href="#visit" class="mt-1 rounded-lg bg-brand px-3 py-2.5 font-700 text-ink text-center">Free Trial Class →</a>
@@ -147,10 +149,12 @@
     <span id="top"></span>
 
     <!-- ============ HERO ============ -->
-    <section class="relative min-h-[88svh] flex items-end on-dark">
-      <!-- image starts below the solid header bar so the team's heads aren't cropped; floor crops at the bottom -->
-      <img src="images/hero-team-belts.jpg" alt="" aria-hidden="true" class="absolute inset-x-0 top-[4.5rem] bottom-0 w-full object-cover object-top" />
-      <div class="absolute inset-x-0 top-[4.5rem] bottom-0 hero-scrim" aria-hidden="true"></div>
+    <section class="relative min-h-[78svh] flex items-end overflow-hidden on-dark">
+      <!-- media layer: fills the area below the 4.5rem header bar and is clipped so it can never spill into the next section -->
+      <div class="absolute inset-x-0 top-[4.5rem] bottom-0 overflow-hidden">
+        <img src="images/hero-team-belts.jpg" alt="" aria-hidden="true" class="h-full w-full object-cover object-top" />
+        <div class="absolute inset-0 hero-scrim" aria-hidden="true"></div>
+      </div>
 
       <div class="relative w-full mx-auto max-w-8xl px-4 sm:px-6 lg:px-10 pb-14 sm:pb-20 pt-32">
         <span class="inline-flex items-center gap-2 rounded-full bg-brand px-3.5 py-1.5 text-xs sm:text-sm font-700 text-ink">
@@ -286,8 +290,8 @@
             <h3 class="mt-4 font-display font-800 text-3xl sm:text-4xl">Confidence that starts on the mat</h3>
             <p class="mt-4 text-ink/75">Focus, respect and toughness wrapped in a fun, high-energy class. We split our youngsters by age so every kid trains at the right level — and builds the kind of confidence that follows them to school and beyond.</p>
             <ul class="mt-6 space-y-2 text-ink/80">
-              <li class="flex items-center gap-3"><span class="h-1.5 w-1.5 rounded-full bg-brand" aria-hidden="true"></span> <strong class="font-600">Little Tigers</strong> — ages 4–8</li>
-              <li class="flex items-center gap-3"><span class="h-1.5 w-1.5 rounded-full bg-brand" aria-hidden="true"></span> <strong class="font-600">Youth MMA</strong> — ages 9–12</li>
+              <li class="flex items-center gap-3"><span class="h-1.5 w-1.5 rounded-full bg-brand" aria-hidden="true"></span> <strong class="font-600">Kids class</strong> — ages 4–8</li>
+              <li class="flex items-center gap-3"><span class="h-1.5 w-1.5 rounded-full bg-brand" aria-hidden="true"></span> <strong class="font-600">Kids class</strong> — ages 9–12</li>
             </ul>
           </div>
         </div>
@@ -307,6 +311,26 @@
             </ul>
           </div>
         </div>
+      </div>
+    </section>
+
+    <!-- ============ WHY TRAIN WITH US (values) ============ -->
+    <section class="py-20 sm:py-28 bg-paper-mist border-y border-paper-line">
+      <div class="mx-auto max-w-8xl px-4 sm:px-6 lg:px-10">
+        <div class="flex flex-wrap items-end justify-between gap-6">
+          <h2 class="font-display display-xl text-4xl sm:text-5xl lg:text-6xl max-w-2xl">Why train with us</h2>
+          <p class="max-w-sm text-ink/70">More than fighting. Every class is built to grow the whole person — on the mat and off it.</p>
+        </div>
+        <ul class="mt-12 grid grid-cols-2 sm:grid-cols-4 gap-px rounded-3xl overflow-hidden bg-paper-line ring-1 ring-paper-line">
+          <li class="bg-paper p-6 sm:p-7"><span class="block text-brand-deep font-700 text-sm">01</span><span class="mt-2 block font-display font-800 text-xl sm:text-2xl">Discipline</span></li>
+          <li class="bg-paper p-6 sm:p-7"><span class="block text-brand-deep font-700 text-sm">02</span><span class="mt-2 block font-display font-800 text-xl sm:text-2xl">Respect</span></li>
+          <li class="bg-paper p-6 sm:p-7"><span class="block text-brand-deep font-700 text-sm">03</span><span class="mt-2 block font-display font-800 text-xl sm:text-2xl">Strength</span></li>
+          <li class="bg-paper p-6 sm:p-7"><span class="block text-brand-deep font-700 text-sm">04</span><span class="mt-2 block font-display font-800 text-xl sm:text-2xl">Confidence</span></li>
+          <li class="bg-paper p-6 sm:p-7"><span class="block text-brand-deep font-700 text-sm">05</span><span class="mt-2 block font-display font-800 text-xl sm:text-2xl">Self-Defense</span></li>
+          <li class="bg-paper p-6 sm:p-7"><span class="block text-brand-deep font-700 text-sm">06</span><span class="mt-2 block font-display font-800 text-xl sm:text-2xl">Fitness</span></li>
+          <li class="bg-paper p-6 sm:p-7"><span class="block text-brand-deep font-700 text-sm">07</span><span class="mt-2 block font-display font-800 text-xl sm:text-2xl">Character</span></li>
+          <li class="bg-paper p-6 sm:p-7"><span class="block text-brand-deep font-700 text-sm">08</span><span class="mt-2 block font-display font-800 text-xl sm:text-2xl leading-tight">Positive Team Environment</span></li>
+        </ul>
       </div>
     </section>
 
@@ -435,12 +459,12 @@
               </thead>
               <tbody class="divide-y divide-paper-line">
                 <tr class="bg-paper">
-                  <th scope="row" class="px-5 sm:px-6 py-5 font-600">Little Tigers <span class="block text-xs font-400 text-ink-muted">Ages 4–8</span></th>
+                  <th scope="row" class="px-5 sm:px-6 py-5 font-600">Kids Class <span class="block text-xs font-400 text-ink-muted">Ages 4–8</span></th>
                   <td class="px-5 sm:px-6 py-5 text-ink/80">Mon &amp; Wed</td>
                   <td class="px-5 sm:px-6 py-5 text-ink/80">5:30 – 6:30 PM</td>
                 </tr>
                 <tr class="bg-paper">
-                  <th scope="row" class="px-5 sm:px-6 py-5 font-600">Youth MMA <span class="block text-xs font-400 text-ink-muted">Ages 9–12</span></th>
+                  <th scope="row" class="px-5 sm:px-6 py-5 font-600">Kids Class <span class="block text-xs font-400 text-ink-muted">Ages 9–12</span></th>
                   <td class="px-5 sm:px-6 py-5 text-ink/80">Tue &amp; Thu</td>
                   <td class="px-5 sm:px-6 py-5 text-ink/80">5:30 – 6:30 PM</td>
                 </tr>
@@ -462,8 +486,63 @@
       </div>
     </section>
 
+    <!-- ============ MEMBERSHIP / PRICING ============ -->
+    <section id="pricing" class="py-20 sm:py-28 bg-paper-mist border-y border-paper-line">
+      <div class="mx-auto max-w-8xl px-4 sm:px-6 lg:px-10">
+        <div class="flex flex-wrap items-end justify-between gap-6">
+          <h2 class="font-display display-xl text-4xl sm:text-5xl lg:text-6xl max-w-2xl">Membership</h2>
+          <p class="max-w-sm text-ink/70">Train one discipline or all of them. Pay by how much you want to train — with family rates and a U.S. military appreciation discount available.</p>
+        </div>
+
+        <!-- Membership tiers -->
+        <div class="mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          <div class="rounded-3xl bg-paper ring-1 ring-paper-line p-7">
+            <p class="font-display font-800 text-xl">1 Discipline</p>
+            <p class="mt-3 font-display font-800 text-4xl">$XX<span class="text-base font-600 text-ink-muted">/mo</span></p>
+            <p class="mt-3 text-sm text-ink/70">Pick any single art — Kempo Karate, Muay Thai, kickboxing, BJJ or wrestling.</p>
+          </div>
+          <div class="rounded-3xl bg-paper ring-1 ring-paper-line p-7">
+            <p class="font-display font-800 text-xl">2 Disciplines</p>
+            <p class="mt-3 font-display font-800 text-4xl">$XX<span class="text-base font-600 text-ink-muted">/mo</span></p>
+            <p class="mt-3 text-sm text-ink/70">Mix striking and grappling — any two arts on the schedule.</p>
+          </div>
+          <div class="rounded-3xl bg-paper ring-1 ring-paper-line p-7">
+            <p class="font-display font-800 text-xl">3 Disciplines</p>
+            <p class="mt-3 font-display font-800 text-4xl">$XX<span class="text-base font-600 text-ink-muted">/mo</span></p>
+            <p class="mt-3 text-sm text-ink/70">Go deeper across striking, grappling and the traditional arts.</p>
+          </div>
+          <div class="rounded-3xl bg-ink text-white on-dark p-7 ring-1 ring-ink">
+            <p class="font-display font-800 text-xl text-brand-glow">Unlimited Classes</p>
+            <p class="mt-3 font-display font-800 text-4xl">$XX<span class="text-base font-600 text-white/60">/mo</span></p>
+            <p class="mt-3 text-sm text-white/75">Every class, every discipline, all week. The full Faglier's experience.</p>
+          </div>
+        </div>
+
+        <!-- Family + gear + military -->
+        <div class="mt-5 grid sm:grid-cols-3 gap-5">
+          <div class="rounded-3xl bg-paper ring-1 ring-paper-line p-7">
+            <p class="text-xs font-700 uppercase tracking-wide text-brand-deep">Family Membership</p>
+            <p class="mt-2 font-display font-800 text-3xl">$XX<span class="text-base font-600 text-ink-muted">/mo</span></p>
+            <p class="mt-2 text-sm text-ink/70">Train as a family on one membership — perfect for parents and kids on the mat together.</p>
+          </div>
+          <div class="rounded-3xl bg-paper ring-1 ring-paper-line p-7">
+            <p class="text-xs font-700 uppercase tracking-wide text-brand-deep">Required Gear</p>
+            <p class="mt-2 font-display font-800 text-3xl">$XX</p>
+            <p class="mt-2 text-sm text-ink/70">Karate gi uniform; BJJ gi for jiu-jitsu (kids &amp; adult sizes). Ask us what your program needs.</p>
+          </div>
+          <div class="rounded-3xl bg-paper ring-1 ring-paper-line p-7">
+            <p class="text-xs font-700 uppercase tracking-wide text-brand-deep">Military Discount</p>
+            <p class="mt-2 font-display font-800 text-3xl">Thank you</p>
+            <p class="mt-2 text-sm text-ink/70">We're proud to offer a U.S. military appreciation discount — just ask about it when you visit.</p>
+          </div>
+        </div>
+
+        <p class="mt-6 text-xs text-ink-muted">Pricing is being finalized — the amounts above are placeholders. Message us for current rates and to find the membership that fits your family.</p>
+      </div>
+    </section>
+
     <!-- ============ FAQ ============ -->
-    <section class="py-20 sm:py-28 bg-paper-mist border-y border-paper-line">
+    <section class="py-20 sm:py-28 bg-paper">
       <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-10">
         <h2 class="font-display display-xl text-4xl sm:text-5xl text-center">Before your first class</h2>
         <div class="mt-12 space-y-3">
@@ -512,7 +591,8 @@
         <div class="rounded-[2rem] bg-ink text-white on-dark overflow-hidden">
           <div class="grid lg:grid-cols-2">
             <div class="p-8 sm:p-12 lg:p-14">
-              <h2 class="font-display display-xl text-4xl sm:text-5xl">Your first class starts here</h2>
+              <p class="font-700 text-brand-glow">Be part of the family</p>
+              <h2 class="mt-2 font-display display-xl text-4xl sm:text-5xl">Your first class starts here</h2>
               <p class="mt-4 max-w-md text-white/80">Stop in during class hours, or reach out and we'll set you up. We can't wait to meet you on the mat.</p>
 
               <dl class="mt-9 space-y-6">
