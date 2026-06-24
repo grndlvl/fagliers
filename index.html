@@ -148,8 +148,9 @@
 
     <!-- ============ HERO ============ -->
     <section class="relative min-h-[88svh] flex items-end on-dark">
-      <img src="images/hero-team-belts.jpg" alt="" aria-hidden="true" class="absolute inset-0 h-full w-full object-cover" />
-      <div class="absolute inset-0 hero-scrim" aria-hidden="true"></div>
+      <!-- image starts below the solid header bar so the team's heads aren't cropped; floor crops at the bottom -->
+      <img src="images/hero-team-belts.jpg" alt="" aria-hidden="true" class="absolute inset-x-0 top-[4.5rem] bottom-0 w-full object-cover object-top" />
+      <div class="absolute inset-x-0 top-[4.5rem] bottom-0 hero-scrim" aria-hidden="true"></div>
 
       <div class="relative w-full mx-auto max-w-8xl px-4 sm:px-6 lg:px-10 pb-14 sm:pb-20 pt-32">
         <span class="inline-flex items-center gap-2 rounded-full bg-brand px-3.5 py-1.5 text-xs sm:text-sm font-700 text-ink">
