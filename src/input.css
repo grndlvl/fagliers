@@ -47,4 +47,6 @@ details[open] .faq-icon { transform: rotate(45deg); }
   html { scroll-behavior: auto; }
   .marquee-track { animation: none; }
   * { animation-duration: .001ms !important; transition-duration: .001ms !important; }
+  /* Neutralize hover/transform effects (e.g. gallery zoom) for motion-sensitive users */
+  .group:hover .group-hover\:scale-105 { transform: none !important; }
 }

@@ -111,20 +111,20 @@
         </a>
 
         <div class="hidden lg:flex items-center gap-8 text-sm font-600" data-nav-links>
-          <a href="#train" class="hover:text-brand-deep transition-colors">Train</a>
-          <a href="#programs" class="hover:text-brand-deep transition-colors">Programs</a>
-          <a href="#coaches" class="hover:text-brand-deep transition-colors">Coaches</a>
-          <a href="#schedule" class="hover:text-brand-deep transition-colors">Schedule</a>
-          <a href="#pricing" class="hover:text-brand-deep transition-colors">Pricing</a>
-          <a href="#gallery" class="hover:text-brand-deep transition-colors">Gallery</a>
-          <a href="#visit" class="hover:text-brand-deep transition-colors">Visit</a>
+          <a href="#train" class="hover:text-brand-deep transition-colors" data-nav-link>Train</a>
+          <a href="#programs" class="hover:text-brand-deep transition-colors" data-nav-link>Programs</a>
+          <a href="#coaches" class="hover:text-brand-deep transition-colors" data-nav-link>Coaches</a>
+          <a href="#schedule" class="hover:text-brand-deep transition-colors" data-nav-link>Schedule</a>
+          <a href="#pricing" class="hover:text-brand-deep transition-colors" data-nav-link>Pricing</a>
+          <a href="#gallery" class="hover:text-brand-deep transition-colors" data-nav-link>Gallery</a>
+          <a href="#visit" class="hover:text-brand-deep transition-colors" data-nav-link>Visit</a>
         </div>
 
         <div class="flex items-center gap-3">
           <a href="#visit" class="hidden sm:inline-flex items-center rounded-full bg-brand px-5 py-2.5 font-700 text-sm text-ink hover:bg-brand-glow transition-colors">
             Free Trial Class
           </a>
-          <button id="navToggle" class="lg:hidden inline-flex items-center justify-center rounded-lg p-2 text-ink bg-white/70 ring-1 ring-black/10" aria-expanded="false" aria-controls="mobileMenu" aria-label="Open menu" data-nav-toggle>
+          <button id="navToggle" class="lg:hidden inline-flex items-center justify-center rounded-lg p-2.5 text-ink bg-white/70 ring-1 ring-black/10" aria-expanded="false" aria-controls="mobileMenu" aria-label="Open menu" data-nav-toggle>
             <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
           </button>
         </div>
@@ -140,7 +140,7 @@
           <a href="#pricing" class="rounded-lg px-3 py-2.5 hover:bg-paper-mist">Pricing</a>
           <a href="#gallery" class="rounded-lg px-3 py-2.5 hover:bg-paper-mist">Gallery</a>
           <a href="#visit" class="rounded-lg px-3 py-2.5 hover:bg-paper-mist">Visit</a>
-          <a href="#visit" class="mt-1 rounded-lg bg-brand px-3 py-2.5 font-700 text-ink text-center">Free Trial Class →</a>
+          <a href="#visit" class="mt-1 rounded-lg bg-brand px-3 py-2.5 font-700 text-ink text-center">Free Trial Class <span aria-hidden="true">→</span></a>
         </div>
       </div>
     </nav>
@@ -225,7 +225,7 @@
             <dd class="mt-1 text-sm text-ink-muted">Disciplines under one roof</dd>
           </div>
           <div class="bg-paper p-7">
-            <dt class="font-display font-800 text-4xl sm:text-5xl">5.0<span class="text-brand-deep">★</span></dt>
+            <dt class="font-display font-800 text-4xl sm:text-5xl">5.0<span class="text-brand-deep" aria-hidden="true">★</span></dt>
             <dd class="mt-1 text-sm text-ink-muted">Rated by our students</dd>
           </div>
           <div class="bg-paper p-7">
@@ -369,25 +369,25 @@
 
         <div class="mt-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           <article class="rounded-3xl bg-paper-mist ring-1 ring-paper-line p-7">
-            <div class="h-14 w-14 rounded-full bg-brand/20 text-brand-deep flex items-center justify-center font-display font-800 text-xl">JS</div>
+            <div class="h-14 w-14 rounded-full bg-brand/20 text-brand-deep flex items-center justify-center font-display font-800 text-xl" aria-hidden="true">JS</div>
             <h3 class="mt-5 font-display font-800 text-xl">Jason Faglier Sr.</h3>
             <p class="text-sm font-600 text-brand-deep">Founder &amp; Head Instructor</p>
             <p class="mt-3 text-sm text-ink/70">The man who started it all — "Pops" led the gym from its Kempo Karate roots into a full MMA program.</p>
           </article>
           <article class="rounded-3xl bg-paper-mist ring-1 ring-paper-line p-7">
-            <div class="h-14 w-14 rounded-full bg-brand/20 text-brand-deep flex items-center justify-center font-display font-800 text-xl">JJ</div>
+            <div class="h-14 w-14 rounded-full bg-brand/20 text-brand-deep flex items-center justify-center font-display font-800 text-xl" aria-hidden="true">JJ</div>
             <h3 class="mt-5 font-display font-800 text-xl">Jason Faglier Jr.</h3>
             <p class="text-sm font-600 text-brand-deep">Instructor</p>
             <p class="mt-3 text-sm text-ink/70">Carrying the family tradition forward, coaching striking, grappling and the next wave of CSRA fighters.</p>
           </article>
           <article class="rounded-3xl bg-paper-mist ring-1 ring-paper-line p-7">
-            <div class="h-14 w-14 rounded-full bg-brand/20 text-brand-deep flex items-center justify-center font-display font-800 text-xl">AF</div>
+            <div class="h-14 w-14 rounded-full bg-brand/20 text-brand-deep flex items-center justify-center font-display font-800 text-xl" aria-hidden="true">AF</div>
             <h3 class="mt-5 font-display font-800 text-xl">Alex Faglier</h3>
             <p class="text-sm font-600 text-brand-deep">Instructor</p>
             <p class="mt-3 text-sm text-ink/70">Bringing energy and precision to every class, from first-timers to competition-team athletes.</p>
           </article>
           <article class="rounded-3xl bg-paper-mist ring-1 ring-paper-line p-7">
-            <div class="h-14 w-14 rounded-full bg-brand/20 text-brand-deep flex items-center justify-center font-display font-800 text-xl">JF</div>
+            <div class="h-14 w-14 rounded-full bg-brand/20 text-brand-deep flex items-center justify-center font-display font-800 text-xl" aria-hidden="true">JF</div>
             <h3 class="mt-5 font-display font-800 text-xl">Joel Faglier</h3>
             <p class="text-sm font-600 text-brand-deep">Instructor</p>
             <p class="mt-3 text-sm text-ink/70">Coaching the team and the mats with the same family-first mindset the gym was built on.</p>
@@ -652,7 +652,7 @@
           </div>
           <p class="mt-4 max-w-sm text-sm text-white/65">Family-run mixed martial arts in Augusta, GA. Kempo Karate, MMA, Muay Thai, kickboxing and Brazilian Jiu-Jitsu for all ages.</p>
         </div>
-        <div>
+        <nav aria-label="Explore">
           <h2 class="text-xs uppercase tracking-wider text-white/55 font-700">Explore</h2>
           <ul class="mt-4 space-y-2.5 text-sm text-white/80">
             <li><a href="#train" class="hover:text-brand-glow">What we train</a></li>
@@ -660,15 +660,15 @@
             <li><a href="#schedule" class="hover:text-brand-glow">Schedule</a></li>
             <li><a href="#visit" class="hover:text-brand-glow">Visit</a></li>
           </ul>
-        </div>
-        <div>
+        </nav>
+        <nav aria-label="Connect">
           <h2 class="text-xs uppercase tracking-wider text-white/55 font-700">Connect</h2>
           <ul class="mt-4 space-y-2.5 text-sm text-white/80">
             <li><a href="https://www.facebook.com/FagliersKempoKarate/" target="_blank" rel="noopener" class="hover:text-brand-glow">Facebook</a></li>
             <li><a href="https://www.instagram.com/fagliersmma/" target="_blank" rel="noopener" class="hover:text-brand-glow">Instagram</a></li>
             <li><a href="tel:+17067269068" class="hover:text-brand-glow">(706) 726-9068</a></li>
           </ul>
-        </div>
+        </nav>
       </div>
       <div class="mt-12 pt-6 border-t border-white/10 flex flex-col sm:flex-row justify-between gap-3 text-xs text-white/50">
         <p>© <span id="year">2026</span> Faglier's Mixed Martial Arts. All rights reserved.</p>
@@ -683,15 +683,46 @@
       var menu = document.getElementById('mobileMenu');
       var navToggle = document.querySelector('[data-nav-toggle]');
       if (navToggle && menu) {
-        navToggle.addEventListener('click', function () {
-          var open = menu.classList.toggle('hidden') === false;
+        var setMenu = function (open) {
+          menu.classList.toggle('hidden', !open);
           navToggle.setAttribute('aria-expanded', String(open));
+          navToggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+        };
+        navToggle.addEventListener('click', function () {
+          setMenu(menu.classList.contains('hidden'));
         });
         menu.querySelectorAll('a').forEach(function (a) {
-          a.addEventListener('click', function () {
-            menu.classList.add('hidden');
-            navToggle.setAttribute('aria-expanded', 'false');
+          a.addEventListener('click', function () { setMenu(false); });
+        });
+        // Escape closes the menu and returns focus to the toggle
+        document.addEventListener('keydown', function (e) {
+          if (e.key === 'Escape' && !menu.classList.contains('hidden')) {
+            setMenu(false);
+            navToggle.focus();
+          }
+        });
+      }
+
+      // Highlight the current in-page section on the primary nav
+      var navLinks = document.querySelectorAll('[data-nav-link]');
+      if (navLinks.length && 'IntersectionObserver' in window) {
+        var linkFor = {};
+        navLinks.forEach(function (link) {
+          linkFor[link.getAttribute('href')] = link;
+        });
+        var observer = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            var link = linkFor['#' + entry.target.id];
+            if (!link) return;
+            if (entry.isIntersecting) {
+              navLinks.forEach(function (l) { l.removeAttribute('aria-current'); });
+              link.setAttribute('aria-current', 'true');
+            }
           });
+        }, { rootMargin: '-45% 0px -50% 0px' });
+        Object.keys(linkFor).forEach(function (href) {
+          var section = document.querySelector(href);
+          if (section) observer.observe(section);
         });
       }
 
