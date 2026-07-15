@@ -123,20 +123,20 @@
         </a>
 
         <div class="hidden lg:flex items-center gap-7 font-head text-sm font-600 uppercase tracking-wider text-slate-300">
-          <a href="#train" class="hover:text-brand transition-colors">Train</a>
-          <a href="#programs" class="hover:text-brand transition-colors">Programs</a>
-          <a href="#coaches" class="hover:text-brand transition-colors">Coaches</a>
-          <a href="#schedule" class="hover:text-brand transition-colors">Schedule</a>
-          <a href="#story" class="hover:text-brand transition-colors">Our Story</a>
-          <a href="#gallery" class="hover:text-brand transition-colors">Gallery</a>
-          <a href="#visit" class="hover:text-brand transition-colors">Visit</a>
+          <a href="#train" class="hover:text-brand transition-colors" data-nav-link>Train</a>
+          <a href="#programs" class="hover:text-brand transition-colors" data-nav-link>Programs</a>
+          <a href="#coaches" class="hover:text-brand transition-colors" data-nav-link>Coaches</a>
+          <a href="#schedule" class="hover:text-brand transition-colors" data-nav-link>Schedule</a>
+          <a href="#story" class="hover:text-brand transition-colors" data-nav-link>Our Story</a>
+          <a href="#gallery" class="hover:text-brand transition-colors" data-nav-link>Gallery</a>
+          <a href="#visit" class="hover:text-brand transition-colors" data-nav-link>Visit</a>
         </div>
 
         <div class="flex items-center gap-3">
           <a href="#visit" class="hidden sm:inline-flex items-center rounded-md bg-brand px-4 py-2 font-head font-700 uppercase tracking-wider text-sm text-ink hover:bg-brand-glow transition-colors">
             Try a Class
           </a>
-          <button id="navToggle" class="lg:hidden inline-flex items-center justify-center rounded-md p-2 text-slate-200 hover:bg-ink-card" aria-expanded="false" aria-controls="mobileMenu" aria-label="Open menu">
+          <button id="navToggle" class="lg:hidden inline-flex items-center justify-center rounded-md p-2.5 text-slate-200 hover:bg-ink-card" aria-expanded="false" aria-controls="mobileMenu" aria-label="Open menu">
             <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
           </button>
         </div>
@@ -158,7 +158,7 @@
     </nav>
   </header>
 
-  <main id="main">
+  <main id="main" tabindex="-1">
     <span id="top"></span>
 
     <!-- ============ HERO ============ -->
@@ -387,31 +387,31 @@
 
         <div class="mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
           <article class="rounded-xl bg-ink-card border border-ink-line p-6 text-center">
-            <div class="mx-auto h-16 w-16 rounded-full bg-brand/15 ring-1 ring-brand/40 flex items-center justify-center font-display text-2xl text-brand">JS</div>
+            <div class="mx-auto h-16 w-16 rounded-full bg-brand/15 ring-1 ring-brand/40 flex items-center justify-center font-display text-2xl text-brand" aria-hidden="true">JS</div>
             <h3 class="mt-4 font-head text-xl font-700 text-white">Jason Faglier Sr.</h3>
             <p class="text-brand text-sm font-600 uppercase tracking-wider">Founder &amp; Head Instructor</p>
             <p class="mt-3 text-sm text-slate-300">The man who started it all. "Pops" has led this gym from its Kempo Karate roots into a full mixed martial arts program.</p>
           </article>
           <article class="rounded-xl bg-ink-card border border-ink-line p-6 text-center">
-            <div class="mx-auto h-16 w-16 rounded-full bg-brand/15 ring-1 ring-brand/40 flex items-center justify-center font-display text-2xl text-brand">JJ</div>
+            <div class="mx-auto h-16 w-16 rounded-full bg-brand/15 ring-1 ring-brand/40 flex items-center justify-center font-display text-2xl text-brand" aria-hidden="true">JJ</div>
             <h3 class="mt-4 font-head text-xl font-700 text-white">Jason Faglier Jr.</h3>
             <p class="text-brand text-sm font-600 uppercase tracking-wider">Instructor</p>
             <p class="mt-3 text-sm text-slate-300">Carrying the family tradition forward, coaching striking, grappling and the next wave of CSRA fighters.</p>
           </article>
           <article class="rounded-xl bg-ink-card border border-ink-line p-6 text-center">
-            <div class="mx-auto h-16 w-16 rounded-full bg-brand/15 ring-1 ring-brand/40 flex items-center justify-center font-display text-2xl text-brand">AF</div>
+            <div class="mx-auto h-16 w-16 rounded-full bg-brand/15 ring-1 ring-brand/40 flex items-center justify-center font-display text-2xl text-brand" aria-hidden="true">AF</div>
             <h3 class="mt-4 font-head text-xl font-700 text-white">Alex Faglier</h3>
             <p class="text-brand text-sm font-600 uppercase tracking-wider">Instructor</p>
             <p class="mt-3 text-sm text-slate-300">Bringing energy and precision to every class, from first-timers to competition-team athletes.</p>
           </article>
           <article class="rounded-xl bg-ink-card border border-ink-line p-6 text-center">
-            <div class="mx-auto h-16 w-16 rounded-full bg-brand/15 ring-1 ring-brand/40 flex items-center justify-center font-display text-2xl text-brand">JF</div>
+            <div class="mx-auto h-16 w-16 rounded-full bg-brand/15 ring-1 ring-brand/40 flex items-center justify-center font-display text-2xl text-brand" aria-hidden="true">JF</div>
             <h3 class="mt-4 font-head text-xl font-700 text-white">Joel Faglier</h3>
             <p class="text-brand text-sm font-600 uppercase tracking-wider">Instructor</p>
             <p class="mt-3 text-sm text-slate-300">Coaching the team and the mats with the same family-first mindset the gym was built on.</p>
           </article>
         </div>
-        <p class="mt-6 text-xs text-slate-500">Coach bios are a starting point — send us your details and rank/credentials and we'll make them exactly right.</p>
+        <p class="mt-6 text-xs text-slate-400">Coach bios are a starting point — send us your details and rank/credentials and we'll make them exactly right.</p>
       </div>
     </section>
 
@@ -466,7 +466,7 @@
             </table>
           </div>
         </div>
-        <p class="mt-6 text-xs text-slate-500">Schedule shown is based on the most recent public information. Message us to confirm current class times before your first visit.</p>
+        <p class="mt-6 text-xs text-slate-400">Schedule shown is based on the most recent public information. Message us to confirm current class times before your first visit.</p>
       </div>
     </section>
 
@@ -670,7 +670,7 @@
           </ul>
         </div>
       </div>
-      <div class="mt-10 pt-6 border-t border-ink-line flex flex-col sm:flex-row justify-between gap-3 text-xs text-slate-500">
+      <div class="mt-10 pt-6 border-t border-ink-line flex flex-col sm:flex-row justify-between gap-3 text-xs text-slate-400">
         <p>© <span id="year">2026</span> Faglier's Mixed Martial Arts. All rights reserved.</p>
         <p>Augusta · Martinez · Evans · the CSRA</p>
       </div>
@@ -683,17 +683,49 @@
       var btn = document.getElementById('navToggle');
       var menu = document.getElementById('mobileMenu');
       if (btn && menu) {
-        btn.addEventListener('click', function () {
-          var open = menu.classList.toggle('hidden') === false;
+        var setMenu = function (open) {
+          menu.classList.toggle('hidden', !open);
           btn.setAttribute('aria-expanded', String(open));
+          btn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+        };
+        btn.addEventListener('click', function () {
+          setMenu(menu.classList.contains('hidden'));
         });
         menu.querySelectorAll('a').forEach(function (a) {
-          a.addEventListener('click', function () {
-            menu.classList.add('hidden');
-            btn.setAttribute('aria-expanded', 'false');
-          });
+          a.addEventListener('click', function () { setMenu(false); });
+        });
+        // Escape closes the menu and returns focus to the toggle
+        document.addEventListener('keydown', function (e) {
+          if (e.key === 'Escape' && !menu.classList.contains('hidden')) {
+            setMenu(false);
+            btn.focus();
+          }
         });
       }
+
+      // Highlight the current in-page section on the primary nav
+      var navLinks = document.querySelectorAll('[data-nav-link]');
+      if (navLinks.length && 'IntersectionObserver' in window) {
+        var linkFor = {};
+        navLinks.forEach(function (link) {
+          linkFor[link.getAttribute('href')] = link;
+        });
+        var observer = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            var link = linkFor['#' + entry.target.id];
+            if (!link) return;
+            if (entry.isIntersecting) {
+              navLinks.forEach(function (l) { l.removeAttribute('aria-current'); });
+              link.setAttribute('aria-current', 'true');
+            }
+          });
+        }, { rootMargin: '-45% 0px -50% 0px' });
+        Object.keys(linkFor).forEach(function (href) {
+          var section = document.querySelector(href);
+          if (section) observer.observe(section);
+        });
+      }
+
       var y = document.getElementById('year');
       if (y) y.textContent = new Date().getFullYear();
     })();
