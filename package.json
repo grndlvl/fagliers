@@ -4,7 +4,9 @@
   "private": true,
   "description": "Faglier's Mixed Martial Arts website",
   "scripts": {
-    "build:css": "tailwindcss -i ./src/input.css -o ./assets/tailwind.css --minify",
+    "build:css": "npm run build:css:alt-1 && npm run build:css:alt-2",
+    "build:css:alt-1": "tailwindcss -c ./tailwind.alt-1.config.js -i ./src/alt-1.css -o ./alt-1/assets/tailwind.css --minify",
+    "build:css:alt-2": "tailwindcss -c ./tailwind.config.js -i ./src/input.css -o ./alt-2/assets/tailwind.css --minify",
     "watch:css": "tailwindcss -i ./src/input.css -o ./assets/tailwind.css --watch"
   },
   "devDependencies": {

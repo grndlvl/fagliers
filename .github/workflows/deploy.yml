@@ -36,14 +36,17 @@ jobs:
 
       - name: Assemble site and compile Tailwind CSS
         run: |
-          mkdir -p _site/assets
+          mkdir -p _site/alt-1/assets _site/alt-2/assets
           cp index.html _site/
+          cp alt-1/index.html _site/alt-1/
+          cp alt-2/index.html _site/alt-2/
           cp -r images _site/
-          cp robots.txt sitemap.xml llms.txt _site/
+          cp robots.txt _site/
           # CNAME is optional until a custom domain is chosen
           [ -f CNAME ] && cp CNAME _site/ || true
           touch _site/.nojekyll
-          npx tailwindcss -i ./src/input.css -o ./_site/assets/tailwind.css --minify
+          npx tailwindcss -c ./tailwind.alt-1.config.js -i ./src/alt-1.css -o ./_site/alt-1/assets/tailwind.css --minify
+          npx tailwindcss -c ./tailwind.config.js -i ./src/input.css -o ./_site/alt-2/assets/tailwind.css --minify
 
       - name: Configure Pages
         uses: actions/configure-pages@v5

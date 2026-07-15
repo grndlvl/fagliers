@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ---- Custom site styles (source for the compiled assets/tailwind.css) ---- */
+html { scroll-behavior: smooth; scroll-padding-top: 5rem; }
+body { font-family: 'Barlow', system-ui, sans-serif; }
+
+.font-display { font-family: 'Bebas Neue', 'Oswald', sans-serif; letter-spacing: .015em; }
+.font-head { font-family: 'Barlow Condensed', sans-serif; }
+
+/* Logo badge: the logo art already has a white field, keep it crisp */
+.logo-badge { object-fit: contain; }
+
+/* Hero darkening overlay over the textured background */
+.hero-overlay {
+  background:
+    radial-gradient(120% 90% at 50% 0%, rgba(108,189,69,.16) 0%, rgba(10,12,9,0) 55%),
+    linear-gradient(180deg, rgba(10,12,9,.55) 0%, rgba(10,12,9,.82) 60%, rgba(10,12,9,.99) 100%);
+}
+
+/* Subtle diagonal "mat texture" used behind dark sections */
+.mat-texture {
+  background-image:
+    repeating-linear-gradient(135deg, rgba(108,189,69,.05) 0 2px, transparent 2px 9px);
+}
+
+/* Green brushstroke underline accent under section eyebrows */
+.section-rule { height: 4px; width: 64px; background: #6CBD45; border-radius: 4px; }
+
+/* Octagon (MMA cage) clip used for the hero badge frame */
+.octagon {
+  clip-path: polygon(30% 0, 70% 0, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0 70%, 0 30%);
+}
+
+/* Animated headline accent bar */
+.accent-bar { background: linear-gradient(90deg, #6CBD45, #92DC63); }
+
+a:focus-visible, button:focus-visible, summary:focus-visible {
+  outline: 3px solid #6CBD45; outline-offset: 2px; border-radius: 4px;
+}
+
+/* FAQ disclosure marker */
+details > summary { list-style: none; cursor: pointer; }
+details > summary::-webkit-details-marker { display: none; }
+details[open] .faq-plus { transform: rotate(45deg); }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { animation: none !important; transition: none !important; }
+}
+
