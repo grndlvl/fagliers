@@ -1,7 +1,7 @@
 # Faglier's Mixed Martial Arts
 
 > Family-run mixed martial arts gym in Augusta, Georgia. Kempo Karate, MMA, Muay Thai,
-> kickboxing, Brazilian Jiu-Jitsu and wrestling for kids and adults of all levels.
+> kickboxing and Brazilian Jiu-Jitsu for kids and adults of all levels.
 > The gym where UFC fighter Malcolm "The Machine" Wellmaker got his start.
 > 2025 Best of Georgia Regional Winner.
 
@@ -20,7 +20,6 @@ and both physical and mental well-being for students of every age.
 - Muay Thai
 - Kickboxing
 - Brazilian Jiu-Jitsu
-- Wrestling
 
 ## Programs
 - Little Tigers — ages 4–8 (Mon & Wed, 5:30–6:30 PM)
