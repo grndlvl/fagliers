@@ -36,8 +36,9 @@ jobs:
 
       - name: Assemble site and compile Tailwind CSS
         run: |
-          mkdir -p _site/alt-1/assets _site/alt-2/assets
+          mkdir -p _site/alts _site/alt-1/assets _site/alt-2/assets
           cp index.html _site/
+          cp alts/index.html _site/alts/
           cp alt-1/index.html _site/alt-1/
           cp alt-2/index.html _site/alt-2/
           cp -r images _site/
