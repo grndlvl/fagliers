@@ -687,15 +687,23 @@
       var btn = document.getElementById('navToggle');
       var menu = document.getElementById('mobileMenu');
       if (btn && menu) {
-        btn.addEventListener('click', function () {
-          var open = menu.classList.toggle('hidden') === false;
+        var setMenu = function (open) {
+          menu.classList.toggle('hidden', !open);
           btn.setAttribute('aria-expanded', String(open));
+          btn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+        };
+        btn.addEventListener('click', function () {
+          setMenu(menu.classList.contains('hidden'));
         });
         menu.querySelectorAll('a').forEach(function (a) {
-          a.addEventListener('click', function () {
-            menu.classList.add('hidden');
-            btn.setAttribute('aria-expanded', 'false');
-          });
+          a.addEventListener('click', function () { setMenu(false); });
+        });
+        // Escape closes the menu and returns focus to the toggle
+        document.addEventListener('keydown', function (e) {
+          if (e.key === 'Escape' && !menu.classList.contains('hidden')) {
+            setMenu(false);
+            btn.focus();
+          }
         });
       }
       var y = document.getElementById('year');
