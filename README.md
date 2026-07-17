@@ -41,11 +41,13 @@ with the gym before going live:
 
 - **Address** — `266 Bobby Jones Expressway, Suite 19, Augusta, GA 30907` (most recent public
   listing; the gym has moved at least once).
-- **Phone** — `(706) 726-9068`.
+- **Phone** — `(762) 383-9551` (confirmed from the gym's posted pricing graphic).
 - **Class schedule / hours** — based on the most recent public info; confirm current times.
 - **Coach names & bios** — Jason Faglier Sr. (founder), Jason Jr., Alex, Joel. Belt ranks,
   credentials and lineage were not public; add the real details.
-- **Pricing / trial policy** — not published anywhere; no prices are stated on the site yet.
+- **Trial policy** — not shown on the posted pricing graphic; confirm with the gym.
+- **Pricing** — updated from the gym's posted pricing graphic; confirm rates have not changed
+  before launch.
 - **Founding year** — sources differ (≈1999–2001); the site says "20+ years" to stay safe.
 - **Photos** — pulled from the gym's public Facebook page, which skews heavily to fighter
   weigh-in portraits. We have the logo, the belt-wall team photo, a medals group shot, two
