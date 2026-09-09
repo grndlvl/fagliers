@@ -55,9 +55,8 @@ with the gym before going live:
   are still wanted** (TABLED — to revisit). Drop new photos into `images/` (heroes/features)
   or `images/gallery/` and update the `src` + `alt` in `index.html`.
 - **Coaches photos** — none available; cards use initials avatars.
-- **Domain** — set the production domain in a `CNAME` file (none committed yet), and update the
-  canonical/OG URLs in `index.html`, plus `robots.txt` and `sitemap.xml` (placeholder
-  `fagliersmma.com`).
+- **Domain** — configured for `fagliersmma.com` through GitHub Pages. Canonical, social,
+  robots and sitemap URLs use the production domain.
 
 ## Brand &amp; design
 

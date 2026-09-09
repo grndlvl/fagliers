@@ -39,7 +39,7 @@ jobs:
           mkdir -p _site/assets
           cp index.html _site/
           cp -r images _site/
-          cp robots.txt _site/
+          cp robots.txt sitemap.xml llms.txt _site/
           # CNAME is optional until a custom domain is chosen
           [ -f CNAME ] && cp CNAME _site/ || true
           touch _site/.nojekyll
