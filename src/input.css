@@ -16,7 +16,7 @@ body { font-family: 'Inter', system-ui, sans-serif; }
 
 /* Hero photo darkening so overlaid white text stays AA-legible */
 .hero-scrim {
-  background: linear-gradient(180deg, rgba(20,22,15,.48) 0%, rgba(20,22,15,.62) 45%, rgba(20,22,15,.94) 100%);
+  background: linear-gradient(180deg, rgba(20,22,15,.72) 0%, rgba(20,22,15,.82) 45%, rgba(20,22,15,.96) 100%);
 }
 
 /* Thin number/label used in the discipline index */
@@ -31,7 +31,8 @@ a:focus-visible, button:focus-visible, summary:focus-visible, [tabindex]:focus-v
 }
 /* On dark bands, use the bright green ring for visibility */
 .on-dark a:focus-visible, .on-dark button:focus-visible, .on-dark summary:focus-visible {
-  outline-color: #8FD861;
+  outline-color: #fff;
+  box-shadow: 0 0 0 2px #000;
 }
 
 /* FAQ disclosure */

@@ -45,7 +45,7 @@ with the gym before going live:
 - **Class schedule / hours** — updated from gym-provided information.
 - **Coach names & bios** — updated from gym-provided information for Jason Faglier Sr.,
   Jason Faglier Jr. and Joel Faglier.
-- **Trial policy** — not shown on the posted pricing graphic; confirm with the gym.
+- **Trial policy** — confirmed by the gym: each new student's first three classes are free.
 - **Pricing** — updated from the gym's posted pricing graphic; confirm rates have not changed
   before launch.
 - **Founding year** — confirmed by the gym as 1999.
