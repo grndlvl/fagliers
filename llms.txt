@@ -1,7 +1,7 @@
 # Faglier's Mixed Martial Arts
 
-> Family-run mixed martial arts gym in Augusta, Georgia. Kempo Karate, MMA, Muay Thai,
-> kickboxing and Brazilian Jiu-Jitsu for kids and adults of all levels.
+> Family-run mixed martial arts gym in Augusta, Georgia offering MMA, Muay Thai,
+> kickboxing and gi and no-gi Brazilian Jiu-Jitsu for kids and adults of all levels.
 > The gym where UFC fighter Malcolm "The Machine" Wellmaker got his start.
 > 2025 Best of Georgia Regional Winner.
 
@@ -10,22 +10,35 @@ Faglier's Mixed Martial Arts (formerly Faglier's Kempo Karate School / FKKS) is 
 family-owned and operated martial arts gym serving Augusta, Martinez, Evans and the wider
 Central Savannah River Area (CSRA). Founded on Christian principles by Jason Faglier Sr.,
 the gym has trained the Augusta community for more than twenty years, growing from a
-traditional Kempo Karate school into a full mixed martial arts program. The coaching staff
-are all members of the Faglier family. The gym emphasizes discipline, respect, confidence
+traditional Kempo Karate school into a full mixed martial arts program. The gym emphasizes discipline, respect, confidence
 and both physical and mental well-being for students of every age.
 
 ## What we train
-- Kempo Karate (self-defense-focused traditional karate; the gym's roots)
+- Kempo (the traditional martial art at the foundation of the gym; not currently scheduled as a standalone class)
 - Mixed Martial Arts (MMA) — striking + grappling, recreational and competitive
 - Muay Thai
 - Kickboxing
-- Brazilian Jiu-Jitsu
+- Brazilian Jiu-Jitsu (gi and no-gi)
+- Wrestling
 
 ## Programs
-- Little Tigers — ages 4–8 (Mon & Wed, 5:30–6:30 PM)
-- Youth MMA — ages 9–12 (Tue & Thu, 5:30–6:30 PM)
-- Adult Classes — teens & adults, all levels (Mon–Thu, 8:00 PM)
-- Fight Team — competition team for amateur and pro MMA (by invitation)
+- Morning MMA — Monday & Wednesday, 6:30–7:30 AM
+- Morning Muay Thai Kickboxing — Tuesday & Thursday, 6:30–7:30 AM
+- Kids Karate Kickboxing — ages 4–15, Monday & Wednesday, 5:00–6:00 PM
+- Kids BJJ — ages 4–15, Tuesday & Thursday, 5:00–6:00 PM
+- Kids MMA — ages 4–15, Friday, 5:00–6:00 PM
+- No-Gi BJJ — Monday & Wednesday, 6:00–7:15 PM
+- MMA — Monday & Wednesday, 7:15–8:30 PM
+- BJJ — Tuesday & Thursday, 6:00–7:15 PM
+- Muay Thai Kickboxing — Tuesday & Thursday, 7:15–8:30 PM
+- Open Mat — all disciplines, Friday, 6:30–8:00 PM
+- Competition Team Sparring — Saturday at 3:00 PM (invite only)
+- Competition Team Conditioning — Sunday at 3:00 PM
+
+## Coaches
+- Jason Faglier Sr. — coach; founded the gym in 1999; black belt in Kempo and Jiu-Jitsu; professional fighter in the early 2000s
+- Jason Faglier Jr. — coach; black belt in Jiu-Jitsu; current professional fighter
+- Joel Faglier — coach; black belt in Kempo and Jiu-Jitsu; current undefeated professional fighter; current USA Beach Wrestling World Team member
 
 ## Notable
 - The gym where UFC bantamweight Malcolm "The Machine" Wellmaker got his start in mixed
@@ -36,8 +49,9 @@ and both physical and mental well-being for students of every age.
 
 ## Location & contact
 - Address: 266 Bobby Jones Expressway, Suite 19, Augusta, GA 30907
-- Phone: (762) 383-9551
-- Gym hours: Monday–Thursday, 5:00–8:30 PM (closed Friday–Sunday)
+- Primary phone: (762) 383-9551
+- Secondary phone: (706) 726-9068
+- Class times include weekday morning and evening sessions plus weekend competition-team sessions; see the Programs section above.
 - Facebook: https://www.facebook.com/FagliersKempoKarate/
 - Instagram: https://www.instagram.com/fagliersmma/
 
@@ -50,5 +64,4 @@ and both physical and mental well-being for students of every age.
 
 ## Notes for accuracy
 The phone number and membership pricing were taken from pricing posted at the gym. Address,
-schedule and coach details were compiled from public sources and should be confirmed with the
-gym before relying on them. The previous official site (fagliermma.com) is no longer active.
+The previous official site (fagliermma.com) is no longer active.

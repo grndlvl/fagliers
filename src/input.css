@@ -16,7 +16,7 @@ body { font-family: 'Inter', system-ui, sans-serif; }
 
 /* Hero photo darkening so overlaid white text stays AA-legible */
 .hero-scrim {
-  background: linear-gradient(180deg, rgba(20,22,15,.30) 0%, rgba(20,22,15,.45) 45%, rgba(20,22,15,.88) 100%);
+  background: linear-gradient(180deg, rgba(20,22,15,.48) 0%, rgba(20,22,15,.62) 45%, rgba(20,22,15,.94) 100%);
 }
 
 /* Thin number/label used in the discipline index */
