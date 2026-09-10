@@ -34,15 +34,18 @@ test('page and expanded disclosures pass axe', async ({ page }, testInfo) => {
   await scan(page, testInfo, 'expanded');
 });
 
-test('event flyers link to the full-size image in a new tab', async ({ page }) => {
+test('event flyers link to the full-size image in a new window', async ({ page }) => {
   const flyers = page.locator('[data-flyer]');
   await expect(flyers).toHaveCount(2);
   for (const flyer of await flyers.all()) {
     await expect(flyer).toHaveAttribute('href', /^images\/events\/.+\.jpg$/);
     await expect(flyer).toHaveAttribute('target', '_blank');
     await expect(flyer).toHaveAttribute('rel', /noopener/);
-    // The new-tab behaviour must be announced, not just visual (WCAG 3.2.5).
-    await expect(flyer).toHaveAccessibleName(/opens in a new tab/i);
+    // The new-window behaviour must be announced, not just visual (WCAG 3.2.5),
+    // using the same sr-only wording as every other external link on the page.
+    await expect(flyer).toHaveAccessibleName(/opens in new window/i);
+    // The image's own alt must reach the link name, not be masked by an aria-label.
+    await expect(flyer).toHaveAccessibleName(/flyer/i);
   }
   await expect(page.locator('dialog')).toHaveCount(0);
 });

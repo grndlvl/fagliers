@@ -44,7 +44,7 @@ npx playwright show-report      # inspect results and axe review items
 
 The suite checks the page and its expanded FAQs/navigation at desktop, tablet, and
 320px mobile widths. It covers WCAG 2.2 AA axe rules, actual keyboard interactions,
-skip-link and mobile-menu focus behaviour, announced new-tab flyer links, animation
+skip-link and mobile-menu focus behaviour, announced new-window flyer links, animation
 pause, reduced motion, text spacing/reflow, and matching header/footer navigation.
 Deployment stops if these checks fail. Reports retain axe's manual-review items;
 automated results do not replace testing with assistive technology or manual review
@@ -86,7 +86,7 @@ Modern, clean, editorial — deliberately distinct from the sibling Backyard Bul
   alternating image/text program rows, clean tables and a dark contact card.
 - **Accessibility:** skip link, semantic landmarks, ARIA on the menu/map, visible focus rings
   (white ring on dark bands), pause/reduced-motion controls, contrast-safe color usage,
-  and event flyers that open full size in a new tab with the behaviour announced.
+  and event flyers that open full size in a new window with the behaviour announced.
 - Logo art lives at `images/logo.jpg`.
 
 ## Tabled / next session
