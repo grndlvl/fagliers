@@ -21,10 +21,10 @@ README.md                     This file
 
 ## Local development
 
-Requires [Node.js](https://nodejs.org) (v20+).
+Requires [Node.js](https://nodejs.org) (v24.8+) and Python 3 for the test preview server.
 
 ```bash
-npm install        # one-time: installs Tailwind
+npm install        # one-time: installs build and accessibility tools
 npm run build:css  # compile assets/tailwind.css once
 npm run watch:css  # or: rebuild on every change while editing
 ```
@@ -33,6 +33,22 @@ Then open `index.html` (or serve the folder, e.g. `python3 -m http.server`).
 
 > `assets/tailwind.css` is **git-ignored** — it's a build artifact. The site is unstyled
 > until you build it locally; in production GitHub Actions builds it fresh on every deploy.
+
+## Accessibility checks
+
+```bash
+npx playwright install chromium  # one-time browser download
+npm run test:a11y                # HTML validation, CSS build, and browser tests
+npx playwright show-report      # inspect results and axe review items
+```
+
+The suite checks the page and its expanded FAQs/navigation at desktop, tablet, and
+320px mobile widths. It covers WCAG 2.2 AA axe rules, actual keyboard interactions,
+skip-link and mobile-menu focus behaviour, announced new-tab flyer links, animation
+pause, reduced motion, text spacing/reflow, and matching header/footer navigation.
+Deployment stops if these checks fail. Reports retain axe's manual-review items;
+automated results do not replace testing with assistive technology or manual review
+of image text, third-party maps, and visual contrast over photography.
 
 ## ⚠️ Verify before launch
 
@@ -69,7 +85,8 @@ Modern, clean, editorial — deliberately distinct from the sibling Backyard Bul
 - **Layout:** full-bleed photo hero, a discipline marquee, a numbered discipline index,
   alternating image/text program rows, clean tables and a dark contact card.
 - **Accessibility:** skip link, semantic landmarks, ARIA on the menu/map, visible focus rings
-  (bright-green ring on dark bands), reduced-motion handling, contrast-safe color usage.
+  (white ring on dark bands), pause/reduced-motion controls, contrast-safe color usage,
+  and event flyers that open full size in a new tab with the behaviour announced.
 - Logo art lives at `images/logo.jpg`.
 
 ## Tabled / next session

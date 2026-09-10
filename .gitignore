@@ -36,3 +36,7 @@ preview-*.png
 .omx/
 ref-*.jpeg
 new-*.jpeg
+
+# Accessibility test artifacts
+playwright-report/
+test-results/

@@ -28,11 +28,25 @@ jobs:
       - name: Set up Node
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 24
           cache: npm
 
       - name: Install dependencies
         run: npm ci
+
+      - name: Install accessibility test browser
+        run: npx playwright install --with-deps chromium
+
+      - name: Check HTML and accessibility before publishing
+        run: npm run test:a11y
+
+      - name: Save accessibility test report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: accessibility-report
+          path: playwright-report/
+          retention-days: 14
 
       - name: Assemble site and compile Tailwind CSS
         run: |

@@ -35,6 +35,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible, [tabindex]:focus-v
   box-shadow: 0 0 0 2px #000;
 }
 
+
 /* FAQ disclosure */
 details > summary { list-style: none; cursor: pointer; }
 details > summary::-webkit-details-marker { display: none; }
@@ -47,6 +48,7 @@ details[open] .faq-icon { transform: rotate(45deg); }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .marquee-track { animation: none; }
+  #marqueeToggle { display: none; }
   * { animation-duration: .001ms !important; transition-duration: .001ms !important; }
   /* Neutralize hover/transform effects (e.g. gallery zoom) for motion-sensitive users */
   .group:hover .group-hover\:scale-105 { transform: none !important; }
