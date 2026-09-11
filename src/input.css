@@ -36,6 +36,21 @@ a:focus-visible, button:focus-visible, summary:focus-visible, [tabindex]:focus-v
 }
 
 
+/* The marquee band clips overflow, which would eat an outset ring's top and bottom
+   edges, so this control draws its focus indicator inside its own box instead. */
+#marqueeToggle:focus-visible {
+  outline-offset: -3px;
+  border-radius: 9999px;
+  box-shadow: inset 0 0 0 6px #000;
+}
+
+/* Forced colors strips the gradient that separates this control from the scrolling
+   text behind it, so give it an opaque surface and a real boundary of its own. */
+@media (forced-colors: active) {
+  #marqueeToggle { background-color: ButtonFace; border: 1px solid ButtonBorder; }
+  #marqueeToggle:focus-visible { outline: 3px solid Highlight; outline-offset: -3px; }
+}
+
 /* FAQ disclosure */
 details > summary { list-style: none; cursor: pointer; }
 details > summary::-webkit-details-marker { display: none; }

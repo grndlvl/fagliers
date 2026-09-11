@@ -74,16 +74,38 @@ test('skip link, menu and focus indicators support keyboard use', async ({ page 
 
 test('moving text can be paused with the keyboard', async ({ page }) => {
   const toggle = page.locator('#marqueeToggle');
-  await expect(toggle).toHaveAccessibleName('Pause animation');
+  await expect(toggle).toHaveAccessibleName('Pause scrolling discipline list');
   await toggle.focus();
   await page.keyboard.press('Space');
   // Icon-only control: the state change must reach the accessible name, not just the glyph.
-  await expect(toggle).toHaveAccessibleName('Resume animation');
+  await expect(toggle).toHaveAccessibleName('Resume scrolling discipline list');
   await expect(toggle.locator('[data-marquee-icon="play"]')).toBeVisible();
   await expect(toggle.locator('[data-marquee-icon="pause"]')).toBeHidden();
   expect(await page.locator('.marquee-track').evaluate(el => getComputedStyle(el).animationPlayState)).toBe('paused');
+  // VoiceOver does not reliably re-announce a changed aria-label, so state is also spoken.
+  await expect(page.locator('#marqueeStatus')).toHaveText('Discipline list paused');
   await page.keyboard.press('Enter');
   expect(await page.locator('.marquee-track').evaluate(el => getComputedStyle(el).animationPlayState)).toBe('running');
+  await expect(page.locator('#marqueeStatus')).toHaveText('Discipline list scrolling');
+});
+
+test('the marquee control survives its clipping band and forced colors', async ({ page }) => {
+  const toggle = page.locator('#marqueeToggle');
+  await toggle.focus();
+  // The band is overflow-hidden, so an outset ring would be clipped away at top and bottom.
+  const ring = await toggle.evaluate(el => {
+    const s = getComputedStyle(el);
+    return { offset: parseFloat(s.outlineOffset), width: parseFloat(s.outlineWidth) };
+  });
+  expect(ring.width).toBeGreaterThan(0);
+  expect(ring.offset).toBeLessThan(0);
+
+  // Forced colors strips the gradient behind the glyph; the button needs its own surface.
+  await page.emulateMedia({ forcedColors: 'active' });
+  const surface = await toggle.evaluate(el => getComputedStyle(el).backgroundColor);
+  const alpha = surface.startsWith('rgba') ? parseFloat(surface.split(',')[3]) : 1;
+  expect(alpha).toBeGreaterThan(0);
+  await page.emulateMedia({ forcedColors: null });
 });
 
 test('reflow, text spacing, reduced motion and event alignment', async ({ page }) => {

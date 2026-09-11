@@ -273,10 +273,11 @@
       </div>
       <!-- Scrolling text fades out before it reaches the pause control. -->
       <div class="pointer-events-none absolute inset-y-0 right-0 w-20 bg-gradient-to-l from-ink via-ink to-transparent"></div>
-      <button type="button" id="marqueeToggle" aria-label="Pause animation" class="absolute right-1 top-1/2 -translate-y-1/2 z-10 grid h-11 w-11 place-items-center rounded-full text-white/70 hover:text-white hover:bg-white/10">
+      <button type="button" id="marqueeToggle" aria-label="Pause scrolling discipline list" title="Pause scrolling discipline list" class="absolute right-1 top-1/2 -translate-y-1/2 z-10 grid h-11 w-11 place-items-center rounded-full bg-ink text-white/70 ring-1 ring-white/40 hover:text-white hover:bg-ink-soft">
         <svg data-marquee-icon="pause" viewBox="0 0 16 16" width="13" height="13" fill="currentColor" aria-hidden="true"><rect x="3" y="2" width="3.5" height="12" rx="1"/><rect x="9.5" y="2" width="3.5" height="12" rx="1"/></svg>
         <svg data-marquee-icon="play" viewBox="0 0 16 16" width="13" height="13" fill="currentColor" aria-hidden="true" hidden><path d="M4 2.5v11a1 1 0 0 0 1.5.86l9-5.5a1 1 0 0 0 0-1.72l-9-5.5A1 1 0 0 0 4 2.5Z"/></svg>
       </button>
+      <p id="marqueeStatus" role="status" class="sr-only"></p>
     </div>
 
     <!-- ============ STORY / STATEMENT ============ -->
@@ -906,15 +907,21 @@
     (function () {
       var marqueeToggle = document.getElementById('marqueeToggle');
       var marquee = document.querySelector('.marquee-track');
-      var pauseIcon = marqueeToggle.querySelector('[data-marquee-icon="pause"]');
-      var playIcon = marqueeToggle.querySelector('[data-marquee-icon="play"]');
-      marqueeToggle.addEventListener('click', function () {
-        var paused = marquee.style.animationPlayState !== 'paused';
-        marquee.style.animationPlayState = paused ? 'paused' : 'running';
-        marqueeToggle.setAttribute('aria-label', paused ? 'Resume animation' : 'Pause animation');
-        pauseIcon.toggleAttribute('hidden', paused);
-        playIcon.toggleAttribute('hidden', !paused);
-      });
+      if (marqueeToggle && marquee) {
+        var pauseIcon = marqueeToggle.querySelector('[data-marquee-icon="pause"]');
+        var playIcon = marqueeToggle.querySelector('[data-marquee-icon="play"]');
+        var marqueeStatus = document.getElementById('marqueeStatus');
+        marqueeToggle.addEventListener('click', function () {
+          var paused = marquee.style.animationPlayState !== 'paused';
+          var label = paused ? 'Resume scrolling discipline list' : 'Pause scrolling discipline list';
+          marquee.style.animationPlayState = paused ? 'paused' : 'running';
+          marqueeToggle.setAttribute('aria-label', label);
+          marqueeToggle.title = label;
+          pauseIcon.toggleAttribute('hidden', paused);
+          playIcon.toggleAttribute('hidden', !paused);
+          if (marqueeStatus) marqueeStatus.textContent = paused ? 'Discipline list paused' : 'Discipline list scrolling';
+        });
+      }
 
       // Mobile menu (header stays a solid light bar at all times)
       var menu = document.getElementById('mobileMenu');
