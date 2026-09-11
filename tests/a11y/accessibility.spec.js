@@ -77,7 +77,10 @@ test('moving text can be paused with the keyboard', async ({ page }) => {
   await expect(toggle).toHaveAccessibleName('Pause animation');
   await toggle.focus();
   await page.keyboard.press('Space');
-  await expect(toggle).toHaveText('Resume animation');
+  // Icon-only control: the state change must reach the accessible name, not just the glyph.
+  await expect(toggle).toHaveAccessibleName('Resume animation');
+  await expect(toggle.locator('[data-marquee-icon="play"]')).toBeVisible();
+  await expect(toggle.locator('[data-marquee-icon="pause"]')).toBeHidden();
   expect(await page.locator('.marquee-track').evaluate(el => getComputedStyle(el).animationPlayState)).toBe('paused');
   await page.keyboard.press('Enter');
   expect(await page.locator('.marquee-track').evaluate(el => getComputedStyle(el).animationPlayState)).toBe('running');
