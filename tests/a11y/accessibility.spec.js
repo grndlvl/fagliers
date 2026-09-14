@@ -34,18 +34,18 @@ test('page and expanded disclosures pass axe', async ({ page }, testInfo) => {
   await scan(page, testInfo, 'expanded');
 });
 
-test('event flyers link to the full-size image in a new window', async ({ page }) => {
-  const flyers = page.locator('[data-flyer]');
-  await expect(flyers).toHaveCount(2);
-  for (const flyer of await flyers.all()) {
-    await expect(flyer).toHaveAttribute('href', /^images\/events\/.+\.jpg$/);
-    await expect(flyer).toHaveAttribute('target', '_blank');
-    await expect(flyer).toHaveAttribute('rel', /noopener/);
+test('upcoming event images link to the full-size image in a new window', async ({ page }) => {
+  const eventImages = page.locator('[data-event-image]');
+  await expect(eventImages).toHaveCount(3);
+  for (const eventImage of await eventImages.all()) {
+    await expect(eventImage).toHaveAttribute('href', /^images\/events\/.+\.(jpg|png|webp)$/);
+    await expect(eventImage).toHaveAttribute('target', '_blank');
+    await expect(eventImage).toHaveAttribute('rel', /noopener/);
     // The new-window behaviour must be announced, not just visual (WCAG 3.2.5),
     // using the same sr-only wording as every other external link on the page.
-    await expect(flyer).toHaveAccessibleName(/opens in new window/i);
+    await expect(eventImage).toHaveAccessibleName(/opens in new window/i);
     // The image's own alt must reach the link name, not be masked by an aria-label.
-    await expect(flyer).toHaveAccessibleName(/flyer/i);
+    await expect(eventImage).toHaveAccessibleName(/Byron|Joel|Malcolm/i);
   }
   await expect(page.locator('dialog')).toHaveCount(0);
 });
@@ -66,10 +66,22 @@ test('skip link, menu and focus indicators support keyboard use', async ({ page 
     await expect(toggle).toBeFocused();
     await expect(page.locator('#mobileMenu')).not.toBeVisible();
   }
-  await page.locator('[data-flyer]').first().focus();
-  expect(await page.locator('[data-flyer]').first().evaluate(el => getComputedStyle(el).outlineStyle)).not.toBe('none');
+  await page.locator('[data-event-image]').first().focus();
+  expect(await page.locator('[data-event-image]').first().evaluate(el => getComputedStyle(el).outlineStyle)).not.toBe('none');
   const links = selector => page.locator(selector).evaluateAll(nodes => nodes.map(el => ({ text: el.textContent.trim(), href: el.getAttribute('href') })));
-  expect(await links('footer nav[aria-label="Explore"] a')).toEqual(await links('[data-nav-link]'));
+  const primaryLinks = await links('[data-nav-link]');
+  expect(primaryLinks).toEqual([
+    { text: 'Programs', href: '#programs' },
+    { text: 'Train', href: '#train' },
+    { text: 'Schedule', href: '#schedule' },
+    { text: 'Pricing', href: '#pricing' },
+    { text: 'Coaches', href: '#coaches' },
+    { text: 'Events', href: '#events' },
+    { text: 'Gallery', href: '#gallery' },
+    { text: 'Visit', href: '#visit' },
+  ]);
+  expect(await links('[data-mobile-nav-link]')).toEqual(primaryLinks);
+  expect(await links('footer nav[aria-label="Explore"] a')).toEqual(primaryLinks);
 });
 
 test('moving text can be paused with the keyboard', async ({ page }) => {
@@ -87,6 +99,27 @@ test('moving text can be paused with the keyboard', async ({ page }) => {
   await page.keyboard.press('Enter');
   expect(await page.locator('.marquee-track').evaluate(el => getComputedStyle(el).animationPlayState)).toBe('running');
   await expect(page.locator('#marqueeStatus')).toHaveText('Discipline list scrolling');
+});
+
+test('in-page navigation preserves destination focus and current-location context', async ({ page }) => {
+  const mobileToggle = page.locator('#navToggle');
+  if (await mobileToggle.isVisible()) {
+    await mobileToggle.focus();
+    await page.keyboard.press('Enter');
+    await page.locator('[data-mobile-nav-link][href="#programs"]').focus();
+    await page.keyboard.press('Enter');
+    await expect(page.locator('#mobileMenu')).not.toBeVisible();
+    await expect(page.locator('#programs [data-section-heading]')).toBeFocused();
+  } else {
+    await page.locator('[data-nav-link][href="#programs"]').click();
+  }
+
+  const matchingLinks = page.locator('[data-section-nav-link][href="#programs"]');
+  await expect(matchingLinks).toHaveCount(3);
+  for (const link of await matchingLinks.all()) {
+    await expect(link).toHaveAttribute('aria-current', 'location');
+    expect(await link.evaluate(el => getComputedStyle(el).textDecorationLine)).toContain('underline');
+  }
 });
 
 test('the marquee control survives its clipping band and forced colors', async ({ page }) => {
@@ -108,13 +141,48 @@ test('the marquee control survives its clipping band and forced colors', async (
   await page.emulateMedia({ forcedColors: null });
 });
 
-test('reflow, text spacing, reduced motion and event alignment', async ({ page }) => {
+test('three-card event row, reflow, text spacing and reduced motion', async ({ page }) => {
   await page.emulateMedia({ reducedMotion: 'reduce' });
   expect(await page.locator('.marquee-track').evaluate(el => getComputedStyle(el).animationName)).toBe('none');
-  if (page.viewportSize().width >= 768) {
-    const rows = await page.locator('#events article').evaluateAll(cards => cards.map(card => [...card.children].map(el => Math.round(el.getBoundingClientRect().top))));
-    expect(rows[0]).toEqual(rows[1]);
+  if (page.viewportSize().width >= 1024) {
+    const eventCardTops = await page.locator('#events article').evaluateAll(cards => cards.map(card => Math.round(card.getBoundingClientRect().top)));
+    expect(new Set(eventCardTops).size).toBe(1);
   }
   await page.addStyleTag({ content: '* { line-height: 1.5 !important; letter-spacing: .12em !important; word-spacing: .16em !important; } p { margin-bottom: 2em !important; }' });
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
+});
+
+test('card order supports the marketing funnel', async ({ page }) => {
+  await expect(page.locator('#schedule h3')).toHaveText([
+    'Kids Classes',
+    'MMA',
+    'Muay Thai Kickboxing',
+    'Brazilian Jiu-Jitsu',
+    'Open Mat',
+    'Weekend',
+  ]);
+  await expect(page.locator('#coaches article h3')).toHaveText([
+    'Jason Faglier Sr.',
+    'Joel Faglier',
+    'Jason Faglier Jr.',
+  ]);
+  expect(await page.locator('#events article').evaluateAll(cards => cards.map(card => card.id))).toEqual([
+    'byron-halo',
+    'joel-beach-worlds',
+    'malcolm-wellmaker-ufc',
+  ]);
+  await expect(page.locator('[data-membership-tiers]')).toHaveJSProperty('tagName', 'UL');
+  await expect(page.locator('[data-membership-tiers] > li > h3')).toHaveText([
+    '1 Discipline',
+    '2 Disciplines',
+    '3 Disciplines',
+    'Unlimited Classes',
+  ]);
+  await expect(page.locator('[data-secondary-pricing]')).toHaveJSProperty('tagName', 'UL');
+  await expect(page.locator('[data-secondary-pricing] > li > h3')).toHaveText([
+    'Family Price Cap',
+    'Open Mat / Drop-In',
+    'Karate Starter Gear · Gi*',
+    'BJJ Starter Gear · Gi*',
+  ]);
 });

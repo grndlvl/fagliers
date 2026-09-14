@@ -10,7 +10,7 @@ module.exports = {
         // Warm near-black used for text and the dramatic dark bands.
         ink: { DEFAULT: "#14160F", soft: "#1B1E15", muted: "#5B6052" },
         // Light, warm "paper" surfaces.
-        paper: { DEFAULT: "#FAFAF6", mist: "#F1F2EC", line: "#E4E5DC" },
+        paper: { DEFAULT: "#FAFAF6", mist: "#ECEFE6", line: "#D8DDCF" },
       },
       fontFamily: {
         display: ["Archivo", "system-ui", "sans-serif"],

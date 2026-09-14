@@ -100,33 +100,6 @@
   "@graph": [
     {
       "@type": "SportsEvent",
-      "@id": "https://fagliersmma.com/#joel-camp",
-      "name": "Wrestling for Jiu-Jitsu camp supporting Joel Faglier",
-      "url": "https://fagliersmma.com/#joel-camp",
-      "startDate": "2026-09-11T18:30:00-04:00",
-      "endDate": "2026-09-11T20:30:00-04:00",
-      "description": "Camp replacing Friday open mat to support Joel Faglier's beach wrestling world competition in Greece. All ages welcome. $25 per person; childcare available for $10 more.",
-      "image": "https://fagliersmma.com/images/events/joel-camp-september-2026.jpg",
-      "location": {
-        "@id": "https://fagliersmma.com/#gym"
-      },
-      "organizer": {
-        "@type": "Organization",
-        "name": "Faglier's Mixed Martial Arts",
-        "url": "https://fagliersmma.com/"
-      },
-      "offers": {
-        "@type": "Offer",
-        "price": "25",
-        "priceCurrency": "USD",
-        "url": "https://www.instagram.com/p/Dc4sUp0hU6O/"
-      },
-      "sameAs": "https://www.instagram.com/p/Dc4sUp0hU6O/",
-      "eventStatus": "https://schema.org/EventScheduled",
-      "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode"
-    },
-    {
-      "@type": "SportsEvent",
       "@id": "https://fagliersmma.com/#byron-halo",
       "name": "The Halo: 8 Man Tournament \u2014 Byron Wilson",
       "url": "https://fagliersmma.com/#byron-halo",
@@ -151,6 +124,69 @@
       "sameAs": [
         "https://www.instagram.com/p/Dc36kdlxjNv/",
         "https://www.tapology.com/fightcenter/events/147851-the-halo-8-man-tournament"
+      ],
+      "eventStatus": "https://schema.org/EventScheduled",
+      "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode"
+    },
+    {
+      "@type": "SportsEvent",
+      "@id": "https://fagliersmma.com/#joel-beach-worlds",
+      "name": "2026 Beach Wrestling World Championships \u2014 Joel Faglier",
+      "url": "https://fagliersmma.com/#joel-beach-worlds",
+      "startDate": "2026-09-25",
+      "endDate": "2026-09-27",
+      "description": "Faglier's and Backyard Bullies wrestler Joel Faglier represents Team USA at the 2026 Beach Wrestling World Championships in Katerini, Greece.",
+      "image": "https://fagliersmma.com/images/events/joel-faglier-beach-worlds-2026.jpg",
+      "location": {
+        "@type": "Place",
+        "name": "Katerini, Greece",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Katerini",
+          "addressCountry": "GR"
+        }
+      },
+      "competitor": {
+        "@type": "Person",
+        "name": "Joel Faglier"
+      },
+      "sport": "Beach Wrestling",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode"
+    },
+    {
+      "@type": "SportsEvent",
+      "@id": "https://fagliersmma.com/#malcolm-wellmaker-ufc",
+      "name": "Malcolm Wellmaker vs. Otari Tanzilovi",
+      "url": "https://fagliersmma.com/#malcolm-wellmaker-ufc",
+      "startDate": "2026-10-10",
+      "description": "Faglier's MMA alumnus Malcolm The Machine Wellmaker faces Otari Tanzilovi at UFC Fight Night: Allen vs. Duncan in Las Vegas.",
+      "image": "https://fagliersmma.com/images/events/malcolm-wellmaker-october-2026.webp",
+      "location": {
+        "@type": "Place",
+        "name": "Meta APEX",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Las Vegas",
+          "addressRegion": "NV",
+          "addressCountry": "US"
+        }
+      },
+      "competitor": [
+        {
+          "@type": "Person",
+          "name": "Malcolm Wellmaker"
+        },
+        {
+          "@type": "Person",
+          "name": "Otari Tanzilovi"
+        }
+      ],
+      "sport": "Mixed Martial Arts",
+      "sameAs": [
+        "https://www.tapology.com/fightcenter/bouts/1163418-ufc-fight-night-malcolm-the-machine-wellmaker-vs-otari-tanzilovi",
+        "https://www.ufc.com/event/ufc-fight-night-october-10-2026",
+        "https://www.instagram.com/p/DI9R91iAalg/"
       ],
       "eventStatus": "https://schema.org/EventScheduled",
       "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode"
@@ -179,14 +215,14 @@
         </a>
 
         <div class="hidden lg:flex items-center gap-3 xl:gap-8 text-sm font-600" data-nav-links>
-          <a href="#train" class="hover:text-brand-deep transition-colors" data-nav-link>Train</a>
-          <a href="#programs" class="hover:text-brand-deep transition-colors" data-nav-link>Programs</a>
-          <a href="#coaches" class="hover:text-brand-deep transition-colors" data-nav-link>Coaches</a>
-          <a href="#schedule" class="hover:text-brand-deep transition-colors" data-nav-link>Schedule</a>
-          <a href="#pricing" class="hover:text-brand-deep transition-colors" data-nav-link>Pricing</a>
-          <a href="#gallery" class="hover:text-brand-deep transition-colors" data-nav-link>Gallery</a>
-          <a href="#events" class="hover:text-brand-deep transition-colors" data-nav-link>Events</a>
-          <a href="#visit" class="hover:text-brand-deep transition-colors" data-nav-link>Visit</a>
+          <a href="#programs" class="hover:text-brand-deep transition-colors" data-nav-link data-section-nav-link>Programs</a>
+          <a href="#train" class="hover:text-brand-deep transition-colors" data-nav-link data-section-nav-link>Train</a>
+          <a href="#schedule" class="hover:text-brand-deep transition-colors" data-nav-link data-section-nav-link>Schedule</a>
+          <a href="#pricing" class="hover:text-brand-deep transition-colors" data-nav-link data-section-nav-link>Pricing</a>
+          <a href="#coaches" class="hover:text-brand-deep transition-colors" data-nav-link data-section-nav-link>Coaches</a>
+          <a href="#events" class="hover:text-brand-deep transition-colors" data-nav-link data-section-nav-link>Events</a>
+          <a href="#gallery" class="hover:text-brand-deep transition-colors" data-nav-link data-section-nav-link>Gallery</a>
+          <a href="#visit" class="hover:text-brand-deep transition-colors" data-nav-link data-section-nav-link>Visit</a>
         </div>
 
         <div class="flex items-center gap-3">
@@ -202,14 +238,14 @@
       <!-- Mobile menu -->
       <div id="mobileMenu" class="hidden lg:hidden pb-4">
         <div class="flex flex-col gap-1 rounded-2xl bg-white p-3 ring-1 ring-black/10 shadow-xl text-ink font-600">
-          <a href="#train" class="rounded-lg px-3 py-2.5 hover:bg-paper-mist">Train</a>
-          <a href="#programs" class="rounded-lg px-3 py-2.5 hover:bg-paper-mist">Programs</a>
-          <a href="#coaches" class="rounded-lg px-3 py-2.5 hover:bg-paper-mist">Coaches</a>
-          <a href="#schedule" class="rounded-lg px-3 py-2.5 hover:bg-paper-mist">Schedule</a>
-          <a href="#pricing" class="rounded-lg px-3 py-2.5 hover:bg-paper-mist">Pricing</a>
-          <a href="#gallery" class="rounded-lg px-3 py-2.5 hover:bg-paper-mist">Gallery</a>
-          <a href="#events" class="rounded-lg px-3 py-2.5 hover:bg-paper-mist">Events</a>
-          <a href="#visit" class="rounded-lg px-3 py-2.5 hover:bg-paper-mist">Visit</a>
+          <a href="#programs" class="rounded-lg px-3 py-2.5 hover:bg-paper-mist" data-mobile-nav-link data-section-nav-link>Programs</a>
+          <a href="#train" class="rounded-lg px-3 py-2.5 hover:bg-paper-mist" data-mobile-nav-link data-section-nav-link>Train</a>
+          <a href="#schedule" class="rounded-lg px-3 py-2.5 hover:bg-paper-mist" data-mobile-nav-link data-section-nav-link>Schedule</a>
+          <a href="#pricing" class="rounded-lg px-3 py-2.5 hover:bg-paper-mist" data-mobile-nav-link data-section-nav-link>Pricing</a>
+          <a href="#coaches" class="rounded-lg px-3 py-2.5 hover:bg-paper-mist" data-mobile-nav-link data-section-nav-link>Coaches</a>
+          <a href="#events" class="rounded-lg px-3 py-2.5 hover:bg-paper-mist" data-mobile-nav-link data-section-nav-link>Events</a>
+          <a href="#gallery" class="rounded-lg px-3 py-2.5 hover:bg-paper-mist" data-mobile-nav-link data-section-nav-link>Gallery</a>
+          <a href="#visit" class="rounded-lg px-3 py-2.5 hover:bg-paper-mist" data-mobile-nav-link data-section-nav-link>Visit</a>
           <a href="#visit" class="mt-1 rounded-lg bg-brand px-3 py-2.5 font-700 text-ink text-center">First 3 Classes Free <span aria-hidden="true">→</span></a>
         </div>
       </div>
@@ -281,7 +317,7 @@
     </div>
 
     <!-- ============ STORY / STATEMENT ============ -->
-    <section id="story" class="py-20 sm:py-28">
+    <section id="story" class="bg-paper py-20 sm:py-28">
       <div class="mx-auto max-w-8xl px-4 sm:px-6 lg:px-10">
         <div class="grid lg:grid-cols-12 gap-10 lg:gap-16 items-end">
           <div class="lg:col-span-7">
@@ -322,7 +358,7 @@
     <section id="train" class="py-20 sm:py-28 bg-paper-mist border-y border-paper-line">
       <div class="mx-auto max-w-8xl px-4 sm:px-6 lg:px-10">
         <div class="flex flex-wrap items-end justify-between gap-6">
-          <h2 class="font-display display-xl text-4xl sm:text-5xl lg:text-6xl max-w-2xl">Five disciplines.<br />One complete MMA program.</h2>
+          <h2 class="font-display display-xl text-4xl sm:text-5xl lg:text-6xl max-w-2xl" tabindex="-1" data-section-heading>Five disciplines.<br />One complete MMA program.</h2>
           <p class="max-w-sm text-ink/70">Striking, grappling and complete MMA training, grounded in our Kempo roots. Every class meets you where you are, whether you're brand new or preparing to compete.</p>
         </div>
 
@@ -357,9 +393,9 @@
     </section>
 
     <!-- ============ PROGRAMS (split rows) ============ -->
-    <section id="programs" class="py-20 sm:py-28">
+    <section id="programs" class="bg-paper py-20 sm:py-28">
       <div class="mx-auto max-w-8xl px-4 sm:px-6 lg:px-10">
-        <h2 class="font-display display-xl text-4xl sm:text-5xl lg:text-6xl max-w-3xl">A class for every age &amp; goal.</h2>
+        <h2 class="font-display display-xl text-4xl sm:text-5xl lg:text-6xl max-w-3xl" tabindex="-1" data-section-heading>A class for every age &amp; goal.</h2>
 
         <!-- Kids & Teens -->
         <div class="mt-14 grid lg:grid-cols-2 gap-8 lg:gap-14 items-center">
@@ -449,10 +485,11 @@
     </section>
 
     <!-- ============ COACHES ============ -->
-    <section id="coaches" class="py-20 sm:py-28">
-      <div class="mx-auto max-w-8xl px-4 sm:px-6 lg:px-10">
+    <section id="coaches" class="relative isolate overflow-hidden bg-paper py-20 sm:py-28">
+      <img src="images/logo.jpg" alt="" aria-hidden="true" loading="lazy" width="958" height="960" class="coaches-watermark pointer-events-none absolute -right-28 top-8 z-0 hidden w-[34rem] max-w-none select-none object-contain opacity-[0.04] mix-blend-multiply lg:block" />
+      <div class="relative z-10 mx-auto max-w-8xl px-4 sm:px-6 lg:px-10">
         <div class="flex flex-wrap items-end justify-between gap-6">
-          <h2 class="font-display display-xl text-4xl sm:text-5xl lg:text-6xl">The Faglier family</h2>
+          <h2 class="font-display display-xl text-4xl sm:text-5xl lg:text-6xl" tabindex="-1" data-section-heading>The Faglier family</h2>
           <p class="max-w-sm text-ink/70">Decades of martial arts and professional fight experience, all grounded in the family-first culture the gym was built on.</p>
         </div>
 
@@ -471,15 +508,6 @@
             </ul>
           </article>
           <article class="w-full max-w-sm rounded-3xl bg-paper-mist ring-1 ring-paper-line p-7">
-            <div class="h-14 w-14 rounded-full bg-brand/20 text-brand-deep flex items-center justify-center font-display font-800 text-xl" aria-hidden="true">JJ</div>
-            <h3 class="mt-5 font-display font-800 text-xl">Jason Faglier Jr.</h3>
-            <p class="text-sm font-600 text-brand-deep">Coach</p>
-            <ul class="mt-3 space-y-1.5 text-sm text-ink/70">
-              <li>Black belt in Jiu-Jitsu</li>
-              <li>Current professional fighter</li>
-            </ul>
-          </article>
-          <article class="w-full max-w-sm rounded-3xl bg-paper-mist ring-1 ring-paper-line p-7">
             <div class="h-14 w-14 rounded-full bg-brand/20 text-brand-deep flex items-center justify-center font-display font-800 text-xl" aria-hidden="true">JF</div>
             <h3 class="mt-5 font-display font-800 text-xl">Joel Faglier</h3>
             <p class="text-sm font-600 text-brand-deep">Coach</p>
@@ -493,6 +521,15 @@
               <li>NAIA national qualifier</li>
             </ul>
           </article>
+          <article class="w-full max-w-sm rounded-3xl bg-paper-mist ring-1 ring-paper-line p-7">
+            <div class="h-14 w-14 rounded-full bg-brand/20 text-brand-deep flex items-center justify-center font-display font-800 text-xl" aria-hidden="true">JJ</div>
+            <h3 class="mt-5 font-display font-800 text-xl">Jason Faglier Jr.</h3>
+            <p class="text-sm font-600 text-brand-deep">Coach</p>
+            <ul class="mt-3 space-y-1.5 text-sm text-ink/70">
+              <li>Black belt in Jiu-Jitsu</li>
+              <li>Current professional fighter</li>
+            </ul>
+          </article>
         </div>
       </div>
     </section>
@@ -501,7 +538,7 @@
     <section id="gallery" class="py-20 sm:py-28 bg-paper-mist border-y border-paper-line">
       <div class="mx-auto max-w-8xl px-4 sm:px-6 lg:px-10">
         <div class="flex flex-wrap items-end justify-between gap-6">
-          <h2 class="font-display display-xl text-4xl sm:text-5xl lg:text-6xl">Inside the gym</h2>
+          <h2 class="font-display display-xl text-4xl sm:text-5xl lg:text-6xl" tabindex="-1" data-section-heading>Inside the gym</h2>
           <p class="text-ink/70">See more on
             <a href="https://www.facebook.com/FagliersKempoKarate/" target="_blank" rel="noopener" class="font-600 text-brand-deep underline underline-offset-4 hover:text-brand-dark">Facebook <span class="sr-only">(opens in new window)</span></a> &amp;
             <a href="https://www.instagram.com/fagliersmma/" target="_blank" rel="noopener" class="font-600 text-brand-deep underline underline-offset-4 hover:text-brand-dark">Instagram <span class="sr-only">(opens in new window)</span></a>.
@@ -528,40 +565,51 @@
     </section>
 
     <!-- ============ EVENTS ============ -->
-    <section id="events" class="py-20 sm:py-28">
+    <section id="events" class="bg-paper py-20 sm:py-28">
       <div class="mx-auto max-w-8xl px-4 sm:px-6 lg:px-10">
-        <h2 class="font-display display-xl text-4xl sm:text-5xl lg:text-6xl">Support our fighters</h2>
+        <h2 class="font-display display-xl text-4xl sm:text-5xl lg:text-6xl" tabindex="-1" data-section-heading>Support our fighters</h2>
         <p class="mt-4 max-w-2xl text-ink/70">Show up for the Faglier's fight family, at the gym and on the road.</p>
-        <div class="mt-12 grid md:grid-cols-2 gap-6 md:gap-y-0">
-          <article id="joel-camp" class="md:row-span-6 md:grid md:grid-rows-[subgrid] rounded-3xl bg-paper-mist ring-1 ring-paper-line p-7">
-            <p class="text-sm font-700 text-brand-deep"><time datetime="2026-09-11">Friday, September 11, 2026</time></p>
-            <h3 class="mt-3 font-display font-800 text-2xl">Wrestling for Jiu-Jitsu camp</h3>
-            <a href="images/events/joel-camp-september-2026.jpg" target="_blank" rel="noopener" data-flyer class="mt-6 block rounded-2xl">
-              <img src="images/events/joel-camp-september-2026.jpg" alt="Joel Faglier fundraising camp flyer. Event details follow below." loading="lazy" width="1200" height="1598" class="w-full aspect-[3/4] object-contain bg-ink rounded-2xl" />
-              <span class="sr-only">(opens in new window)</span>
-            </a>
-            <p class="mt-3 font-600">Faglier's MMA · Augusta, Georgia</p>
-            <div class="mt-4">
-              <p class="text-ink/70">6:30–8:30 PM · $25 per person · All ages welcome</p>
-              <p class="mt-2 text-sm text-ink/70">Childcare available for $10 more.</p>
-              <p class="mt-4 text-ink/70">Join us for a camp in place of Friday open mat and help support Joel's trip to compete in beach wrestling worlds in Greece.</p>
-            </div>
-            <a href="https://www.instagram.com/p/Dc4sUp0hU6O/" target="_blank" rel="noopener" class="mt-6 self-start inline-flex min-h-11 items-center font-700 text-brand-deep underline underline-offset-4">View camp announcement <span class="sr-only">(opens in new window)</span></a>
-          </article>
-          <article id="byron-halo" class="md:row-span-6 md:grid md:grid-rows-[subgrid] rounded-3xl bg-paper-mist ring-1 ring-paper-line p-7">
+        <div class="mt-12 grid gap-6 lg:grid-cols-3 lg:gap-y-0">
+          <article id="byron-halo" class="rounded-3xl bg-paper-mist ring-1 ring-paper-line p-7 lg:row-span-6 lg:grid lg:grid-rows-[subgrid]">
             <p class="text-sm font-700 text-brand-deep"><time datetime="2026-09-18">Friday, September 18, 2026</time></p>
             <h3 class="mt-3 font-display font-800 text-2xl">Cheer on Byron Wilson at The Halo</h3>
-            <a href="images/events/byron-halo-september-2026.jpg" target="_blank" rel="noopener" data-flyer class="mt-6 block rounded-2xl">
+            <a href="images/events/byron-halo-september-2026.jpg" target="_blank" rel="noopener" data-event-image class="mt-6 block rounded-2xl">
               <img src="images/events/byron-halo-september-2026.jpg" alt="Byron Wilson's Entering the Halo fight flyer for September 18 at Bonk Studios in Miami, Florida" loading="lazy" width="1200" height="1500" class="w-full aspect-[3/4] object-contain bg-ink rounded-2xl" />
               <span class="sr-only">(opens in new window)</span>
             </a>
-            <p class="mt-3 font-600">Bonk Studios · Miami, Florida</p>
-            <div class="mt-4">
-              <p class="text-ink/70">Faglier's fighter Byron Wilson enters The Halo's 8-man MMA tournament at 155 lb. Get behind Byron as he represents the fight family in Miami.</p>
-            </div>
-            <div class="mt-6 self-start flex flex-wrap gap-x-6 gap-y-2">
+            <p class="mt-4 font-600">Bonk Studios · Miami, Florida</p>
+            <p class="mt-3 text-ink/70">Faglier's fighter Byron Wilson enters The Halo's 8-man MMA tournament at 155 lb. Get behind Byron as he represents the fight family in Miami.</p>
+            <div class="mt-6 flex flex-wrap gap-x-6 gap-y-2 self-start">
               <a href="https://www.instagram.com/p/Dc36kdlxjNv/" target="_blank" rel="noopener" class="inline-flex min-h-11 items-center font-700 text-brand-deep underline underline-offset-4">View Byron's announcement <span class="sr-only">(opens in new window)</span></a>
               <a href="https://www.tapology.com/fightcenter/events/147851-the-halo-8-man-tournament" target="_blank" rel="noopener" class="inline-flex min-h-11 items-center font-700 text-brand-deep underline underline-offset-4">View fight card <span class="sr-only">(opens in new window)</span></a>
+            </div>
+          </article>
+          <article id="joel-beach-worlds" class="rounded-3xl bg-paper-mist ring-1 ring-paper-line p-7 lg:row-span-6 lg:grid lg:grid-rows-[subgrid]">
+            <p class="text-sm font-700 text-brand-deep">Friday–Sunday, <time datetime="2026-09-25">September 25</time>–<time datetime="2026-09-27">27, 2026</time></p>
+            <h3 class="mt-3 font-display font-800 text-2xl">Cheer on Joel Faglier at Beach Worlds</h3>
+            <a href="images/events/joel-faglier-beach-worlds-2026.jpg" target="_blank" rel="noopener" data-event-image class="mt-6 block rounded-2xl">
+              <img src="images/events/joel-faglier-beach-worlds-2026.jpg" alt="Joel Faglier wearing his 2026 Carolina Beach Nationals gold medal" loading="lazy" width="600" height="400" class="w-full aspect-[3/4] object-cover rounded-2xl" />
+              <span class="sr-only">(opens in new window)</span>
+            </a>
+            <p class="mt-4 font-600">Katerini, Greece</p>
+            <p class="mt-3 text-ink/70">Joel heads to the 2026 Beach Wrestling World Championships as the Senior Men over 90 kg Carolina Beach Nationals champion. Cheer him on as he represents Team USA, Backyard Bullies and the Faglier's fight family.</p>
+            <div class="mt-6 flex flex-wrap gap-x-6 gap-y-2 self-start">
+              <a href="https://www.instagram.com/p/Dc4sUp0hU6O/" target="_blank" rel="noopener" class="inline-flex min-h-11 items-center font-700 text-brand-deep underline underline-offset-4">View Joel's trip announcement <span class="sr-only">(opens in new window)</span></a>
+            </div>
+          </article>
+          <article id="malcolm-wellmaker-ufc" class="rounded-3xl bg-paper-mist ring-1 ring-paper-line p-7 lg:row-span-6 lg:grid lg:grid-rows-[subgrid]">
+            <p class="text-sm font-700 text-brand-deep"><time datetime="2026-10-10">Saturday, October 10, 2026</time></p>
+            <h3 class="mt-3 font-display font-800 text-2xl">Cheer on Malcolm “The Machine” Wellmaker</h3>
+            <a href="images/events/malcolm-wellmaker-october-2026.webp" target="_blank" rel="noopener" data-event-image class="mt-6 block rounded-2xl">
+              <img src="images/events/malcolm-wellmaker-october-2026.webp" alt="Fight poster for Malcolm The Machine Wellmaker versus Otari Tanzilovi on October 10, 2026" loading="lazy" width="1122" height="1402" class="w-full aspect-[3/4] object-cover rounded-2xl" />
+              <span class="sr-only">(opens in new window)</span>
+            </a>
+            <p class="mt-4 font-600">Meta APEX · Las Vegas, Nevada</p>
+            <p class="mt-3 text-ink/70">Augusta's own Malcolm Wellmaker faces Otari Tanzilovi at UFC Fight Night: Allen vs. Duncan. The main card begins at 8:00 PM Eastern on Paramount+.</p>
+            <div class="mt-6 flex flex-wrap gap-x-6 gap-y-2 self-start">
+              <a href="https://www.instagram.com/p/DI9R91iAalg/" target="_blank" rel="noopener" class="inline-flex min-h-11 items-center font-700 text-brand-deep underline underline-offset-4">View Malcolm's post <span class="sr-only">(opens in new window)</span></a>
+              <a href="https://www.tapology.com/fightcenter/bouts/1163418-ufc-fight-night-malcolm-the-machine-wellmaker-vs-otari-tanzilovi" target="_blank" rel="noopener" class="inline-flex min-h-11 items-center font-700 text-brand-deep underline underline-offset-4">View bout details <span class="sr-only">(opens in new window)</span></a>
+              <a href="https://www.ufc.com/event/ufc-fight-night-october-10-2026" target="_blank" rel="noopener" class="inline-flex min-h-11 items-center font-700 text-brand-deep underline underline-offset-4">View UFC event <span class="sr-only">(opens in new window)</span></a>
             </div>
           </article>
         </div>
@@ -569,48 +617,17 @@
     </section>
 
     <!-- ============ SCHEDULE ============ -->
-    <section id="schedule" class="py-20 sm:py-28">
+    <section id="schedule" class="bg-paper-mist border-y border-paper-line py-20 sm:py-28">
       <div class="mx-auto max-w-8xl px-4 sm:px-6 lg:px-10">
         <div class="flex flex-wrap items-end justify-between gap-6">
           <div>
             <p class="font-700 text-brand-deep">Weekly classes</p>
-            <h2 class="mt-3 font-display display-xl text-4xl sm:text-5xl lg:text-6xl">Class schedule</h2>
+            <h2 class="mt-3 font-display display-xl text-4xl sm:text-5xl lg:text-6xl" tabindex="-1" data-section-heading>Class schedule</h2>
           </div>
           <p class="max-w-md text-ink/75">Find your class, then choose the day and time that works for you.</p>
         </div>
 
         <div class="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          <section class="rounded-3xl bg-paper-mist ring-1 ring-paper-line p-6" aria-labelledby="mma-schedule">
-            <p class="text-xs font-700 uppercase tracking-wide text-brand-deep">Mixed Martial Arts</p>
-            <h3 id="mma-schedule" class="mt-2 font-display font-800 text-2xl">MMA</h3>
-            <dl class="mt-5">
-              <div>
-                <dt class="font-700">Mon &amp; Wed</dt>
-                <dd class="mt-2 space-y-1 text-sm text-ink/70"><span class="block">Morning · 6:30–7:30 AM</span><span class="block">Evening · 7:15–8:30 PM</span></dd>
-              </div>
-            </dl>
-          </section>
-
-          <section class="rounded-3xl bg-paper-mist ring-1 ring-paper-line p-6" aria-labelledby="striking-schedule">
-            <p class="text-xs font-700 uppercase tracking-wide text-brand-deep">Striking</p>
-            <h3 id="striking-schedule" class="mt-2 font-display font-800 text-2xl">Muay Thai Kickboxing</h3>
-            <dl class="mt-5">
-              <div>
-                <dt class="font-700">Tue &amp; Thu</dt>
-                <dd class="mt-2 space-y-1 text-sm text-ink/70"><span class="block">Morning · 6:30–7:30 AM</span><span class="block">Evening · 7:15–8:30 PM</span></dd>
-              </div>
-            </dl>
-          </section>
-
-          <section class="rounded-3xl bg-paper-mist ring-1 ring-paper-line p-6" aria-labelledby="bjj-schedule">
-            <p class="text-xs font-700 uppercase tracking-wide text-brand-deep">Grappling</p>
-            <h3 id="bjj-schedule" class="mt-2 font-display font-800 text-2xl">Brazilian Jiu-Jitsu</h3>
-            <dl class="mt-5 space-y-4">
-              <div><dt class="font-700">No-Gi · Mon &amp; Wed</dt><dd class="text-sm text-ink/70">6:00–7:15 PM</dd></div>
-              <div><dt class="font-700">Gi BJJ · Tue &amp; Thu</dt><dd class="text-sm text-ink/70">6:00–7:15 PM</dd></div>
-            </dl>
-          </section>
-
           <section class="rounded-3xl bg-brand/10 ring-1 ring-brand/30 p-6" aria-labelledby="kids-schedule">
             <p class="text-xs font-700 uppercase tracking-wide text-brand-deep">Ages 4–15 · 5:00–6:00 PM</p>
             <h3 id="kids-schedule" class="mt-2 font-display font-800 text-2xl">Kids Classes</h3>
@@ -621,7 +638,38 @@
             </dl>
           </section>
 
-          <section class="rounded-3xl bg-paper-mist ring-1 ring-paper-line p-6" aria-labelledby="open-mat-schedule">
+          <section class="rounded-3xl bg-paper ring-1 ring-paper-line p-6" aria-labelledby="mma-schedule">
+            <p class="text-xs font-700 uppercase tracking-wide text-brand-deep">Mixed Martial Arts</p>
+            <h3 id="mma-schedule" class="mt-2 font-display font-800 text-2xl">MMA</h3>
+            <dl class="mt-5">
+              <div>
+                <dt class="font-700">Mon &amp; Wed</dt>
+                <dd class="mt-2 space-y-1 text-sm text-ink/70"><span class="block">Morning · 6:30–7:30 AM</span><span class="block">Evening · 7:15–8:30 PM</span></dd>
+              </div>
+            </dl>
+          </section>
+
+          <section class="rounded-3xl bg-paper ring-1 ring-paper-line p-6" aria-labelledby="striking-schedule">
+            <p class="text-xs font-700 uppercase tracking-wide text-brand-deep">Striking</p>
+            <h3 id="striking-schedule" class="mt-2 font-display font-800 text-2xl">Muay Thai Kickboxing</h3>
+            <dl class="mt-5">
+              <div>
+                <dt class="font-700">Tue &amp; Thu</dt>
+                <dd class="mt-2 space-y-1 text-sm text-ink/70"><span class="block">Morning · 6:30–7:30 AM</span><span class="block">Evening · 7:15–8:30 PM</span></dd>
+              </div>
+            </dl>
+          </section>
+
+          <section class="rounded-3xl bg-paper ring-1 ring-paper-line p-6" aria-labelledby="bjj-schedule">
+            <p class="text-xs font-700 uppercase tracking-wide text-brand-deep">Grappling</p>
+            <h3 id="bjj-schedule" class="mt-2 font-display font-800 text-2xl">Brazilian Jiu-Jitsu</h3>
+            <dl class="mt-5 space-y-4">
+              <div><dt class="font-700">No-Gi · Mon &amp; Wed</dt><dd class="text-sm text-ink/70">6:00–7:15 PM</dd></div>
+              <div><dt class="font-700">Gi BJJ · Tue &amp; Thu</dt><dd class="text-sm text-ink/70">6:00–7:15 PM</dd></div>
+            </dl>
+          </section>
+
+          <section class="rounded-3xl bg-paper ring-1 ring-paper-line p-6" aria-labelledby="open-mat-schedule">
             <p class="text-xs font-700 uppercase tracking-wide text-brand-deep">All Disciplines</p>
             <h3 id="open-mat-schedule" class="mt-2 font-display font-800 text-2xl">Open Mat</h3>
             <dl class="mt-5">
@@ -649,10 +697,10 @@
     </section>
 
     <!-- ============ MEMBERSHIP / PRICING ============ -->
-    <section id="pricing" class="py-20 sm:py-28 bg-paper-mist border-y border-paper-line">
+    <section id="pricing" class="bg-paper py-20 sm:py-28">
       <div class="mx-auto max-w-8xl px-4 sm:px-6 lg:px-10">
         <div class="flex flex-wrap items-end justify-between gap-6">
-          <h2 class="font-display display-xl text-4xl sm:text-5xl lg:text-6xl max-w-2xl">Membership</h2>
+          <h2 class="font-display display-xl text-4xl sm:text-5xl lg:text-6xl max-w-2xl" tabindex="-1" data-section-heading>Membership</h2>
           <p class="max-w-sm text-ink/70">Choose your membership by the number of disciplines you train. Required starter gear is purchased separately.</p>
         </div>
 
@@ -666,60 +714,60 @@
         </div>
 
         <!-- Membership tiers -->
-        <div class="mt-5 grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
-          <div class="rounded-3xl bg-paper ring-1 ring-paper-line p-7">
-            <p class="font-display font-800 text-xl">1 Discipline</p>
+        <ul class="mt-5 grid sm:grid-cols-2 lg:grid-cols-4 gap-5" data-membership-tiers>
+          <li class="rounded-3xl bg-paper-mist ring-1 ring-paper-line p-7">
+            <h3 class="font-display font-800 text-xl">1 Discipline</h3>
             <p class="mt-3 font-display font-800 text-4xl">$100<span class="text-base font-600 text-ink-muted">/mo</span></p>
             <p class="mt-3 text-sm text-ink/70">Choose any one scheduled program. Starter equipment is separate.*</p>
-          </div>
-          <div class="rounded-3xl bg-paper ring-1 ring-paper-line p-7">
-            <p class="font-display font-800 text-xl">2 Disciplines</p>
+          </li>
+          <li class="rounded-3xl bg-paper-mist ring-1 ring-paper-line p-7">
+            <h3 class="font-display font-800 text-xl">2 Disciplines</h3>
             <p class="mt-3 font-display font-800 text-4xl">$125<span class="text-base font-600 text-ink-muted">/mo</span></p>
             <p class="mt-3 text-sm text-ink/70">Combine any two scheduled programs. Starter equipment is separate.*</p>
-          </div>
-          <div class="rounded-3xl bg-paper ring-1 ring-paper-line p-7">
-            <p class="font-display font-800 text-xl">3 Disciplines</p>
+          </li>
+          <li class="rounded-3xl bg-paper-mist ring-1 ring-paper-line p-7">
+            <h3 class="font-display font-800 text-xl">3 Disciplines</h3>
             <p class="mt-3 font-display font-800 text-4xl">$150<span class="text-base font-600 text-ink-muted">/mo</span></p>
             <p class="mt-3 text-sm text-ink/70">Train across any three scheduled programs. Starter equipment is separate.*</p>
-          </div>
-          <div class="rounded-3xl bg-ink text-white on-dark p-7 ring-1 ring-ink">
-            <p class="font-display font-800 text-xl text-brand-glow">Unlimited Classes</p>
+          </li>
+          <li class="rounded-3xl bg-ink text-white on-dark p-7 ring-1 ring-ink">
+            <h3 class="font-display font-800 text-xl text-brand-glow">Unlimited Classes</h3>
             <p class="mt-3 font-display font-800 text-4xl">$200<span class="text-base font-600 text-white/60">/mo</span></p>
             <p class="mt-3 text-sm text-white/75">Every scheduled class, every discipline, all week.</p>
-          </div>
-        </div>
+          </li>
+        </ul>
 
         <!-- Family + program pricing + gear + discounts -->
-        <div class="mt-5 grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
-          <div class="rounded-3xl bg-paper ring-1 ring-paper-line p-7">
-            <p class="text-xs font-700 uppercase tracking-wide text-brand-deep">Family Price Cap</p>
+        <ul class="mt-5 grid sm:grid-cols-2 lg:grid-cols-4 gap-5" data-secondary-pricing>
+          <li class="rounded-3xl bg-paper-mist ring-1 ring-paper-line p-7">
+            <h3 class="text-xs font-700 uppercase tracking-wide text-brand-deep">Family Price Cap</h3>
             <p class="mt-2 font-display font-800 text-3xl">$350<span class="text-base font-600 text-ink-muted">/mo</span></p>
             <p class="mt-2 text-sm text-ink/70">The maximum monthly membership price for a family.</p>
-          </div>
-          <div class="rounded-3xl bg-paper ring-1 ring-paper-line p-7">
-            <p class="text-xs font-700 uppercase tracking-wide text-brand-deep">BJJ Starter Gear · Gi<sup aria-hidden="true">*</sup></p>
+          </li>
+          <li class="rounded-3xl bg-paper-mist ring-1 ring-paper-line p-7">
+            <h3 class="text-xs font-700 uppercase tracking-wide text-brand-deep">Open Mat / Drop-In</h3>
+            <p class="mt-2 font-display font-800 text-3xl">$20<span class="text-base font-600 text-ink-muted">/session</span></p>
+            <p class="mt-2 text-sm text-ink/70">Join an open-mat session without a monthly membership.</p>
+          </li>
+          <li class="rounded-3xl bg-paper-mist ring-1 ring-paper-line p-7">
+            <h3 class="text-xs font-700 uppercase tracking-wide text-brand-deep">Karate Starter Gear · Gi<sup aria-hidden="true">*</sup></h3>
+            <p class="mt-2 font-display font-800 text-3xl">$45<span class="text-base font-600 text-ink-muted"> kids</span></p>
+            <p class="mt-2 text-sm text-ink/70">One-time starter gi pricing for kids' karate training.</p>
+          </li>
+          <li class="rounded-3xl bg-paper-mist ring-1 ring-paper-line p-7">
+            <h3 class="text-xs font-700 uppercase tracking-wide text-brand-deep">BJJ Starter Gear · Gi<sup aria-hidden="true">*</sup></h3>
             <p class="mt-2 font-display font-800 text-3xl">$115<span class="text-base font-600 text-ink-muted"> kids</span></p>
             <p class="mt-1 font-display font-800 text-3xl">$160<span class="text-base font-600 text-ink-muted"> adults</span></p>
             <p class="mt-2 text-sm text-ink/70">One-time starter gi pricing for Brazilian Jiu-Jitsu.</p>
-          </div>
-          <div class="rounded-3xl bg-paper ring-1 ring-paper-line p-7">
-            <p class="text-xs font-700 uppercase tracking-wide text-brand-deep">Karate Starter Gear · Gi<sup aria-hidden="true">*</sup></p>
-            <p class="mt-2 font-display font-800 text-3xl">$45<span class="text-base font-600 text-ink-muted"> kids</span></p>
-            <p class="mt-2 text-sm text-ink/70">One-time starter gi pricing for kids' karate training.</p>
-          </div>
-          <div class="rounded-3xl bg-paper ring-1 ring-paper-line p-7">
-            <p class="text-xs font-700 uppercase tracking-wide text-brand-deep">Open Mat / Drop-In</p>
-            <p class="mt-2 font-display font-800 text-3xl">$20<span class="text-base font-600 text-ink-muted">/session</span></p>
-            <p class="mt-2 text-sm text-ink/70">Join an open-mat session without a monthly membership.</p>
-          </div>
-        </div>
+          </li>
+        </ul>
 
         <p class="mt-6 text-xs text-ink-muted"><strong>*</strong> Required starter equipment for Gi BJJ and kids karate is purchased separately from monthly membership. Please confirm current rates before enrolling. U.S. military appreciation and sibling discounts are available; ask an administrator for details.</p>
       </div>
     </section>
 
     <!-- ============ FAQ ============ -->
-    <section class="py-20 sm:py-28 bg-paper">
+    <section class="bg-paper-mist border-y border-paper-line py-20 sm:py-28">
       <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-10">
         <h2 class="font-display display-xl text-4xl sm:text-5xl text-center">Before your first class</h2>
         <div class="mt-12 space-y-3">
@@ -777,13 +825,13 @@
     </section>
 
     <!-- ============ VISIT / CTA ============ -->
-    <section id="visit" class="py-20 sm:py-28">
+    <section id="visit" class="bg-paper py-20 sm:py-28">
       <div class="mx-auto max-w-8xl px-4 sm:px-6 lg:px-10">
         <div class="rounded-[2rem] bg-ink text-white on-dark overflow-hidden">
           <div class="grid lg:grid-cols-2">
             <div class="p-8 sm:p-12 lg:p-14">
               <p class="font-700 text-brand-glow">Be part of the family</p>
-              <h2 class="mt-2 font-display display-xl text-4xl sm:text-5xl">Your first 3 classes are free</h2>
+              <h2 class="mt-2 font-display display-xl text-4xl sm:text-5xl" tabindex="-1" data-section-heading>Your first 3 classes are free</h2>
               <p class="mt-4 max-w-md text-white/80">Stop in during class hours, or reach out and we'll set you up. We can't wait to meet you on the mat.</p>
 
               <dl class="mt-9 space-y-6">
@@ -875,14 +923,14 @@
         <nav aria-label="Explore">
           <h2 class="text-xs uppercase tracking-wider text-white/55 font-700">Explore</h2>
           <ul class="mt-4 space-y-2.5 text-sm text-white/80">
-            <li><a href="#train" class="hover:text-brand-glow">Train</a></li>
-            <li><a href="#programs" class="hover:text-brand-glow">Programs</a></li>
-            <li><a href="#coaches" class="hover:text-brand-glow">Coaches</a></li>
-            <li><a href="#schedule" class="hover:text-brand-glow">Schedule</a></li>
-            <li><a href="#pricing" class="hover:text-brand-glow">Pricing</a></li>
-            <li><a href="#gallery" class="hover:text-brand-glow">Gallery</a></li>
-            <li><a href="#events" class="hover:text-brand-glow">Events</a></li>
-            <li><a href="#visit" class="hover:text-brand-glow">Visit</a></li>
+            <li><a href="#programs" class="hover:text-brand-glow" data-section-nav-link>Programs</a></li>
+            <li><a href="#train" class="hover:text-brand-glow" data-section-nav-link>Train</a></li>
+            <li><a href="#schedule" class="hover:text-brand-glow" data-section-nav-link>Schedule</a></li>
+            <li><a href="#pricing" class="hover:text-brand-glow" data-section-nav-link>Pricing</a></li>
+            <li><a href="#coaches" class="hover:text-brand-glow" data-section-nav-link>Coaches</a></li>
+            <li><a href="#events" class="hover:text-brand-glow" data-section-nav-link>Events</a></li>
+            <li><a href="#gallery" class="hover:text-brand-glow" data-section-nav-link>Gallery</a></li>
+            <li><a href="#visit" class="hover:text-brand-glow" data-section-nav-link>Visit</a></li>
           </ul>
         </nav>
         <nav aria-label="Connect">
@@ -936,7 +984,16 @@
           setMenu(menu.classList.contains('hidden'));
         });
         menu.querySelectorAll('a').forEach(function (a) {
-          a.addEventListener('click', function () { setMenu(false); });
+          a.addEventListener('click', function () {
+            var destination = document.querySelector(a.getAttribute('href'));
+            var heading = destination && destination.querySelector('[data-section-heading]');
+            setMenu(false);
+            if (heading) {
+              window.requestAnimationFrame(function () {
+                heading.focus({ preventScroll: true });
+              });
+            }
+          });
         });
         // Escape closes the menu and returns focus to the toggle
         document.addEventListener('keydown', function (e) {
@@ -947,20 +1004,22 @@
         });
       }
 
-      // Highlight the current in-page section on the primary nav
-      var navLinks = document.querySelectorAll('[data-nav-link]');
+      // Keep every navigation instance synchronized with the current in-page location.
+      var navLinks = document.querySelectorAll('[data-section-nav-link]');
       if (navLinks.length && 'IntersectionObserver' in window) {
         var linkFor = {};
         navLinks.forEach(function (link) {
-          linkFor[link.getAttribute('href')] = link;
+          var href = link.getAttribute('href');
+          if (!linkFor[href]) linkFor[href] = [];
+          linkFor[href].push(link);
         });
         var observer = new IntersectionObserver(function (entries) {
           entries.forEach(function (entry) {
-            var link = linkFor['#' + entry.target.id];
-            if (!link) return;
+            var links = linkFor['#' + entry.target.id];
+            if (!links) return;
             if (entry.isIntersecting) {
               navLinks.forEach(function (l) { l.removeAttribute('aria-current'); });
-              link.setAttribute('aria-current', 'true');
+              links.forEach(function (link) { link.setAttribute('aria-current', 'location'); });
             }
           });
         }, { rootMargin: '-45% 0px -50% 0px' });

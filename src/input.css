@@ -35,6 +35,14 @@ a:focus-visible, button:focus-visible, summary:focus-visible, [tabindex]:focus-v
   box-shadow: 0 0 0 2px #000;
 }
 
+/* Current in-page location is visible without relying on color alone. */
+nav [aria-current="location"] {
+  font-weight: 800;
+  text-decoration-line: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: .35em;
+}
+
 
 /* The marquee band clips overflow, which would eat an outset ring's top and bottom
    edges, so this control draws its focus indicator inside its own box instead. */
@@ -49,6 +57,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible, [tabindex]:focus-v
 @media (forced-colors: active) {
   #marqueeToggle { background-color: ButtonFace; border: 1px solid ButtonBorder; }
   #marqueeToggle:focus-visible { outline: 3px solid Highlight; outline-offset: -3px; }
+  .coaches-watermark { display: none; }
 }
 
 /* FAQ disclosure */
