@@ -45,7 +45,7 @@ test('upcoming event images link to the full-size image in a new window', async 
     // using the same sr-only wording as every other external link on the page.
     await expect(eventImage).toHaveAccessibleName(/opens in new window/i);
     // The image's own alt must reach the link name, not be masked by an aria-label.
-    await expect(eventImage).toHaveAccessibleName(/Byron|Joel|Malcolm/i);
+    await expect(eventImage).toHaveAccessibleName(/Joel|Malcolm|Trunk or Treat/i);
   }
   await expect(page.locator('dialog')).toHaveCount(0);
 });
@@ -141,7 +141,7 @@ test('the marquee control survives its clipping band and forced colors', async (
   await page.emulateMedia({ forcedColors: null });
 });
 
-test('three-card event row, reflow, text spacing and reduced motion', async ({ page }) => {
+test('event row, reflow, text spacing and reduced motion', async ({ page }) => {
   await page.emulateMedia({ reducedMotion: 'reduce' });
   expect(await page.locator('.marquee-track').evaluate(el => getComputedStyle(el).animationName)).toBe('none');
   if (page.viewportSize().width >= 1024) {
@@ -167,9 +167,9 @@ test('card order supports the marketing funnel', async ({ page }) => {
     'Jason Faglier Jr.',
   ]);
   expect(await page.locator('#events article').evaluateAll(cards => cards.map(card => card.id))).toEqual([
-    'byron-halo',
     'joel-beach-worlds',
     'malcolm-wellmaker-ufc',
+    'trunk-or-treat-2026',
   ]);
   await expect(page.locator('[data-membership-tiers]')).toHaveJSProperty('tagName', 'UL');
   await expect(page.locator('[data-membership-tiers] > li > h3')).toHaveText([
