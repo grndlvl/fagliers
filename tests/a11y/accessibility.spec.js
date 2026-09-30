@@ -168,7 +168,6 @@ test('card order supports the marketing funnel', async ({ page }) => {
   ]);
   expect(await page.locator('#events article').evaluateAll(cards => cards.map(card => card.id))).toEqual([
     'joel-faglier-ufc-debut',
-    'joel-beach-worlds',
     'malcolm-wellmaker-ufc',
     'trunk-or-treat-2026',
   ]);
