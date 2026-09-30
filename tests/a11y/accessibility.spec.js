@@ -145,7 +145,7 @@ test('event row, reflow, text spacing and reduced motion', async ({ page }) => {
   await page.emulateMedia({ reducedMotion: 'reduce' });
   expect(await page.locator('.marquee-track').evaluate(el => getComputedStyle(el).animationName)).toBe('none');
   if (page.viewportSize().width >= 1024) {
-    const eventCardTops = await page.locator('#events article:not(#joel-faglier-ufc-debut)').evaluateAll(cards => cards.map(card => Math.round(card.getBoundingClientRect().top)));
+    const eventCardTops = await page.locator('#events article').evaluateAll(cards => cards.map(card => Math.round(card.getBoundingClientRect().top)));
     expect(new Set(eventCardTops).size).toBe(1);
   }
   await page.addStyleTag({ content: '* { line-height: 1.5 !important; letter-spacing: .12em !important; word-spacing: .16em !important; } p { margin-bottom: 2em !important; }' });
@@ -166,8 +166,13 @@ test('card order supports the marketing funnel', async ({ page }) => {
     'Joel Faglier',
     'Jason Faglier Jr.',
   ]);
-  expect(await page.locator('#events article').evaluateAll(cards => cards.map(card => card.id))).toEqual([
+  await expect(page.locator('#joel-faglier-ufc-debut h2')).toHaveText('Joel Faglier makes his UFC debut');
+  expect(await page.locator('#joel-faglier-ufc-debut, #events, #joel-beach-worlds').evaluateAll(elements => elements.map(element => element.id))).toEqual([
     'joel-faglier-ufc-debut',
+    'events',
+    'joel-beach-worlds',
+  ]);
+  expect(await page.locator('#events article').evaluateAll(cards => cards.map(card => card.id))).toEqual([
     'malcolm-wellmaker-ufc',
     'trunk-or-treat-2026',
   ]);
