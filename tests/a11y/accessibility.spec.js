@@ -45,7 +45,7 @@ test('upcoming event images link to the full-size image in a new window', async 
     // using the same sr-only wording as every other external link on the page.
     await expect(eventImage).toHaveAccessibleName(/opens in new window/i);
     // The image's own alt must reach the link name, not be masked by an aria-label.
-    await expect(eventImage).toHaveAccessibleName(/Joel|Faglier|Malcolm|Trunk or Treat/i);
+    await expect(eventImage).toHaveAccessibleName(/Joel|Faglier|Trunk or Treat/i);
   }
   await expect(page.locator('dialog')).toHaveCount(0);
 });
@@ -145,7 +145,7 @@ test('event row, reflow, text spacing and reduced motion', async ({ page }) => {
   await page.emulateMedia({ reducedMotion: 'reduce' });
   expect(await page.locator('.marquee-track').evaluate(el => getComputedStyle(el).animationName)).toBe('none');
   if (page.viewportSize().width >= 1024) {
-    const eventCardTops = await page.locator('#events article').evaluateAll(cards => cards.map(card => Math.round(card.getBoundingClientRect().top)));
+    const eventCardTops = await page.locator('[data-event-grid] article').evaluateAll(cards => cards.map(card => Math.round(card.getBoundingClientRect().top)));
     expect(new Set(eventCardTops).size).toBe(1);
   }
   await page.addStyleTag({ content: '* { line-height: 1.5 !important; letter-spacing: .12em !important; word-spacing: .16em !important; } p { margin-bottom: 2em !important; }' });
@@ -172,8 +172,9 @@ test('card order supports the marketing funnel', async ({ page }) => {
     'events',
     'joel-beach-worlds',
   ]);
+  await expect(page.locator('#joel-faglier-ufc-debut a[href="#joel-faglier-ufc-watch-party"]')).toHaveText(/Join the UFC debut watch party/);
   expect(await page.locator('#events article').evaluateAll(cards => cards.map(card => card.id))).toEqual([
-    'malcolm-wellmaker-ufc',
+    'joel-faglier-ufc-watch-party',
     'trunk-or-treat-2026',
   ]);
   await expect(page.locator('[data-membership-tiers]')).toHaveJSProperty('tagName', 'UL');
