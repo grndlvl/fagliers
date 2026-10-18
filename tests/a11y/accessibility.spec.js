@@ -36,7 +36,7 @@ test('page and expanded disclosures pass axe', async ({ page }, testInfo) => {
 
 test('upcoming event images link to the full-size image in a new window', async ({ page }) => {
   const eventImages = page.locator('[data-event-image]');
-  await expect(eventImages).toHaveCount(4);
+  await expect(eventImages).toHaveCount(2);
   for (const eventImage of await eventImages.all()) {
     await expect(eventImage).toHaveAttribute('href', /^images\/events\/.+\.(jpg|png|webp)$/);
     await expect(eventImage).toHaveAttribute('target', '_blank');
@@ -166,15 +166,19 @@ test('card order supports the marketing funnel', async ({ page }) => {
     'Joel Faglier',
     'Jason Faglier Jr.',
   ]);
-  await expect(page.locator('#joel-faglier-ufc-debut h2')).toHaveText('Joel Faglier makes his UFC debut');
+  await expect(page.locator('#joel-faglier-ufc-debut h2')).toHaveText('Joel Faglier wins his UFC debut');
   expect(await page.locator('#joel-faglier-ufc-debut, #events, #joel-beach-worlds').evaluateAll(elements => elements.map(element => element.id))).toEqual([
     'joel-faglier-ufc-debut',
     'events',
     'joel-beach-worlds',
   ]);
-  await expect(page.locator('#joel-faglier-ufc-debut a[href="#joel-faglier-ufc-watch-party"]')).toHaveText(/Join the UFC debut watch party/);
+  const highlightLinks = page.locator('#joel-faglier-ufc-debut a[href="https://www.ufc.com/video/161155"]');
+  await expect(highlightLinks).toHaveCount(2);
+  for (const link of await highlightLinks.all()) {
+    await expect(link).toHaveAttribute('target', '_blank');
+    await expect(link).toHaveAccessibleName(/opens in new window/i);
+  }
   expect(await page.locator('#events article').evaluateAll(cards => cards.map(card => card.id))).toEqual([
-    'joel-faglier-ufc-watch-party',
     'trunk-or-treat-2026',
   ]);
   await expect(page.locator('[data-membership-tiers]')).toHaveJSProperty('tagName', 'UL');
