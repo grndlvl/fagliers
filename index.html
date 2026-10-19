@@ -435,8 +435,8 @@
             <dd class="mt-1 text-sm text-ink-muted">Rated by our students</dd>
           </div>
           <div class="bg-paper p-7">
-            <dt class="font-display font-800 text-4xl sm:text-5xl">1</dt>
-            <dd class="mt-1 text-sm text-ink-muted">UFC fighter got his start here</dd>
+            <dt class="font-display font-800 text-4xl sm:text-5xl">2</dt>
+            <dd class="mt-1 text-sm text-ink-muted">UFC fighters got their start here</dd>
           </div>
         </dl>
       </div>
@@ -541,33 +541,55 @@
       </div>
     </section>
 
-    <!-- ============ WELLMAKER (dark band) ============ -->
-    <section class="on-dark bg-ink text-white py-20 sm:py-28">
+    <!-- ============ UFC LEGACY (dark band) ============ -->
+    <section class="on-dark bg-ink text-white py-20 sm:py-28" aria-labelledby="ufc-legacy-title">
       <div class="mx-auto max-w-8xl px-4 sm:px-6 lg:px-10">
-        <div class="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
-          <div class="order-2 lg:order-1">
-            <p class="font-600 text-brand-glow">Where it started</p>
-            <h2 class="mt-4 font-display display-xl text-4xl sm:text-5xl lg:text-6xl">
-              The gym that started UFC's Malcolm <span class="text-brand-glow">"The Machine"</span> Wellmaker
+        <header class="grid items-end gap-6 lg:grid-cols-12 lg:gap-10">
+          <div class="lg:col-span-8">
+            <p class="font-700 text-brand-glow">From Faglier's to the UFC</p>
+            <h2 id="ufc-legacy-title" class="mt-4 max-w-4xl font-display display-xl text-4xl sm:text-5xl lg:text-6xl">
+              Two UFC fighters.<br />
+              <span class="text-brand-glow">One Augusta foundation.</span>
             </h2>
-            <p class="mt-6 max-w-xl text-white/80">
-              Augusta's own Malcolm Wellmaker first stepped onto our mats with no combat-sports background — and from that start built a career all the way to the UFC. He's since taken his pro camp to a major fight team, but his mixed martial arts journey began right here. The same coaching and fight family that helped launch a UFC fighter is ready for you.
-            </p>
-            <p class="mt-4 text-sm text-white/55 italic">Every fighter starts somewhere. Yours could start here.</p>
-            <div class="mt-8 flex flex-wrap gap-4">
-              <div class="rounded-2xl bg-white/5 ring-1 ring-white/10 px-6 py-4">
-                <p class="font-display font-800 text-3xl text-brand-glow leading-none">UFC</p>
-                <p class="mt-1 text-xs uppercase tracking-wider text-white/55">Bantamweight</p>
+          </div>
+          <p class="max-w-xl text-lg text-white/75 lg:col-span-4">
+            Malcolm Wellmaker walked in with no combat-sports background. Joel Faglier grew up on these mats. Their paths were different. Their starting point was the same.
+          </p>
+        </header>
+
+        <div class="mt-12 grid gap-5 md:grid-cols-2 lg:gap-8">
+          <article data-ufc-fighter class="grid h-full grid-rows-[auto_1fr] overflow-hidden rounded-3xl bg-white/5 ring-1 ring-white/10">
+            <img src="images/wellmaker-ufc-v2.png" alt="Malcolm Wellmaker flexing on the official scale at a UFC weigh-in" loading="lazy" width="1254" height="1254" class="aspect-[4/3] w-full object-cover object-[center_38%]" />
+            <div class="flex flex-col p-6 sm:p-8">
+              <div class="flex flex-wrap items-center justify-between gap-3">
+                <p class="text-xs font-700 uppercase tracking-wider text-brand-glow">Started at Faglier's</p>
+                <span class="rounded-full bg-white/10 px-3 py-1 text-xs font-700 text-white">UFC Bantamweight</span>
               </div>
-              <div class="rounded-2xl bg-white/5 ring-1 ring-white/10 px-6 py-4">
-                <p class="font-display font-800 text-3xl text-brand-glow leading-none">Augusta</p>
-                <p class="mt-1 text-xs uppercase tracking-wider text-white/55">Where he got his start</p>
-              </div>
+              <h3 class="mt-5 font-display font-800 text-3xl">Malcolm Wellmaker</h3>
+              <p class="mt-1 font-700 text-white/70">“The Machine”</p>
+              <p class="mt-5 text-white/75">Malcolm first stepped onto these mats with no combat-sports background. Faglier's is where he built the foundation that carried him to the UFC.</p>
+              <p class="mt-auto pt-6 text-sm font-700 text-brand-glow">First trained here → UFC</p>
             </div>
-          </div>
-          <div class="order-1 lg:order-2">
-            <img src="images/wellmaker-ufc-v2.png" alt="Malcolm Wellmaker flexing on the official scale at a UFC weigh-in" loading="lazy" width="1254" height="1254" class="w-full rounded-3xl object-cover ring-1 ring-white/10" />
-          </div>
+          </article>
+
+          <article data-ufc-fighter class="grid h-full grid-rows-[auto_1fr] overflow-hidden rounded-3xl bg-white/5 ring-1 ring-white/10">
+            <img src="images/events/joel-faglier-ufc-debut-win-october-2026.jpg" alt="Joel Faglier lands a punch during his UFC debut victory" loading="lazy" width="1280" height="720" class="aspect-[4/3] w-full object-cover object-center" />
+            <div class="flex flex-col p-6 sm:p-8">
+              <div class="flex flex-wrap items-center justify-between gap-3">
+                <p class="text-xs font-700 uppercase tracking-wider text-brand-glow">Raised at Faglier's</p>
+                <span class="rounded-full bg-white/10 px-3 py-1 text-xs font-700 text-white">UFC Heavyweight · Coach</span>
+              </div>
+              <h3 class="mt-5 font-display font-800 text-3xl">Joel Faglier</h3>
+              <p class="mt-1 font-700 text-white/70">“The Sniper”</p>
+              <p class="mt-5 text-white/75">Joel grew up on these mats, became an undefeated professional and won his UFC debut by second-round TKO. He remains part of Faglier's as a coach and fighter.</p>
+              <p class="mt-auto pt-6 text-sm font-700 text-brand-glow">Raised here → UFC debut victory</p>
+            </div>
+          </article>
+        </div>
+
+        <div class="mt-10 flex flex-wrap items-center justify-between gap-6 border-t border-white/10 pt-8">
+          <p class="max-w-xl font-display font-800 text-2xl sm:text-3xl">Their journeys started here. Yours can too.</p>
+          <a href="#visit" class="inline-flex min-h-11 items-center rounded-full bg-brand px-6 font-700 text-ink transition-colors hover:bg-brand-glow focus-visible:bg-brand-glow">Claim your 3 free classes</a>
         </div>
       </div>
     </section>

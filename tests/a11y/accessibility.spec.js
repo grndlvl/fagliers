@@ -167,6 +167,13 @@ test('card order supports the marketing funnel', async ({ page }) => {
     'Jason Faglier Jr.',
   ]);
   await expect(page.locator('#joel-faglier-ufc-debut h2')).toHaveText('Joel Faglier wins his UFC debut');
+  await expect(page.getByRole('heading', { name: 'Two UFC fighters. One Augusta foundation.' })).toBeVisible();
+  await expect(page.getByText('UFC fighters got their start here', { exact: true })).toBeVisible();
+  const ufcFighterCards = page.locator('[data-ufc-fighter]');
+  await expect(ufcFighterCards).toHaveCount(2);
+  await expect(ufcFighterCards.locator('h3')).toHaveText(['Malcolm Wellmaker', 'Joel Faglier']);
+  await expect(ufcFighterCards.nth(0).locator('img')).toHaveAttribute('alt', /Malcolm/);
+  await expect(ufcFighterCards.nth(1).locator('img')).toHaveAttribute('alt', /Joel/);
   expect(await page.locator('#joel-faglier-ufc-debut, #events, #joel-beach-worlds').evaluateAll(elements => elements.map(element => element.id))).toEqual([
     'joel-faglier-ufc-debut',
     'events',
