@@ -36,7 +36,7 @@ test('page and expanded disclosures pass axe', async ({ page }, testInfo) => {
 
 test('upcoming event images link to the full-size image in a new window', async ({ page }) => {
   const eventImages = page.locator('[data-event-image]');
-  await expect(eventImages).toHaveCount(2);
+  await expect(eventImages).toHaveCount(3);
   for (const eventImage of await eventImages.all()) {
     await expect(eventImage).toHaveAttribute('href', /^images\/events\/.+\.(jpg|png|webp)$/);
     await expect(eventImage).toHaveAttribute('target', '_blank');
@@ -178,7 +178,9 @@ test('card order supports the marketing funnel', async ({ page }) => {
     await expect(link).toHaveAttribute('target', '_blank');
     await expect(link).toHaveAccessibleName(/opens in new window/i);
   }
+  await expect(page.getByRole('link', { name: "Join Joel's welcome home" })).toHaveAttribute('href', '#joel-faglier-welcome-home-2026');
   expect(await page.locator('#events article').evaluateAll(cards => cards.map(card => card.id))).toEqual([
+    'joel-faglier-welcome-home-2026',
     'trunk-or-treat-2026',
   ]);
   await expect(page.locator('[data-membership-tiers]')).toHaveJSProperty('tagName', 'UL');
