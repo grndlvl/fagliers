@@ -34,18 +34,18 @@ test('page and expanded disclosures pass axe', async ({ page }, testInfo) => {
   await scan(page, testInfo, 'expanded');
 });
 
-test('upcoming event images link to the full-size image in a new window', async ({ page }) => {
-  const eventImages = page.locator('[data-event-image]');
-  await expect(eventImages).toHaveCount(3);
-  for (const eventImage of await eventImages.all()) {
-    await expect(eventImage).toHaveAttribute('href', /^images\/events\/.+\.(jpg|png|webp)$/);
-    await expect(eventImage).toHaveAttribute('target', '_blank');
-    await expect(eventImage).toHaveAttribute('rel', /noopener/);
+test('achievement image links to the full-size image in a new window', async ({ page }) => {
+  const achievementImage = page.locator('[data-achievement-image]');
+  await expect(achievementImage).toHaveCount(1);
+  for (const imageLink of await achievementImage.all()) {
+    await expect(imageLink).toHaveAttribute('href', /^images\/events\/.+\.(jpg|png|webp)$/);
+    await expect(imageLink).toHaveAttribute('target', '_blank');
+    await expect(imageLink).toHaveAttribute('rel', /noopener/);
     // The new-window behaviour must be announced, not just visual (WCAG 3.2.5),
     // using the same sr-only wording as every other external link on the page.
-    await expect(eventImage).toHaveAccessibleName(/opens in new window/i);
+    await expect(imageLink).toHaveAccessibleName(/opens in new window/i);
     // The image's own alt must reach the link name, not be masked by an aria-label.
-    await expect(eventImage).toHaveAccessibleName(/Joel|Faglier|Trunk or Treat/i);
+    await expect(imageLink).toHaveAccessibleName(/Joel|Faglier/i);
   }
   await expect(page.locator('dialog')).toHaveCount(0);
 });
@@ -66,8 +66,8 @@ test('skip link, menu and focus indicators support keyboard use', async ({ page 
     await expect(toggle).toBeFocused();
     await expect(page.locator('#mobileMenu')).not.toBeVisible();
   }
-  await page.locator('[data-event-image]').first().focus();
-  expect(await page.locator('[data-event-image]').first().evaluate(el => getComputedStyle(el).outlineStyle)).not.toBe('none');
+  await page.locator('[data-achievement-image]').focus();
+  expect(await page.locator('[data-achievement-image]').evaluate(el => getComputedStyle(el).outlineStyle)).not.toBe('none');
   const links = selector => page.locator(selector).evaluateAll(nodes => nodes.map(el => ({ text: el.textContent.trim(), href: el.getAttribute('href') })));
   const primaryLinks = await links('[data-nav-link]');
   expect(primaryLinks).toEqual([
@@ -76,7 +76,6 @@ test('skip link, menu and focus indicators support keyboard use', async ({ page 
     { text: 'Schedule', href: '#schedule' },
     { text: 'Pricing', href: '#pricing' },
     { text: 'Coaches', href: '#coaches' },
-    { text: 'Events', href: '#events' },
     { text: 'Gallery', href: '#gallery' },
     { text: 'Visit', href: '#visit' },
   ]);
@@ -141,13 +140,9 @@ test('the marquee control survives its clipping band and forced colors', async (
   await page.emulateMedia({ forcedColors: null });
 });
 
-test('event row, reflow, text spacing and reduced motion', async ({ page }) => {
+test('reflow, text spacing and reduced motion', async ({ page }) => {
   await page.emulateMedia({ reducedMotion: 'reduce' });
   expect(await page.locator('.marquee-track').evaluate(el => getComputedStyle(el).animationName)).toBe('none');
-  if (page.viewportSize().width >= 1024) {
-    const eventCardTops = await page.locator('[data-event-grid] article').evaluateAll(cards => cards.map(card => Math.round(card.getBoundingClientRect().top)));
-    expect(new Set(eventCardTops).size).toBe(1);
-  }
   await page.addStyleTag({ content: '* { line-height: 1.5 !important; letter-spacing: .12em !important; word-spacing: .16em !important; } p { margin-bottom: 2em !important; }' });
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
 });
@@ -161,11 +156,18 @@ test('card order supports the marketing funnel', async ({ page }) => {
     'Open Mat',
     'Weekend',
   ]);
+  const kidsSchedule = page.locator('#kids-schedule').locator('..');
+  await expect(kidsSchedule.locator('dt')).toHaveText(['Mon & Wed', 'Tuesday', 'Thursday', 'Friday']);
+  await expect(kidsSchedule.locator('dd')).toHaveText(['Karate Kickboxing', 'BJJ Gi', 'BJJ No Gi', 'MMA']);
   await expect(page.locator('#coaches article h3')).toHaveText([
+    'Jason Faglier Jr.',
     'Jason Faglier Sr.',
     'Joel Faglier',
-    'Jason Faglier Jr.',
   ]);
+  const jasonCard = page.locator('#coaches article').first();
+  await expect(jasonCard).toContainText('Gym owner · Head coach');
+  await expect(jasonCard).toContainText('22–5 combined amateur and professional record');
+  await expect(jasonCard).toContainText('Ironman triathlete');
   await expect(page.locator('#joel-faglier-ufc-debut h2')).toHaveText('Joel Faglier wins his UFC debut');
   await expect(page.getByRole('heading', { name: 'Two UFC fighters. One Augusta foundation.' })).toBeVisible();
   await expect(page.getByText('UFC fighters got their start here', { exact: true })).toBeVisible();
@@ -174,9 +176,8 @@ test('card order supports the marketing funnel', async ({ page }) => {
   await expect(ufcFighterCards.locator('h3')).toHaveText(['Malcolm Wellmaker', 'Joel Faglier']);
   await expect(ufcFighterCards.nth(0).locator('img')).toHaveAttribute('alt', /Malcolm/);
   await expect(ufcFighterCards.nth(1).locator('img')).toHaveAttribute('alt', /Joel/);
-  expect(await page.locator('#joel-faglier-ufc-debut, #events, #joel-beach-worlds').evaluateAll(elements => elements.map(element => element.id))).toEqual([
+  expect(await page.locator('#joel-faglier-ufc-debut, #joel-beach-worlds').evaluateAll(elements => elements.map(element => element.id))).toEqual([
     'joel-faglier-ufc-debut',
-    'events',
     'joel-beach-worlds',
   ]);
   const highlightLinks = page.locator('#joel-faglier-ufc-debut a[href="https://www.ufc.com/video/161155"]');
@@ -185,11 +186,7 @@ test('card order supports the marketing funnel', async ({ page }) => {
     await expect(link).toHaveAttribute('target', '_blank');
     await expect(link).toHaveAccessibleName(/opens in new window/i);
   }
-  await expect(page.getByRole('link', { name: "Join Joel's welcome home" })).toHaveAttribute('href', '#joel-faglier-welcome-home-2026');
-  expect(await page.locator('#events article').evaluateAll(cards => cards.map(card => card.id))).toEqual([
-    'joel-faglier-welcome-home-2026',
-    'trunk-or-treat-2026',
-  ]);
+  await expect(page.locator('#events, [data-section-nav-link][href="#events"]')).toHaveCount(0);
   await expect(page.locator('[data-membership-tiers]')).toHaveJSProperty('tagName', 'UL');
   await expect(page.locator('[data-membership-tiers] > li > h3')).toHaveText([
     '1 Discipline',
