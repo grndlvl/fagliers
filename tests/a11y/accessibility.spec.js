@@ -34,10 +34,10 @@ test('page and expanded disclosures pass axe', async ({ page }, testInfo) => {
   await scan(page, testInfo, 'expanded');
 });
 
-test('achievement image links to the full-size image in a new window', async ({ page }) => {
-  const achievementImage = page.locator('[data-achievement-image]');
-  await expect(achievementImage).toHaveCount(1);
-  for (const imageLink of await achievementImage.all()) {
+test('event and achievement images link to full-size images in a new window', async ({ page }) => {
+  const imageLinks = page.locator('[data-event-image], [data-achievement-image]');
+  await expect(imageLinks).toHaveCount(2);
+  for (const imageLink of await imageLinks.all()) {
     await expect(imageLink).toHaveAttribute('href', /^images\/events\/.+\.(jpg|png|webp)$/);
     await expect(imageLink).toHaveAttribute('target', '_blank');
     await expect(imageLink).toHaveAttribute('rel', /noopener/);
@@ -76,6 +76,7 @@ test('skip link, menu and focus indicators support keyboard use', async ({ page 
     { text: 'Schedule', href: '#schedule' },
     { text: 'Pricing', href: '#pricing' },
     { text: 'Coaches', href: '#coaches' },
+    { text: 'Events', href: '#events' },
     { text: 'Gallery', href: '#gallery' },
     { text: 'Visit', href: '#visit' },
   ]);
@@ -186,7 +187,8 @@ test('card order supports the marketing funnel', async ({ page }) => {
     await expect(link).toHaveAttribute('target', '_blank');
     await expect(link).toHaveAccessibleName(/opens in new window/i);
   }
-  await expect(page.locator('#events, [data-section-nav-link][href="#events"]')).toHaveCount(0);
+  await expect(page.locator('#events')).toBeVisible();
+  await expect(page.locator('[data-section-nav-link][href="#events"]')).toHaveCount(3);
   await expect(page.locator('[data-membership-tiers]')).toHaveJSProperty('tagName', 'UL');
   await expect(page.locator('[data-membership-tiers] > li > h3')).toHaveText([
     '1 Discipline',
