@@ -36,7 +36,7 @@ test('page and expanded disclosures pass axe', async ({ page }, testInfo) => {
 
 test('event and achievement images link to full-size images in a new window', async ({ page }) => {
   const imageLinks = page.locator('[data-event-image], [data-achievement-image]');
-  await expect(imageLinks).toHaveCount(2);
+  await expect(imageLinks).toHaveCount(4);
   for (const imageLink of await imageLinks.all()) {
     await expect(imageLink).toHaveAttribute('href', /^images\/events\/.+\.(jpg|png|webp)$/);
     await expect(imageLink).toHaveAttribute('target', '_blank');
@@ -45,7 +45,7 @@ test('event and achievement images link to full-size images in a new window', as
     // using the same sr-only wording as every other external link on the page.
     await expect(imageLink).toHaveAccessibleName(/opens in new window/i);
     // The image's own alt must reach the link name, not be masked by an aria-label.
-    await expect(imageLink).toHaveAccessibleName(/Joel|Faglier/i);
+    await expect(imageLink).toHaveAccessibleName(/Joel|Faglier|Tyler|Dixon|Quincy|Evans|Tillman/i);
   }
   await expect(page.locator('dialog')).toHaveCount(0);
 });
@@ -189,6 +189,14 @@ test('card order supports the marketing funnel', async ({ page }) => {
   }
   await expect(page.locator('#events')).toBeVisible();
   await expect(page.locator('[data-section-nav-link][href="#events"]')).toHaveCount(3);
+  await expect(page.locator('#events article')).toHaveCount(3);
+  expect(await page.locator('#events article').evaluateAll(events => events.map(event => event.id))).toEqual([
+    'joel-faglier-seminar-november-2026',
+    'tyler-dixon-scrap-7-november-2026',
+    'quincy-evans-fury-fc-126-december-2026',
+  ]);
+  await expect(page.locator('#tyler-dixon-scrap-7-november-2026')).toContainText('Tyler Dixon of Faglier\'s MMA vs. Jay Foreman of ANAX Collective');
+  await expect(page.locator('#quincy-evans-fury-fc-126-december-2026')).toContainText('Quincy Evans of Faglier\'s MMA vs. Shawn Tillman');
   await expect(page.locator('[data-membership-tiers]')).toHaveJSProperty('tagName', 'UL');
   await expect(page.locator('[data-membership-tiers] > li > h3')).toHaveText([
     '1 Discipline',
