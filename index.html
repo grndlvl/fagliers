@@ -138,14 +138,14 @@
 <body class="bg-paper text-ink font-body antialiased selection:bg-brand selection:text-ink">
 
   <!-- Skip link -->
-  <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:z-[100] focus:top-3 focus:left-3 focus:bg-ink focus:text-white focus:px-4 focus:py-2 focus:rounded-lg focus:font-semibold">
+  <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:z-100 focus:top-3 focus:left-3 focus:bg-ink focus:text-white focus:px-4 focus:py-2 focus:rounded-lg focus:font-semibold">
     Skip to main content
   </a>
 
   <!-- ============ HEADER ============ -->
-  <header id="siteHeader" class="fixed inset-x-0 top-0 z-50 bg-paper shadow-sm ring-1 ring-black/5">
+  <header id="siteHeader" class="fixed inset-x-0 top-0 z-50 bg-paper shadow-xs ring-1 ring-black/5">
     <nav class="mx-auto max-w-8xl px-4 sm:px-6 lg:px-10" aria-label="Primary">
-      <div class="flex h-[4.5rem] items-center justify-between">
+      <div class="flex h-18 items-center justify-between">
         <a href="#top" class="flex items-center gap-3 group">
           <img src="images/logo.jpg" alt="" width="44" height="44" class="logo-badge h-11 w-11 rounded-lg bg-white ring-1 ring-black/10" />
           <span class="font-display font-800 tracking-tight text-lg leading-none" data-nav-text>
@@ -197,7 +197,7 @@
     <!-- ============ HERO ============ -->
     <section class="relative min-h-[78svh] flex items-end overflow-hidden on-dark">
       <!-- media layer: fills the area below the 4.5rem header bar and is clipped so it can never spill into the next section -->
-      <div class="absolute inset-x-0 top-[4.5rem] bottom-0 overflow-hidden">
+      <div class="absolute inset-x-0 top-18 bottom-0 overflow-hidden">
         <picture class="block h-full w-full">
           <source media="(min-width: 1024px)" srcset="images/hero-banner.jpg" />
           <img src="images/hero-banner-mobile-v2.jpg" alt="" aria-hidden="true" class="h-full w-full object-cover object-center lg:object-[center_48%]" />
@@ -219,7 +219,7 @@
           <a href="#visit" class="inline-flex items-center rounded-full bg-brand px-7 py-3.5 font-700 text-ink hover:bg-brand-glow transition-colors">
             Claim your 3 free classes
           </a>
-          <a href="#train" class="inline-flex items-center rounded-full bg-white/10 px-7 py-3.5 font-700 text-white ring-1 ring-white/40 hover:bg-white/20 transition-colors backdrop-blur-sm">
+          <a href="#train" class="inline-flex items-center rounded-full bg-white/10 px-7 py-3.5 font-700 text-white ring-1 ring-white/40 hover:bg-white/20 transition-colors backdrop-blur-xs">
             What we train
           </a>
         </div>
@@ -247,7 +247,7 @@
         </span>
       </div>
       <!-- Scrolling text fades out before it reaches the pause control. -->
-      <div class="pointer-events-none absolute inset-y-0 right-0 w-20 bg-gradient-to-l from-ink via-ink to-transparent"></div>
+      <div class="pointer-events-none absolute inset-y-0 right-0 w-20 bg-linear-to-l from-ink via-ink to-transparent"></div>
       <button type="button" id="marqueeToggle" aria-label="Pause scrolling discipline list" title="Pause scrolling discipline list" class="absolute right-1 top-1/2 -translate-y-1/2 z-10 grid h-11 w-11 place-items-center rounded-full bg-ink text-white/70 ring-1 ring-white/40 hover:text-white hover:bg-ink-soft">
         <svg data-marquee-icon="pause" viewBox="0 0 16 16" width="13" height="13" fill="currentColor" aria-hidden="true"><rect x="3" y="2" width="3.5" height="12" rx="1"/><rect x="9.5" y="2" width="3.5" height="12" rx="1"/></svg>
         <svg data-marquee-icon="play" viewBox="0 0 16 16" width="13" height="13" fill="currentColor" aria-hidden="true" hidden><path d="M4 2.5v11a1 1 0 0 0 1.5.86l9-5.5a1 1 0 0 0 0-1.72l-9-5.5A1 1 0 0 0 4 2.5Z"/></svg>
@@ -400,7 +400,7 @@
         <!-- Adults -->
         <div class="mt-16 grid lg:grid-cols-2 gap-8 lg:gap-14 items-center">
           <div class="lg:order-2">
-            <img src="images/gallery/team-medals.jpg" alt="Faglier's teens and adults together on the mat with their tournament medals" loading="lazy" width="960" height="960" class="w-full rounded-3xl object-cover object-center aspect-[4/3]" />
+            <img src="images/gallery/team-medals.jpg" alt="Faglier's teens and adults together on the mat with their tournament medals" loading="lazy" width="960" height="960" class="w-full rounded-3xl object-cover object-center aspect-4/3" />
           </div>
           <div class="lg:order-1">
             <span class="inline-block rounded-full bg-brand/20 text-brand-deep px-3 py-1 text-xs font-700 uppercase tracking-wide">Teens &amp; Adults</span>
@@ -430,7 +430,7 @@
           <li class="bg-paper p-6 sm:p-7"><span class="block text-brand-deep font-700 text-sm">05</span><span class="mt-2 block font-display font-800 text-xl sm:text-2xl">Self-Defense</span></li>
           <li class="bg-paper p-6 sm:p-7"><span class="block text-brand-deep font-700 text-sm">06</span><span class="mt-2 block font-display font-800 text-xl sm:text-2xl">Fitness</span></li>
           <li class="bg-paper p-6 sm:p-7"><span class="block text-brand-deep font-700 text-sm">07</span><span class="mt-2 block font-display font-800 text-xl sm:text-2xl">Character</span></li>
-          <li class="bg-paper p-6 sm:p-7"><span class="block text-brand-deep font-700 text-sm">08</span><span class="mt-2 block font-display font-800 text-xl sm:text-2xl leading-tight">Positive Team Environment</span></li>
+          <li class="bg-paper p-6 sm:p-7"><span class="block text-brand-deep font-700 text-sm">08</span><span class="mt-2 block font-display font-800 text-xl leading-tight sm:text-2xl sm:leading-8">Positive Team Environment</span></li>
         </ul>
       </div>
     </section>
@@ -453,7 +453,7 @@
 
         <div class="mt-12 grid gap-5 md:grid-cols-2 lg:gap-8">
           <article data-ufc-fighter class="grid h-full grid-rows-[auto_1fr] overflow-hidden rounded-3xl bg-white/5 ring-1 ring-white/10">
-            <img src="images/wellmaker-ufc-v2.png" alt="Malcolm Wellmaker flexing on the official scale at a UFC weigh-in" loading="lazy" width="1254" height="1254" class="aspect-[4/3] w-full object-cover object-[center_38%]" />
+            <img src="images/wellmaker-ufc-v2.png" alt="Malcolm Wellmaker flexing on the official scale at a UFC weigh-in" loading="lazy" width="1254" height="1254" class="aspect-4/3 w-full object-cover object-[center_38%]" />
             <div class="flex flex-col p-6 sm:p-8">
               <div class="flex flex-wrap items-center justify-between gap-3">
                 <p class="text-xs font-700 uppercase tracking-wider text-brand-glow">Started at Faglier's</p>
@@ -467,7 +467,7 @@
           </article>
 
           <article data-ufc-fighter class="grid h-full grid-rows-[auto_1fr] overflow-hidden rounded-3xl bg-white/5 ring-1 ring-white/10">
-            <img src="images/events/joel-faglier-ufc-debut-win-october-2026.jpg" alt="Joel Faglier lands a punch during his UFC debut victory" loading="lazy" width="1280" height="720" class="aspect-[4/3] w-full object-cover object-center" />
+            <img src="images/events/joel-faglier-ufc-debut-win-october-2026.jpg" alt="Joel Faglier lands a punch during his UFC debut victory" loading="lazy" width="1280" height="720" class="aspect-4/3 w-full object-cover object-center" />
             <div class="flex flex-col p-6 sm:p-8">
               <div class="flex flex-wrap items-center justify-between gap-3">
                 <p class="text-xs font-700 uppercase tracking-wider text-brand-glow">Raised at Faglier's</p>
@@ -490,7 +490,7 @@
 
     <!-- ============ COACHES ============ -->
     <section id="coaches" class="relative isolate overflow-hidden bg-paper py-20 sm:py-28">
-      <img src="images/logo.jpg" alt="" aria-hidden="true" loading="lazy" width="958" height="960" class="coaches-watermark pointer-events-none absolute -right-28 top-8 z-0 hidden w-[34rem] max-w-none select-none object-contain opacity-[0.04] mix-blend-multiply lg:block" />
+      <img src="images/logo.jpg" alt="" aria-hidden="true" loading="lazy" width="958" height="960" class="coaches-watermark pointer-events-none absolute -right-28 top-8 z-0 hidden w-136 max-w-none select-none object-contain opacity-[0.04] mix-blend-multiply lg:block" />
       <div class="relative z-10 mx-auto max-w-8xl px-4 sm:px-6 lg:px-10">
         <div class="flex flex-wrap items-end justify-between gap-6">
           <h2 class="font-display display-xl text-4xl sm:text-5xl lg:text-6xl" tabindex="-1" data-section-heading>The Faglier family</h2>
@@ -838,7 +838,7 @@
     <!-- ============ VISIT / CTA ============ -->
     <section id="visit" class="bg-paper py-20 sm:py-28">
       <div class="mx-auto max-w-8xl px-4 sm:px-6 lg:px-10">
-        <div class="rounded-[2rem] bg-ink text-white on-dark overflow-hidden">
+        <div class="rounded-4xl bg-ink text-white on-dark overflow-hidden">
           <div class="grid lg:grid-cols-2">
             <div class="p-8 sm:p-12 lg:p-14">
               <p class="font-700 text-brand-glow">Be part of the family</p>

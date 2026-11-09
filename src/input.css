@@ -1,6 +1,43 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss' source(none);
+@source '../index.html';
+
+@theme {
+  --color-brand: #6cbd45;
+  --color-brand-dark: #4f9e2e;
+  --color-brand-deep: #2f6a1e;
+  --color-brand-glow: #8fd861;
+
+  --color-ink: #14160f;
+  --color-ink-soft: #1b1e15;
+  --color-ink-muted: #5b6052;
+
+  --color-paper: #fafaf6;
+  --color-paper-mist: #ecefe6;
+  --color-paper-line: #d8ddcf;
+
+  --font-display: Archivo, system-ui, sans-serif;
+  --font-body: Inter, system-ui, sans-serif;
+
+  --container-8xl: 88rem;
+}
+
+/*
+  The default border color has changed to `currentcolor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentcolor);
+  }
+}
 
 /* ---- Faglier's MMA — modern editorial theme (source for assets/tailwind.css) ---- */
 html { scroll-behavior: smooth; scroll-padding-top: 5.5rem; }
@@ -10,6 +47,11 @@ body { font-family: 'Inter', system-ui, sans-serif; }
 
 /* Big editorial headline sizing helper */
 .display-xl { letter-spacing: -0.02em; line-height: 0.95; font-weight: 800; }
+
+/* Preserve the v3 responsive heading rhythm when larger text utilities take effect. */
+@media (min-width: 40rem) {
+  .display-xl { line-height: 1; }
+}
 
 /* Logo art already sits on a white field — keep it crisp */
 .logo-badge { object-fit: contain; }
